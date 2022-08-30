@@ -17,33 +17,33 @@
 				<div class="header__row ops">
 					<div class="header__rank">
 						<div class="header__body">
-							<ul class="header__icon-list">
-								<li class="header__icon-el"><img src="img/fb-24.webp" alt=""></li>
-								<li class="header__icon-el"><img src="img/tw-24.webp" alt=""></li>
-								<li class="header__icon-el"><img src="img/ut-24.webp" alt=""></li>
-								<li class="header__icon-el"><img src="img/in-24.webp" alt=""></li>
-								<li class="header__icon-el"><img src="img/vk-24.webp" alt=""></li>
-							</ul>
+						<ul class="header__icon-list">
+							<li class="header__icon-el"><%= image_tag(asset_path('fb-24.webp')) %></li>
+							<li class="header__icon-el"><%= image_tag(asset_path('tw-24.webp')) %></li>
+							<li class="header__icon-el"><%= image_tag(asset_path('ut-24.webp')) %></li>
+							<li class="header__icon-el"><%= image_tag(asset_path('in-24.webp')) %></li>
+							<li class="header__icon-el"><%= image_tag(asset_path('vk-24.webp')) %></li>
+						</ul>
 							<ul class="header__text-list">
 								<li class="header__icon-box">
-									<img src="img/ph-24.webp" alt="">
+									<%= image_tag(asset_path('ph-24.webp')) %>
 									<div class="header__icon-text"><a href="tel:+48795124042" class="header__icon-link">+48795124042</a>
 									</div>
 								</li>
 								<li class="header__icon-box">
-									<img src="img/ph-24.webp" alt="">
+								<%= image_tag(asset_path('ph-24.webp')) %>
 									<div class="header__icon-text"><a href="tel:+48796128406" class="header__icon-link">+48796128406</a>
 									</div>
 								</li>
 								<li class="header__icon-box">
-									<img src="img/en-24.webp" alt="">
+									<%= image_tag(asset_path('en-24.webp')) %>
 									<div class="header__icon-text"><a href="mailto:biuro@profistyle.group"
 											class="header__icon-link">biuro@profistyle.group</a></div>
 								</li>
 							</ul>
 						</div>
 						<div class="header__logo">
-							<img src="img/logo/cropped-logo.webp" alt="">
+							<%= image_tag(asset_path('cropped-logo.webp')) %>
 						</div>
 						<div class="menu-btn ">
 							<span></span>
@@ -134,7 +134,9 @@
 							<a href="blogPostHost.html" class="blog__el-label">Host Services</a>
 							<div class="blog__el-pic">
 								<a href="blogPostHost.html" class="blog__el-pic-bg"></a>
-								<a href="blogPostHost.html"><img src="img/hosting.png" alt=""></a>
+								<a href="blogPostHost.html">
+								<%= image_tag(asset_path('hosting.png')) %>
+								</a>
 							</div>
 							<div class="blog__body">
 								<div class="blog__el-description">
@@ -212,7 +214,7 @@
 							<a href="blogPostRuby.html" class="blog__el-label">Ruby on Rails web applications</a>
 							<div class="blog__el-pic">
 								<a href="blogPostRuby.html" class="blog__el-pic-bg"></a>
-								<img src="img/Ruby_On_Rails_Logo.svg_.png" alt="">
+								<%= image_tag(asset_path('Ruby_On_Rails_Logo.svg_.png')) %>
 							</div>
 							<div class="blog__body">
 								<div class="blog__el-description">
@@ -337,22 +339,22 @@
 							<div class="footer__title">Photos</div>
 							<div class="footer__list4">
 								<div class="footer__list4-el">
-									<a href="#"><img src="img/g1.webp" alt=""></a>
+									<a href="#"><%= image_tag(asset_path('g1.webp')) %></a>
 								</div>
 								<div class="footer__list4-el">
-									<a href="#"><img src="img/g2.webp" alt=""></a>
+									<a href="#"><%= image_tag(asset_path('g2.webp')) %></a>
 								</div>
 								<div class="footer__list4-el">
-									<a href="#"><img src="img/g6.webp" alt=""></a>
+									<a href="#"><%= image_tag(asset_path('g6.webp')) %></a>
 								</div>
 								<div class="footer__list4-el">
-									<a href="#"><img src="img/g7.webp" alt=""></a>
+									<a href="#"><%= image_tag(asset_path('g7.webp')) %></a>
 								</div>
 								<div class="footer__list4-el">
-									<a href="#"><img src="img/g8.webp" alt=""></a>
+									<a href="#"><%= image_tag(asset_path('g8.webp')) %></a>
 								</div>
 								<div class="footer__list4-el">
-									<a href="#"><img src="img/g9.webp" alt=""></a>
+									<a href="#"><%= image_tag(asset_path('g9.webp')) %></a>
 								</div>
 							</div>
 						</div>

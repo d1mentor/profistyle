@@ -40,8 +40,8 @@
 						<nav class="nav mon">
 							<ul>
 								<li><a href="home.html">Home</a></li>
-								<li><a href="about.html">About Us</a></li>
-								<li><a href="servicesMAIN.html">Services</a>
+								<li><a href="/about_us">About Us</a></li>
+								<li><a href="/services">Services</a>
 									<button class="collapsible"></button>
 									<div class="collapsible-content">
 										<a href="servicesRoR.html">RoR development</a>
@@ -49,9 +49,9 @@
 										<a href="servicesSEO.html">SEO Promotion</a>
 									</div>
 								</li>
-								<li><a href="blog.html">Blog</a></li>
-								<li><a href="portfolio.html">Portfolio</a></li>
-								<li><a href="contact.html">Contact Us</a></li>
+								<li><a href="/blog">Blog</a></li>
+								<li><a href="/portfolio">Portfolio</a></li>
+								<li><a href="/contacts">Contact Us</a></li>
 								<li><a href="#"><%= image_tag(asset_path('pl-24.webp')) %></a></li>
 								<li><a href="#"><%= image_tag(asset_path('rus-24.webp')) %></a></li>
 								<li><a href="#"><%= image_tag(asset_path('eng-24.webp')) %></a></li>
@@ -71,10 +71,10 @@
 								<a href="home.html" class="jaw__link active">Home</a>
 							</div>
 							<div class="jaw__el">
-								<a href="about.html" class="jaw__link">About Us</a>
+								<a href="/about_us" class="jaw__link">About Us</a>
 							</div>
 							<div class="jaw__el">
-								<a href="servicesMAIN.html" class="jaw__link">Services</a>
+								<a href="/services" class="jaw__link">Services</a>
 								<span></span>
 								<div class="jaw__poster">
 									<a href="servicesRoR.html" class="jaw__link">RoR development</a>
@@ -83,13 +83,13 @@
 								</div>
 							</div>
 							<div class="jaw__el">
-								<a href="blog.html" class="jaw__link">Blog</a>
+								<a href="/blog" class="jaw__link">Blog</a>
 							</div>
 							<div class="jaw__el">
-								<a href="portfolio.html" class="jaw__link">Portfolio</a>
+								<a href="/portfolio" class="jaw__link">Portfolio</a>
 							</div>
 							<div class="jaw__el">
-								<a href="contact.html" class="jaw__link">Contact Us</a>
+								<a href="/contacts" class="jaw__link">Contact Us</a>
 							</div>
 							<div class="jaw__el">
 								<a href="#" class="jaw__link"><%= image_tag(asset_path('pl-24.webp')) %></a>
@@ -107,8 +107,8 @@
 			<div class="carousel">
 				<div class="slider">
 					<div class="slider__item ops">
-						<hr class="slider__item-bg1">
-						<%= image_tag(asset_path('Sl1.webp'), class: "slider__item-pic") %>
+						<span class="slider__item-bg1"></span>
+						<%= image_tag(asset_path('Sl1.jpg'), class: "slider__item-pic") %>
 						<div class="slider__item-box">
 							<div class="slider__item-label">Solution Website For you HTML5 RESPONSIVE</div>
 							<div class="slider__item-sublabel">We use the most modern adaptability solutions for mobile devices to
@@ -117,7 +117,7 @@
 						</div>
 					</div>
 					<div class="slider__item ops">
-						<hr class="slider__item-bg2">
+						<span class="slider__item-bg2"></span>
 						<%= image_tag(asset_path('Sl2.webp'), class: "slider__item-pic") %>
 						<div class="slider__item-box">
 							<div class="slider__item-label">Professional <br> web and graphic design</div>
@@ -128,7 +128,7 @@
 						</div>
 					</div>
 					<div class="slider__item ops">
-						<hr class="slider__item-bg3">
+						<span class="slider__item-bg3"></span>
 						<%= image_tag(asset_path('Sl3.webp'), class: "slider__item-pic") %>
 						<div class="slider__item-box">
 							<div class="slider__item-label">Website Development team With Good Skills</div>
@@ -143,7 +143,7 @@
 				<div class="container">
 					<div class="roll__row">
 						<div class="roll__coll">
-							<span class="roll__coll-wall1"></span>
+							<span class="roll__coll-wall1-1"></span>
 							<span class="roll__coll-wall2"></span>
 							<div class="roll__coll-body">
 								<div class="roll__coll-label">01.</div>
@@ -154,7 +154,7 @@
 							</div>
 						</div>
 						<div class="roll__coll">
-							<span class="roll__coll-wall1"></span>
+							<span class="roll__coll-wall1-2"></span>
 							<span class="roll__coll-wall2"></span>
 							<div class="roll__coll-body">
 								<div class="roll__coll-label">02.</div>
@@ -165,7 +165,7 @@
 							</div>
 						</div>
 						<div class="roll__coll">
-							<span class="roll__coll-wall1"></span>
+							<span class="roll__coll-wall1-3"></span>
 							<span class="roll__coll-wall2"></span>
 							<div class="roll__coll-body">
 								<div class="roll__coll-label">03.</div>
@@ -217,7 +217,7 @@
 						<div class="additional__label">ADDITIONAL SERVICES</div>
 						<div class="additional__body">
 							<div class="additional__el">
-								<span class="additional__el-wall1"></span>
+								<span class="additional__el-wall1-1"></span>
 								<span class="additional__el-wall2"></span>
 								<div class="additional__el-body">
 									<div class="additional__pic"><%= image_tag(asset_path('mn-48.webp')) %></div>
@@ -229,7 +229,7 @@
 								</div>
 							</div>
 							<div class="additional__el">
-								<span class="additional__el-wall1"></span>
+								<span class="additional__el-wall1-2"></span>
 								<span class="additional__el-wall2"></span>
 								<div class="additional__el-body">
 									<div class="additional__pic"><%= image_tag(asset_path('et-50.webp')) %></div>
@@ -241,7 +241,7 @@
 								</div>
 							</div>
 							<div class="additional__el">
-								<span class="additional__el-wall1"></span>
+								<span class="additional__el-wall1-3"></span>
 								<span class="additional__el-wall2"></span>
 								<div class="additional__el-body">
 									<div class="additional__pic"><%= image_tag(asset_path('html-50.webp')) %></div>
@@ -253,7 +253,7 @@
 								</div>
 							</div>
 							<div class="additional__el">
-								<span class="additional__el-wall1"></span>
+								<span class="additional__el-wall1-4"></span>
 								<span class="additional__el-wall2"></span>
 								<div class="additional__el-body">
 									<div class="additional__pic"><%= image_tag(asset_path('st-50.webp')) %></div>
@@ -265,7 +265,7 @@
 								</div>
 							</div>
 							<div class="additional__el">
-								<span class="additional__el-wall1"></span>
+								<span class="additional__el-wall1-5"></span>
 								<span class="additional__el-wall2"></span>
 								<div class="additional__el-body">
 									<div class="additional__pic"><%= image_tag(asset_path('lp-50.webp')) %></div>
@@ -277,7 +277,7 @@
 								</div>
 							</div>
 							<div class="additional__el">
-								<span class="additional__el-wall1"></span>
+								<span class="additional__el-wall1-6"></span>
 								<span class="additional__el-wall2"></span>
 								<div class="additional__el-body">
 									<div class="additional__pic"><%= image_tag(asset_path('pc-50.webp')) %></div>
@@ -293,7 +293,7 @@
 				</div>
 			</div>
 			<div class="portfolio">
-				<hr class="portfolio__bg">
+				<span class="portfolio__bg"></span>
 				<div class="container">
 					<div class="portfolio__row">
 						<div class="portfolio__label">ARE YOU IMPRESSED WITH OUR AMAZING PORTFOLIO?</div>
@@ -384,7 +384,7 @@
 				</div>
 			</div>
 			<div class="always">
-				<hr class="always__bg">
+				<span class="always__bg"></span>
 				<div class="container">
 					<div class="always__row">
 						<div class="always__label">We Always Provide Responsive WebsiteTemplates</div>
