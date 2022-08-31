@@ -21,4 +21,6 @@ Things you may want to cover:
 
 * Deployment instructions
 
+* git remote add origin git@github.com:d1mentor/profistyle.git
+
 * ...
