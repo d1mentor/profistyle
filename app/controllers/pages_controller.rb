@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+	#Методы страничек
 	def home
 		render_page_by_lang("home", params[:lang])
 	end
