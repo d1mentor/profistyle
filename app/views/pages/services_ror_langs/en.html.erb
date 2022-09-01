@@ -17,13 +17,13 @@
 				<div class="header__row ops">
 					<div class="header__rank">
 						<div class="header__body">
-						<ul class="header__icon-list">
-							<li class="header__icon-el"><%= image_tag(asset_path('fb-24.webp')) %></li>
-							<li class="header__icon-el"><%= image_tag(asset_path('tw-24.webp')) %></li>
-							<li class="header__icon-el"><%= image_tag(asset_path('ut-24.webp')) %></li>
-							<li class="header__icon-el"><%= image_tag(asset_path('in-24.webp')) %></li>
-							<li class="header__icon-el"><%= image_tag(asset_path('vk-24.webp')) %></li>
-						</ul>
+							<ul class="header__icon-list">
+								<li class="header__icon-el"><%= image_tag(asset_path('fb-24.webp')) %></li>
+								<li class="header__icon-el"><%= image_tag(asset_path('tw-24.webp')) %></li>
+								<li class="header__icon-el"><%= image_tag(asset_path('ut-24.webp')) %></li>
+								<li class="header__icon-el"><%= image_tag(asset_path('in-24.webp')) %></li>
+								<li class="header__icon-el"><%= image_tag(asset_path('vk-24.webp')) %></li>
+							</ul>
 							<ul class="header__text-list">
 								<li class="header__icon-box">
 								<%= image_tag(asset_path('ph-24.webp')) %>
@@ -65,18 +65,9 @@
 								<li><a href="/blog">Blog</a></li>
 								<li><a href="/portfolio">Portfolio</a></li>
 								<li><a href="/contacts">Contact Us</a></li>
-								<li><a href="#">
-								<%= image_tag(asset_path('pl-24.webp')) %>
-								</a>
-								</li>
-								<li><a href="#">
-								<%= image_tag(asset_path('rus-24.webp')) %>
-								</a>
-								</li>
-								<li><a href="#">
-								<%= image_tag(asset_path('eng-24.webp')) %>
-								</a>
-								</li>
+								<li><a href="#"><%= image_tag(asset_path('pl-24.webp')) %></a></li>
+								<li><a href="#"><%= image_tag(asset_path('rus-24.webp')) %></a></li>
+								<li><a href="#"><%= image_tag(asset_path('eng-24.webp')) %></a></li>
 							</ul>
 						</nav>
 					</div>
@@ -99,9 +90,9 @@
 								<a href="/services" class="jaw__link active">Services</a>
 								<span></span>
 								<div class="jaw__poster">
-									<a href="servicesRoR.html" class="jaw__link">RoR development</a>
+									<a href="/services_ror" class="jaw__link">RoR development</a>
 									<a href="/services_cms" class="jaw__link">CMS Development</a>
-									<a href="servicesSEO.html" class="jaw__link">SEO Promotion</a>
+									<a href="/services_seo" class="jaw__link">SEO Promotion</a>
 								</div>
 							</div>
 							<div class="jaw__el">
@@ -114,19 +105,13 @@
 								<a href="/contacts" class="jaw__link">Contact Us</a>
 							</div>
 							<div class="jaw__el">
-								<a href="#" class="jaw__link">
-								<%= image_tag(asset_path('pl-24.webp')) %>
-								</a>
+								<a href="#" class="jaw__link"><%= image_tag(asset_path('pl-24.webp')) %></a>
 							</div>
 							<div class="jaw__el">
-								<a href="#" class="jaw__link">
-								<%= image_tag(asset_path('rus-24.webp')) %>
-								</a>
+								<a href="#" class="jaw__link"><%= image_tag(asset_path('rus-24.webp')) %></a>
 							</div>
 							<div class="jaw__el">
-								<a href="#" class="jaw__link">
-								<%= image_tag(asset_path('eng-24.webp')) %>
-								</a>
+								<a href="#" class="jaw__link"><%= image_tag(asset_path('eng-24.webp')) %></a>
 							</div>
 						</div>
 					</div>
@@ -136,7 +121,7 @@
 				<div class="container">
 					<div class="breadcrumb__row">
 						<div class="breadcrumb__body">
-							<a href="/">Home</a> &#187; CMS Development
+							<a href="/">Home</a> &#187; Ruby Development
 						</div>
 					</div>
 				</div>
@@ -144,46 +129,83 @@
 			<div class="ruby">
 				<div class="container">
 					<div class="ruby__text-body">
-						<div class="ruby__label">SITES ON CMS JOOMLA AND WORDPRESS</div>
+						<div class="ruby__label">RUBY ON RAILS WEB DEVELOPMENT</div>
 
-						<div class="ruby__title">1. What is a site’s CMS?</div>
-						<div class="ruby__text">Content management system (CMS, content management system) — This is software with which you can develop and maintain web sites. In simple terms, this is a site for creating and editing sites. It is assumed that the user (not necessarily a programmer), having basic web design skills, will be able to create and maintain a website on CMS on their own. Of course, to implement any serious project, you need more than just basic skills, here our experts in CMS development will come to your aid. As a rule, CMS has an abundance of so-called plugins — ready-made solutions for any occasion. Sliders, galleries, contact forms, interactive maps, multilingual and even entire online stores (WooCommerce for example). Of course, as in any somewhat complex computer system, the CMS of the site often has compatibility problems with these same plugins. In such situations, people who do not have a number of specific skills are powerless. Despite the fact that there is an abundance of video materials on the network on the topic «Create a website in an hour», «Web design in an hour», «Online store for free in 20 minutes», but the difference between a product that a team of specialists worked on and the same website in an hour can be clearly seen even by a person who is not deep in the development topic. We recommend using <a href="servicesMAIN.html">specialist services</a>, in our practice there are many cases when ordinary people, in order to save money, tried to create a website on their own, or hired «muddy» freelancers, and in the end, everyone turned to us, but already losing time and money.</div>
+						<div class="ruby__title">Development process</div>
+						<div class="ruby__text">To understand how we develop our Ruby on Rails applications, you can take a look at
+							the main development steps.</div>
 
-						<div class="ruby__title">2.CMS development process</div>
-						<div class="ruby__subtitle">CMS selection for the site</div>
-						<div class="ruby__text">CMS are different, as a rule they are not much different, but among them there are divisions into areas: Universal CMS, CMS for creating online stores, CMS for creating blogs. Having a clear idea of ​​the final result, you should choose the appropriate CMS for the site. Hammering nails with a screwdriver is not reasonable, although it is quite realistic.</div>
-						<div class="ruby__subtitle">Choosing or creating a template</div>
-						<div class="ruby__text">To create a quality website, you need to clearly understand what you are doing and why. The choice of colors, the location of the buttons, the content — all this should not be chosen randomly. And all because there are a number of psychological moments even regarding color, a well-formed color palette is already a significant contribution to the fact that a client will make a purchase on your site or call you. Creating a template is a painstaking and by no means simple process, the designer and layout designer must work hard to eventually get good ground for the future website.When it comes to ready-made templates, many web designers make their money by simply creating and selling templates to other developers. If you do not have the time or funds to create a completely unique template, then ready-made solutions for a website on a CMS are your choice.</div>
-						<div class="ruby__subtitle">Content placement</div>
-						<div class="ruby__text">After preparing the template, specialists begin to post the required content, in fact, everything that you will see on your site. This also takes some time, but this stage is much easier than creating a template, so you don’t have to be a first-class programmer to handle it. A person who has passed the appropriate courses will be able to cope.</div>
-						<div class="ruby__subtitle">Uploading the finished site to hosting</div>
-						<div class="ruby__text">When the website is ready, the only thing left to do is buy a domain name, <a href="https://accounts.fozzy.com/aff.php?aff=18138">rent hosting</a> and put it all together. Only a specialist can cope with this stage, a simple user will spend a lot of time and effort, and in the end, he will still turn to a specialist for help.</div>
-
-						<div class="ruby__title">3.What CMS do we use and why?</div>
-						<div class="ruby__text">As a rule, our specialists for CMS sites use <a href="https://en.wordpress.org/">WordPress</a> and <a href="https://www.joomla.org/">Joomla</a>, these are the most popular and versatile tools. Our developers have extensive experience in CMS development, and over the years, sites on CMS WordPress and Joomla have proven their reliability and simplicity.</div>
-
-						<div class="ruby__title">4. Pros and cons of CMS development</div>
-						<div class="ruby__subtitle">Goodies</div>
-						<div class="ruby__text">
-							<ul class="ruby__text-list">
-								<li class="ruby__text-el">Development speed — with the help of a CMS and a ready-made template, a multifunctional website can be deployed in a few days</li>
-								<li class="ruby__text-el">Large developer community — most problems can be solved through communication with colleagues Easy to accompany — even a person without specific skills can administer the content</li>
-							</ul>
+						<div class="ruby__title">1. Main stages of development</div>
+						<div class="ruby__subtitle">Review of Terms of Reference</div>
+						<div class="ruby__text">The development of a web application is carried out on the basis of the terms of
+							reference (TOR). Specialists developers study technical specifications in detail, because The key to
+							success when developing an application is strict compliance with the requirements. To create an
+							application on Ruby on Rails, it is not necessary to know all the standards by heart, but in order to do
+							it efficiently, specialists must work with the documentation. You communicate with developers in the
+							language of the terms of reference. It is often difficult for people who are not close to technical
+							sciences to draw up technical specifications. Our experts will help you with this.</div>
+						<div class="ruby__subtitle">Domain Introduction</div>
+						<div class="ruby__text">Before starting development in accordance with the TOR, specialists study the
+							subject area. For example, you want to develop an online auto parts store with integration into your
+							warehouse and accounting programs. We need to study in detail the features of online sales of auto parts,
+							the range of cars, software products for selecting spare parts by make / model or VIN code of a car,
+							explore the possibilities of integrating other software products with a web application, and much more.
+						</div>
+						<div class="ruby__subtitle">Modeling a future Ruby on Rails application</div>
+						<div class="ruby__text">After getting acquainted with the TK and the subject area, specialists need to
+							schematically present a model of the future application. Not only the development of a web application on
+							Ruby on Rails, but any other requires a clear idea of ​​the final result. Otherwise, any complex
+							application will not work correctly, if at all. Our developers always work on the principle of measure 7
+							times — cut 1 time.</div>
+						<div class="ruby__subtitle">Getting Started</div>
+						<div class="ruby__text">Upon completion of the modeling, the specialists distribute responsibilities and
+							begin developing the web application according to the previously agreed scheme. With this approach, the
+							probability of force majeure is extremely low, the work goes quickly and efficiently.</div>
+						<div class="ruby__subtitle">Testing</div>
+						<div class="ruby__text">No developer in the world can avoid mistakes. Therefore, after writing the code, it
+							is immediately checked and, if necessary, corrected. Testing is a guarantee that your Ruby on Rails online
+							store will work properly, and you will not lose a penny due to a sudden failure of the web application.
 						</div>
 
-						<div class="ruby__subtitle">Cons</div>
-						<div class="ruby__text">
-							<ul class="ruby__text-list">
-								<li class="ruby__text-el">Performance is the main problem of all sites on CMS, any web site created without the use of CMS will be much faster, and therefore higher in search engine results.</li>
-								<li class="ruby__text-el"><a href="servicesSEO.html">SEO promotion</a> Website CMS is more demanding for optimization.</li>
-								<li class="ruby__text-el">Quality of plug-ins — The abundance of ready-made solutions is good, but almost half of them are of extremely poor quality.</li>
-							</ul>
+						<div class="ruby__title">2. Maintenance of finished software</div>
+						<div class="ruby__text">We provide a full range of services for maintaining and modernizing our Ruby on
+							Rails applications. The finished software is accompanied by technical documentation, with its help any
+							developer can easily understand the program code.</div>
+						<div class="ruby__subtitle">Technical documentation</div>
+						<div class="ruby__text">In the process of developing a web application, the programmer begins to write
+							technical documentation. It includes information about the software. In what environment was the
+							development carried out, and why in it. What plugins were used and why. What problems may arise. It is
+							very important to maintain documentation for further support and modernization of the application.</div>
+
+						<div class="ruby__title">3. Ruby on Rails development standards</div>
+						<div class="ruby__text">In the web development environment, there are certain application development and
+							security standards that must be followed because such a Ruby on Rails application will be difficult to
+							hack and easy to understand for another developer. We work strictly according to web development
+							standards, so you can be sure that there will be no problems with your application in the future.</div>
+						<div class="ruby__subtitle">Security Standards</div>
+						<div class="ruby__text">There are a number of security standards, such as rules for storing passwords in a
+							database. The passwords in the database are stored in an encrypted form, this ensures that when the
+							database is hacked, a hacker will not be able to use the obtained passwords to harm your application.
 						</div>
+						<div class="ruby__subtitle">Design Standards</div>
+						<div class="ruby__text">When developing, it is also necessary to use standards, for example, the so-called
+							<a href="href="https://github.com/arbox/ruby-style-guide/blob/master/README-ruRU.md">style code</a> . The Ruby on Rails application code must be properly structured. It is
+							necessary to avoid complex structures, piling up of monotonous functions, etc. This ensures that the
+							author of the application, or any other programmer, will easily understand the program code and be able to
+							work with it. Otherwise, it can be easier to develop a web application from scratch than to understand
+							what inexperienced developers have written.</div>
+						<div class="ruby__title">4. Why do our programmers choose Ruby on Rails?</div>
+						<div class="ruby__text">It’s all about the ease of use of this framework for developing web applications.
+							There are a number of ready-made and fully customizable modules that allow you to quickly create a Ruby on
+							Rails application. The Ruby programming language was originally created for the convenience of the
+							programmer. But most importantly, the Ruby on Rails web application has high performance and security, and
+							Ruby on Rails web sites have a high potential for <a href="servicesSEO.html">SEO promotion</a> in the TOP of search
+							engines.</div>
 					</div>
 					<div class="ruby__gallery">
 						<div class="ruby__el">
 							<div class="ruby__el-pic">
-							<%= image_tag(asset_path('php.webp')) %>
+							<%= image_tag(asset_path('php.png')) %>
 							</div>
 							<div class="ruby__el-body">
 								<div class="ruby__el-title">App Development</div>
@@ -192,7 +214,7 @@
 						</div>
 						<div class="ruby__el">
 							<div class="ruby__el-pic">
-							<%= image_tag(asset_path('ui.webp')) %>
+							<%= image_tag(asset_path('ui.png')) %>
 							</div>
 							<div class="ruby__el-body">
 								<div class="ruby__el-title">Web Portal</div>
@@ -359,9 +381,7 @@
 						</div>
 					</div>
 					<div class="footer__log">
-						<a href="https://accounts.fozzy.com/aff.php?aff=18138">
-						<%= image_tag(asset_path('fozzy_button.png')) %>
-						</a>
+						<a href="https://accounts.fozzy.com/aff.php?aff=18138"><%= image_tag(asset_path('fozzy_button.webp')) %></a>
 					</div>
 					<div class="footer__post">Created by <a href="https://profistyle.group/">profistyle.group ©</a></div>
 				</div>
