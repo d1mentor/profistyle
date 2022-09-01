@@ -9,4 +9,8 @@ Rails.application.routes.draw do
   get "/blog", to: "pages#blog"
   get "/contacts", to: "pages#contacts"
   get "/about_us", to: "pages#about"
+  get "/services_ror", to: "pages#ror"
+  get "/services_cms", to: "pages#cms"
+  get "/services_seo", to: "pages#seo"
+  get "/services_cmr", to: "pages#cmr"
 end

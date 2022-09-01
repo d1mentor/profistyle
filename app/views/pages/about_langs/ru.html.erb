@@ -1,49 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="shortcut icon" href="img/cropped-icon2.png" type="image/x-icon">
-	<title>Website development and SEO promotion - ProfiStyle Group</title>
-</head>
-
-<body>
 	<div class="wrapper">
 		<header class="header" id="header">
 			<div class="container">
 				<div class="header__row ops">
 					<div class="header__rank">
 						<div class="header__body">
-							<ul class="header__icon-list">
-								<li class="header__icon-el"><img src="img/fb-24.webp" alt=""></li>
-								<li class="header__icon-el"><img src="img/tw-24.webp" alt=""></li>
-								<li class="header__icon-el"><img src="img/ut-24.webp" alt=""></li>
-								<li class="header__icon-el"><img src="img/in-24.webp" alt=""></li>
-								<li class="header__icon-el"><img src="img/vk-24.webp" alt=""></li>
-							</ul>
+						<ul class="header__icon-list">
+							<li class="header__icon-el"><%= image_tag(asset_path('fb-24.webp')) %></li>
+							<li class="header__icon-el"><%= image_tag(asset_path('tw-24.webp')) %></li>
+							<li class="header__icon-el"><%= image_tag(asset_path('ut-24.webp')) %></li>
+							<li class="header__icon-el"><%= image_tag(asset_path('in-24.webp')) %></li>
+							<li class="header__icon-el"><%= image_tag(asset_path('vk-24.webp')) %></li>
+						</ul>
 							<ul class="header__text-list">
 								<li class="header__icon-box">
-									<img src="img/ph-24.webp" alt="">
+								<%= image_tag(asset_path('ph-24.webp')) %>
 									<div class="header__icon-text"><a href="tel:+48795124042" class="header__icon-link">+48795124042</a>
 									</div>
 								</li>
 								<li class="header__icon-box">
-									<img src="img/ph-24.webp" alt="">
+									<%= image_tag(asset_path('ph-24.webp')) %>
 									<div class="header__icon-text"><a href="tel:+48796128406" class="header__icon-link">+48796128406</a>
 									</div>
 								</li>
 								<li class="header__icon-box">
-									<img src="img/en-24.webp" alt="">
+								<%= image_tag(asset_path('en-24.webp')) %>
 									<div class="header__icon-text"><a href="mailto:biuro@profistyle.group"
 											class="header__icon-link">biuro@profistyle.group</a></div>
 								</li>
 							</ul>
 						</div>
 						<div class="header__logo">
-							<img src="img/logo/cropped-logo.webp" alt="">
+						<%= image_tag(asset_path('cropped-logo.webp')) %>
 						</div>
 						<div class="menu-btn ">
 							<span></span>
@@ -52,22 +39,22 @@
 					<div class="menu">
 						<nav class="nav mon">
 							<ul>
-								<li><a href="home.html">Home</a></li>
-								<li><a href="about.html">About Us</a></li>
-								<li><a href="servicesMAIN.html">Services</a>
+								<li><a href="/?lang=en">Home</a></li>
+								<li><a href="/about_us?lang=en">About Us</a></li>
+								<li><a href="/service?lang=en">Services</a>
 									<button class="collapsible"></button>
 									<div class="collapsible-content">
-										<a href="servicesRoR.html">RoR development</a>
-										<a href="servicesCMS.html">CMS Development</a>
-										<a href="servicesSEO.html">SEO Promotion</a>
+										<a href="">RoR development</a>
+										<a href="">CMS Development</a>
+										<a href="">SEO Promotion</a>
 									</div>
 								</li>
-								<li><a href="blog.html">Blog</a></li>
-								<li><a href="portfolio.html">Portfolio</a></li>
-								<li><a href="contact.html">Contact Us</a></li>
-								<li><a href="#"><img src="img/pl-24.webp" alt=""></a></li>
-								<li><a href="#"><img src="img/rus-24.webp" alt=""></a></li>
-								<li><a href="#"><img src="img/eng-24.webp" alt=""></a></li>
+								<li><a href="/blog?lang=en">Blog</a></li>
+								<li><a href="/portfolio?lang=en">Portfolio</a></li>
+								<li><a href="/contacts?lang=en">Contact Us</a></li>
+								<li><a href="/about_us?lang=pl"><%= image_tag(asset_path('pl-24.webp')) %></a></li>
+								<li><a href="/about_us?lang=ru"><%= image_tag(asset_path('rus-24.webp')) %></a></li>
+								<li><a href="/about_us?lang=en"><%= image_tag(asset_path('eng-24.webp')) %></a></li>
 							</ul>
 						</nav>
 					</div>
@@ -78,40 +65,46 @@
 			<div class="jaw bg">
 				<div class="container">
 					<div class="jaw__row mon">
-						<div class="jaw__pic"><img src="img/logo/cropped-logo.webp" alt=""></div>
+						<div class="jaw__pic"><%= image_tag(asset_path('cropped-logo.webp')) %></div>
 						<div class="jaw__list">
 							<div class="jaw__el">
-								<a href="home.html" class="jaw__link">Home</a>
+								<a href="/?lang=en" class="jaw__link">Home</a>
 							</div>
 							<div class="jaw__el">
-								<a href="about.html" class="jaw__link active">About Us</a>
+								<a href="/about_us?lang=en" class="jaw__link active">About Us</a>
 							</div>
 							<div class="jaw__el">
-								<a href="servicesMAIN.html" class="jaw__link">Services</a>
+								<a href="/services?lang=en" class="jaw__link">Services</a>
 								<span></span>
 								<div class="jaw__poster">
-									<a href="servicesRoR.html" class="jaw__link">RoR development</a>
-									<a href="servicesCMS.html" class="jaw__link">CMS Development</a>
-									<a href="servicesSEO.html" class="jaw__link">SEO Promotion</a>
+									<a href="" class="jaw__link">RoR development</a>
+									<a href="" class="jaw__link">CMS Development</a>
+									<a href="" class="jaw__link">SEO Promotion</a>
 								</div>
 							</div>
 							<div class="jaw__el">
-								<a href="blog.html" class="jaw__link">Blog</a>
+								<a href="/blog?lang=en" class="jaw__link">Blog</a>
 							</div>
 							<div class="jaw__el">
-								<a href="portfolio.html" class="jaw__link">Portfolio</a>
+								<a href="/portfolio?lang=en" class="jaw__link">Portfolio</a>
 							</div>
 							<div class="jaw__el">
-								<a href="contact.html" class="jaw__link">Contact Us</a>
+								<a href="/contacts?lang=en" class="jaw__link">Contact Us</a>
 							</div>
 							<div class="jaw__el">
-								<a href="#" class="jaw__link"><img src="img/pl-24.webp" alt=""></a>
+								<a href="/about_us?lang=pl" class="jaw__link">
+								<%= image_tag(asset_path('pl-24.webp')) %>
+								</a>
 							</div>
 							<div class="jaw__el">
-								<a href="#" class="jaw__link"><img src="img/rus-24.webp" alt=""></a>
+								<a href="/about_us?lang=ru" class="jaw__link">
+								<%= image_tag(asset_path('rus-24.webp')) %>
+								</a>
 							</div>
 							<div class="jaw__el">
-								<a href="#" class="jaw__link"><img src="img/eng-24.webp" alt=""></a>
+								<a href="/about_us?lang=en" class="jaw__link">
+								<%= image_tag(asset_path('eng-24.webp')) %>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -121,7 +114,7 @@
 				<div class="container">
 					<div class="breadcrumb__row">
 						<div class="breadcrumb__body">
-							<a href="home.html">Home</a> &#187; Who We Are
+							<a href="/?lang=en">Home</a> &#187; Who We Are
 						</div>
 					</div>
 				</div>
@@ -133,7 +126,7 @@
 						<div class="staff__gallery">
 							<div class="staff__el wobble">
 								<div class="staff__pic">
-								<img src="img/ruslan.webp" alt="">
+								<%= image_tag(asset_path('ruslan.webp')) %>
 								</div>
 								<div class="staff__body">
 									<div class="staff__body-title">Ruslan</div>
@@ -148,7 +141,7 @@
 							</div>
 							<div class="staff__el wobble">
 								<div class="staff__pic">
-								<img src="img/daniil-1.webp" alt="">
+								<%= image_tag(asset_path('daniil-1.webp')) %>
 								</div>
 								<div class="staff__body">
 									<div class="staff__body-title">Daniil</div>
@@ -163,7 +156,7 @@
 							</div>
 							<div class="staff__el wobble">
 								<div class="staff__pic">
-								<img src="img/dmytro.webp" alt="">
+								<%= image_tag(asset_path('dmytro.webp')) %>
 								</div>
 								<div class="staff__body">
 									<div class="staff__body-title">Dmytro</div>
@@ -178,7 +171,7 @@
 							</div>
 							<div class="staff__el wobble">
 								<div class="staff__pic">
-								<img src="img/image.webp" alt="">
+								<%= image_tag(asset_path('image.webp')) %>
 								</div>
 								<div class="staff__body">
 									<div class="staff__body-title">Danil</div>
@@ -193,7 +186,7 @@
 							</div>
 							<div class="staff__el wobble">
 								<div class="staff__pic">
-								<img src="img/andrey.webp" alt="">
+								<%= image_tag(asset_path('andrey.webp')) %>
 								</div>
 								<div class="staff__body">
 									<div class="staff__body-title">Andrey</div>
@@ -217,7 +210,7 @@
 						<div class="briefly__label">SOMETHING ABOUT US</div>
 						<div class="briefly__box">
 							<div class="briefly__pic">
-								<img src="img/banner1.webp" alt="">
+							<%= image_tag(asset_path('banner1.webp')) %>
 							</div>
 							<div class="briefly__el-box">
 								<div class="briefly__el">
@@ -252,7 +245,7 @@
 						<div class="choose__col">
 							<div class="choose__label">WHY YOU SHOULD CHOOSE US ?</div>
 							<div class="choose__vid">
-								<img src="img/about1.webp" alt="">
+							<%= image_tag(asset_path('about1.webp')) %>
 							</div>
 						</div>
 						<div class="choose__col">
@@ -261,13 +254,16 @@
 								hosting or a VPS server.</div>
 							<div class="choose__body">
 								<div class="choose__el">
-									<div class="choose__pic"><img src="img/bu-50.webp" alt=""></div>
+									<div class="choose__pic">
+									<%= image_tag(asset_path('bu-50.webp')) %>
+									</div>
 									<div class="choose__tagline">CREATIVE</div>
 									<div class="choose__text">Our experts will advise you on all issues. We use a creative approach in
 										communicating with the customer and what he needs .</div>
 								</div>
 								<div class="choose__el">
-									<div class="choose__pic"><img src="img/bx-50.webp" alt=""></div>
+									<div class="choose__pic">
+									<%= image_tag(asset_path('bx-50.webp')) %></div>
 									<div class="choose__tagline">STANDARD</div>
 									<div class="choose__text">Our specialists have the necessary qualifications to fulfill your order in
 										accordance with the highest and most modern standards in the field of IT.</div>
@@ -284,28 +280,28 @@
 						<div class="product__body">
 							<div class="product__el">
 								<div class="product__el-pic">
-									<img src="img/st-80.png" alt="">
+								<%= image_tag(asset_path('st-80.png')) %>
 								</div>
 								<div class="product__el-num">7</div>
 								<div class="product__el-text">SINCE WE LAUNCHED</div>
 							</div>
 							<div class="product__el">
 								<div class="product__el-pic">
-									<img src="img/gr-80.png" alt="">
+								<%= image_tag(asset_path('gr-80.png')) %>
 								</div>
 								<div class="product__el-num">1204</div>
 								<div class="product__el-text">SATISFIED USTOMERS</div>
 							</div>
 							<div class="product__el">
 								<div class="product__el-pic">
-									<img src="img/en-80.png" alt="">
+								<%= image_tag(asset_path('en-80.png')) %>
 								</div>
 								<div class="product__el-num">120450</div>
 								<div class="product__el-text">EMAILS SENT/MONTH</div>
 							</div>
 							<div class="product__el">
 								<div class="product__el-pic">
-									<img src="img/tp-80.png" alt="">
+								<%= image_tag(asset_path('tp-80.png')) %>
 								</div>
 								<div class="product__el-num">800</div>
 								<div class="product__el-text">TEMPLATES</div>
@@ -387,36 +383,31 @@
 							<div class="footer__title">Photos</div>
 							<div class="footer__list4">
 								<div class="footer__list4-el">
-									<a href="#"><img src="img/g1.webp" alt=""></a>
+									<a href="#"><%= image_tag(asset_path('g1.webp')) %></a>
 								</div>
 								<div class="footer__list4-el">
-									<a href="#"><img src="img/g2.webp" alt=""></a>
+									<a href="#"><%= image_tag(asset_path('g2.webp')) %></a>
 								</div>
 								<div class="footer__list4-el">
-									<a href="#"><img src="img/g6.webp" alt=""></a>
+									<a href="#"><%= image_tag(asset_path('g6.webp')) %></a>
 								</div>
 								<div class="footer__list4-el">
-									<a href="#"><img src="img/g7.webp" alt=""></a>
+									<a href="#"><%= image_tag(asset_path('g7.webp')) %></a>
 								</div>
 								<div class="footer__list4-el">
-									<a href="#"><img src="img/g8.webp" alt=""></a>
+									<a href="#"><%= image_tag(asset_path('g8.webp')) %></a>
 								</div>
 								<div class="footer__list4-el">
-									<a href="#"><img src="img/g9.webp" alt=""></a>
+									<a href="#"><%= image_tag(asset_path('g9.webp')) %></a>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="footer__log">
-						<a href="https://accounts.fozzy.com/aff.php?aff=18138"><img src="img/fozzy_button.webp" alt=""></a>
+						<a href="https://accounts.fozzy.com/aff.php?aff=18138"><%= image_tag(asset_path('fozzy_button.webp')) %></a>
 					</div>
 					<div class="footer__post">Created by <a href="https://profistyle.group/">profistyle.group ©</a></div>
 				</div>
 			</div>
 		</footer>
 	</div>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-	<script src="js/script.js"></script>
-</body>
-
-</html>

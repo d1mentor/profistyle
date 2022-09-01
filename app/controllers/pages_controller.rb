@@ -24,6 +24,23 @@ class PagesController < ApplicationController
 		render_page_by_lang("blog", params[:lang])
 	end
 
+	def services_ror
+		render_page_by_lang("services_ror", params[:lang])
+	end
+
+	def services_cms
+		render_page_by_lang("services_cms", params[:lang])
+	end
+
+	def services_cmr
+		render_page_by_lang("services_cmr", params[:lang])
+	end
+
+	def services_seo
+		render_page_by_lang("services_seo", params[:lang])
+	end
+
+
 	private
 
 	def render_page_by_lang(dir_name, lang)
