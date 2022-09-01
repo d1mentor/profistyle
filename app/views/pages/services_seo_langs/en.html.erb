@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" href="img/cropped-icon2.png" type="image/x-icon">
+	<title>Website development and SEO promotion - ProfiStyle Group</title>
+</head>
+
+<body>
+<div class="wrapper">
+<header class="header" id="header">
+	<div class="container">
+		<div class="header__row ops">
+			<div class="header__rank">
+				<div class="header__body">
+					<ul class="header__icon-list">
+					<li class="header__icon-el"><%= image_tag(asset_path('fb-24.webp')) %></li>
+					<li class="header__icon-el"><%= image_tag(asset_path('tw-24.webp')) %></li>
+					<li class="header__icon-el"><%= image_tag(asset_path('ut-24.webp')) %></li>
+					<li class="header__icon-el"><%= image_tag(asset_path('in-24.webp')) %></li>
+					<li class="header__icon-el"><%= image_tag(asset_path('vk-24.webp')) %></li>
+					</ul>
+					<ul class="header__text-list">
+						<li class="header__icon-box">
+						<%= image_tag(asset_path('ph-24.webp')) %>
+							<div class="header__icon-text"><a href="tel:+48795124042" class="header__icon-link">+48795124042</a>
+							</div>
+						</li>
+						<li class="header__icon-box">
+						<%= image_tag(asset_path('ph-24.webp')) %>
+							<div class="header__icon-text"><a href="tel:+48796128406" class="header__icon-link">+48796128406</a>
+							</div>
+						</li>
+						<li class="header__icon-box">
+						<%= image_tag(asset_path('en-24.webp')) %>
+							<div class="header__icon-text"><a href="mailto:biuro@profistyle.group"
+									class="header__icon-link">biuro@profistyle.group</a></div>
+						</li>
+					</ul>
+				</div>
+				<div class="header__logo">
+				<%= image_tag(asset_path('cropped-logo.webp')) %>
+				</div>
+				<div class="menu-btn ">
+					<span></span>
+				</div>
+			</div>
+			<div class="menu">
+				<nav class="nav mon">
+					<ul>
+						<li><a href="/">Home</a></li>
+						<li><a href="/about_us">About Us</a></li>
+						<li><a href="/services">Services</a>
+							<button class="collapsible"></button>
+							<div class="collapsible-content">
+								<a href="/services_ror">RoR development</a>
+								<a href="/services_cms">CMS Development</a>
+								<a href="/services_seo">SEO Promotion</a>
+							</div>
+						</li>
+						<li><a href="/blog">Blog</a></li>
+						<li><a href="/portfolio">Portfolio</a></li>
+						<li><a href="/contacts">Contact Us</a></li>
+						<li><a href="#"><%= image_tag(asset_path('pl-24.webp')) %></a></li>
+						<li><a href="#"><%= image_tag(asset_path('rus-24.webp')) %></a></li>
+						<li><a href="#"><%= image_tag(asset_path('eng-24.webp')) %></a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+</header>
+<main class="main">
+	<div class="jaw bg">
+		<div class="container">
+			<div class="jaw__row mon">
+				<div class="jaw__pic"><%= image_tag(asset_path('cropped-logo.webp')) %></div>
+				<div class="jaw__list">
+					<div class="jaw__el">
+						<a href="/" class="jaw__link">Home</a>
+					</div>
+					<div class="jaw__el">
+						<a href="/about_us" class="jaw__link">About Us</a>
+					</div>
+					<div class="jaw__el">
+						<a href="/services" class="jaw__link active">Services</a>
+						<span></span>
+						<div class="jaw__poster">
+							<a href="/services_ror" class="jaw__link">RoR development</a>
+							<a href="/services_cms" class="jaw__link">CMS Development</a>
+							<a href="/services_seo" class="jaw__link">SEO Promotion</a>
+						</div>
+					</div>
+					<div class="jaw__el">
+						<a href="/blog" class="jaw__link">Blog</a>
+					</div>
+					<div class="jaw__el">
+						<a href="/portfolio" class="jaw__link">Portfolio</a>
+					</div>
+					<div class="jaw__el">
+						<a href="/contacts" class="jaw__link">Contact Us</a>
+					</div>
+					<div class="jaw__el">
+						<a href="#" class="jaw__link"><%= image_tag(asset_path('pl-24.webp')) %></a>
+					</div>
+					<div class="jaw__el">
+						<a href="#" class="jaw__link"><%= image_tag(asset_path('rus-24.webp')) %></a>
+					</div>
+					<div class="jaw__el">
+						<a href="#" class="jaw__link"><%= image_tag(asset_path('eng-24.webp')) %></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="breadcrumb">
+		<div class="container">
+			<div class="breadcrumb__row">
+				<div class="breadcrumb__body">
+					<a href="/">Home</a> &#187; SEO Promotion
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="ruby">
+		<div class="container">
+			<div class="ruby__text-body">
+				<div class="ruby__label">SEO PROMOTION, OPTIMIZATION, CONTEXTUAL ADVERTISING</div>
+				<div class="ruby__text">An important element of the quality of a website is its search engine optimization,
+					which provides higher positioning in search engines than non-optimized websites. However, with serious
+					competition, search engine optimization alone is not enough to get the site into the top 10 search
+					engines. So, there are two main ways to promote a site to the TOP. Let’s dwell on each of them in more
+					detail. </div>
+
+				<div class="ruby__title">1. Setting up contextual advertising</div>
+				<div class="ruby__text">The first method is faster and easier, but requires fine tuning to optimize
+					financial costs. We are talking about advertising <a href="https://ads.google.com/">Google</a> ads and <a
+						href="https://direct.yandex.ru/">Yandex-direct</a>. You pay for a click a user makes on your ad in search. Depending on the
+					budget and settings of the advertising company, the search system will display your ad on the first page
+					of search results for the search query specified in your ad. Congratulations, you are in the top 10 of the
+					search engine! Fast and efficient, but, as always, the main thing is in the details. For example, you set
+					a daily budget of $100. Google ads or Yandex Direct can spend them for 2000 clicks, or maybe even 10. It
+					all depends on the settings of the advertising company. On average, out of 100 people who clicked on the
+					ad and followed it to the site, 1-2 people will make an order. Accordingly, these two orders can cost $5
+					or $1,000. Therefore, always contact specialists in the field of advertising settings. We will create and
+					professionally set up an advertising campaign for you. </div>
+
+				<div class="ruby__title">2. SEO website promotion</div>
+				<div class="ruby__text">The second way is longer and starts with proper SEO optimization of the site. </div>
+
+				<div class="ruby__subtitle">SEO optimization</div>
+				<div class="ruby__text">If there are no competitive sites for your keywords, then most likely the site will
+					get into the top 10 only due to search engine optimization. The site is analyzed for speed and errors in
+					the code. We provide a detailed report on the analysis carried out with a list of deficiencies found and
+					possible ways to eliminate them. Errors are eliminated, performance is optimized.The semantic core is
+					modified for your keywords. The best solution is to initially <a href="servicesCMS.html">website development in pure
+						HTML/CSS</a> or in framework <a href="blogPostRuby.html">Ruby on Rails</a>. Such sites are not overloaded with
+					unnecessary code and are initially created with search engine optimization. If there is high competition
+					for keywords, SEO promotion is necessary. </div>
+				<div class="ruby__subtitle">SEO Analytics</div>
+				<div class="ruby__text">SEO website promotion starts with competitor analytics. Competitor sites in the
+					TOP10 are determined by keywords, a detailed analysis of their semantics, trustworthiness and many other
+					parameters is carried out. Depending on the results, a further promotion strategy and the necessary budget
+					are determined. It includes specialist fees + technical costs. Depending on the number of keywords for
+					which it is necessary to promote the site, and the level of competition, several specialists may be
+					involved. </div>
+				<div class="ruby__subtitle">Search Engine Optimization</div>
+				<div class="ruby__text">Work on SEO website promotion takes from 2 months to 1 year. The budget strongly
+					depends on the quantity and quality of competitors, they do not sleep and also promote their sites. In the
+					future, after the site enters the top 10 Yandex and / or Google, constant work on promotion will not be
+					required. Periodically, it will be necessary to monitor the position of the site in search engines and, in
+					case of sudden changes in positions, conduct additional analytics on the possible actions of competitors
+					or the possible entry of the website under search engine filters. In the first case (with Google ads or
+					Yandex direct), you pay all the time and the website immediately gets into the top 10 (more precisely, an
+					advertisement linking to your website), and in the second (with seo promotion) you pay within promotion
+					period (from 2 to 12 months), and then, after passing the site in the top 10, you get traffic to the site
+					from the search engine and customers for free. The website is always in the search engine results, and the
+					advertisement is shown periodically, depending on the budget and contextual advertising settings. The
+					choice is yours. We will professionally perform both options.</div>
+			</div>
+			<div class="ruby__gallery">
+				<div class="ruby__el">
+					<div class="ruby__el-pic">
+					<%= image_tag(asset_path('php.png')) %>
+					</div>
+					<div class="ruby__el-body">
+						<div class="ruby__el-title">App Development</div>
+						<div class="ruby__el-text">Development of desktop and mobile web applications</div>
+					</div>
+				</div>
+				<div class="ruby__el">
+					<div class="ruby__el-pic">
+					<%= image_tag(asset_path('ui.png')) %>
+					</div>
+					<div class="ruby__el-body">
+						<div class="ruby__el-title">Web Portal</div>
+						<div class="ruby__el-text">Creation, supporting and SEO promotion of web portals</div>
+					</div>
+				</div>
+				<div class="ruby__el">
+					<div class="ruby__el-pic">
+					<%= image_tag(asset_path('mockup.png')) %>
+					</div>
+					<div class="ruby__el-body">
+						<div class="ruby__el-title">Open Source</div>
+						<div class="ruby__el-text">The projects are available for viewing and analysis on Github</div>
+					</div>
+				</div>
+				<div class="ruby__el">
+					<div class="ruby__el-pic">
+					<%= image_tag(asset_path('responsive.png')) %>
+					</div>
+					<div class="ruby__el-body">
+						<div class="ruby__el-title">CRM</div>
+						<div class="ruby__el-text">nstallation, configuration and supporting of CRM applications</div>
+					</div>
+				</div>
+				<div class="ruby__el">
+					<div class="ruby__el-pic">
+					<%= image_tag(asset_path('brainstorm.png')) %>
+					</div>
+					<div class="ruby__el-body">
+						<div class="ruby__el-title">Enterprise Portal</div>
+						<div class="ruby__el-text">Creation and supporting of Enerprise portals</div>
+					</div>
+				</div>
+				<div class="ruby__el">
+					<div class="ruby__el-pic">
+					<%= image_tag(asset_path('web-design.png')) %>
+					</div>
+					<div class="ruby__el-body">
+						<div class="ruby__el-title">Custom eCommerce</div>
+						<div class="ruby__el-text">Development and supporting of web applications for e-commerce</div>
+					</div>
+				</div>
+				<div class="ruby__el">
+					<div class="ruby__el-pic">
+					<%= image_tag(asset_path('website.png')) %>
+					</div>
+					<div class="ruby__el-body">
+						<div class="ruby__el-title">CMS</div>
+						<div class="ruby__el-text">Installation, configuration and supporting of CMS websites</div>
+					</div>
+				</div>
+				<div class="ruby__el">
+					<div class="ruby__el-pic">
+					<%= image_tag(asset_path('wireframe.png')) %>
+					</div>
+					<div class="ruby__el-body">
+						<div class="ruby__el-title">Website Maintenance</div>
+						<div class="ruby__el-text">Supporting, optimization and SEO promotion of websites</div>
+					</div>
+				</div>
+				<div class="ruby__el">
+					<div class="ruby__el-pic">
+					<%= image_tag(asset_path('browser.png')) %>
+					</div>
+					<div class="ruby__el-body">
+						<div class="ruby__el-title">Cost Effective</div>
+						<div class="ruby__el-text">We will develop effective tools for your online business</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+<footer class="footer">
+	<div class="container">
+		<div class="footer__row ops">
+			<div class="footer__rank">
+				<div class="footer__coll">
+					<div class="footer__title">Call us</div>
+					<div class="footer__subtitle">Our specialists will answer all your questions</div>
+					<div class="footer__list1">
+						<div class="footer__list1-el">
+							<div class="footer__list1-pic"></div>
+							<div class="footer__list1-num"><a href="tel:+48795124042">+ 48 795 124 042</a></div>
+						</div>
+						<div class="footer__list1-el">
+							<div class="footer__list1-pic"></div>
+							<div class="footer__list1-num"><a href="tel:+380687120756">+ 38 068 7120756</a></div>
+						</div>
+						<div class="footer__list1-el">
+							<div class="footer__list1-pic"></div>
+							<div class="footer__list1-num"><a href="tel:+48796128406">+ 48 796 128 406</a></div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__coll">
+					<div class="footer__title">Working hours</div>
+					<div class="footer__list2">
+						<div class="footer__list2-el">
+							Mon: 8-00 - 16-00
+						</div>
+						<div class="footer__list2-el">
+							Tue: 8-00 - 16-00
+						</div>
+						<div class="footer__list2-el">
+							Wed: 8-00 - 16-00
+						</div>
+						<div class="footer__list2-el">
+							Thu: 8-00 - 16-00
+						</div>
+						<div class="footer__list2-el">
+							Fri: 8-00 - 16-00
+						</div>
+						<div class="footer__list2-el">
+							Sat - Sun: Off
+						</div>
+					</div>
+				</div>
+				<div class="footer__coll">
+					<div class="footer__title">Advice Center</div>
+					<div class="footer__list3">
+						<div class="footer__list3-el">
+							<a href="https://accounts.fozzy.com/aff.php?aff=18138">Domain name</a>
+						</div>
+						<div class="footer__list3-el">
+							<a href="https://accounts.fozzy.com/aff.php?aff=18138">Hosting</a>
+						</div>
+						<div class="footer__list3-el">
+							<a href="https://accounts.fozzy.com/aff.php?aff=18138">VPS/VDS hosting</a>
+						</div>
+						<div class="footer__list3-el">
+							<a href="https://accounts.fozzy.com/aff.php?aff=18138">Dedicated server</a>
+						</div>
+						<div class="footer__list3-el">
+							<a href="#">Templates Word Press</a>
+						</div>
+						<div class="footer__list3-el">
+							<a href="#">Templates Joomla</a>
+						</div>
+					</div>
+				</div>
+				<div class="footer__coll">
+					<div class="footer__title">Photos</div>
+					<div class="footer__list4">
+								<div class="footer__list4-el">
+									<a href="#"><%= image_tag(asset_path('g1.webp')) %></a>
+								</div>
+								<div class="footer__list4-el">
+									<a href="#"><%= image_tag(asset_path('g2.webp')) %></a>
+								</div>
+								<div class="footer__list4-el">
+									<a href="#"><%= image_tag(asset_path('g6.webp')) %></a>
+								</div>
+								<div class="footer__list4-el">
+									<a href="#"><%= image_tag(asset_path('g7.webp')) %></a>
+								</div>
+								<div class="footer__list4-el">
+									<a href="#"><%= image_tag(asset_path('g8.webp')) %></a>
+								</div>
+								<div class="footer__list4-el">
+									<a href="#"><%= image_tag(asset_path('g9.webp')) %></a>
+								</div>
+							</div>
+				</div>
+			</div>
+			<div class="footer__log">
+				<a href="https://accounts.fozzy.com/aff.php?aff=18138"><%= image_tag(asset_path('fozzy_button.webp')) %></a>
+			</div>
+			<div class="footer__post">Created by <a href="https://profistyle.group/">profistyle.group ©</a></div>
+		</div>
+	</div>
+</footer>
+</div>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+
+</html>
