@@ -39,22 +39,22 @@
 					<div class="menu">
 						<nav class="nav mon">
 							<ul>
-								<li><a href="home.html">Home</a></li>
-								<li><a href="about.html">About Us</a></li>
-								<li><a href="servicesMAIN.html">Services</a>
+								<li><a href="/?lang=ru">Главная</a></li>
+								<li><a href="/about_us?lang=ru">О нас</a></li>
+								<li><a href="/services?lang=ru">Услуги</a>
 									<button class="collapsible"></button>
 									<div class="collapsible-content">
-										<a href="servicesRoR.html">RoR development</a>
-										<a href="servicesCMS.html">CMS Development</a>
-										<a href="servicesSEO.html">SEO Promotion</a>
+										<a href="">RoR разработка</a>
+										<a href="">CMS разработка</a>
+										<a href="">SEO продвижение</a>
 									</div>
 								</li>
-								<li><a href="blog.html">Blog</a></li>
-								<li><a href="portfolio.html">Portfolio</a></li>
-								<li><a href="contact.html">Contact Us</a></li>
-								<li><a href="#"><%= image_tag(asset_path('pl-24.webp')) %></a></li>
-								<li><a href="#"><%= image_tag(asset_path('rus-24.webp')) %></a></li>
-								<li><a href="#"><%= image_tag(asset_path('eng-24.webp')) %></a></li>
+								<li><a href="/blog?lang=ru">Блог</a></li>
+								<li><a href="/portfolio?lang=ru">Портфолио</a></li>
+								<li><a href="/contacts?lang=ru">Контакты</a></li>
+								<li><a href="/?lang=pl"><%= image_tag(asset_path('pl-24.webp')) %></a></li>
+								<li><a href="/?lang=ru"><%= image_tag(asset_path('rus-24.webp')) %></a></li>
+								<li><a href="/?lang=en"><%= image_tag(asset_path('eng-24.webp')) %></a></li>
 							</ul>
 						</nav>
 					</div>
@@ -68,37 +68,37 @@
 						<div class="jaw__pic"><%= image_tag(asset_path('cropped-logo.webp')) %></div>
 						<div class="jaw__list">
 							<div class="jaw__el">
-								<a href="home.html" class="jaw__link active">Home</a>
+								<a href="/?lang=ru" class="jaw__link active">Главная</a>
 							</div>
 							<div class="jaw__el">
-								<a href="about.html" class="jaw__link">About Us</a>
+								<a href="/about_us?lang=ru" class="jaw__link">О нас</a>
 							</div>
 							<div class="jaw__el">
-								<a href="servicesMAIN.html" class="jaw__link">Services</a>
+								<a href="/services?lang=ru" class="jaw__link">Услуги</a>
 								<span></span>
 								<div class="jaw__poster">
-									<a href="servicesRoR.html" class="jaw__link">RoR development</a>
-									<a href="servicesCMS.html" class="jaw__link">CMS Development</a>
-									<a href="servicesSEO.html" class="jaw__link">SEO Promotion</a>
+									<a href="" class="jaw__link">RoR разработка</a>
+									<a href="" class="jaw__link">CMS разработка</a>
+									<a href="" class="jaw__link">SEO продвижение</a>
 								</div>
 							</div>
 							<div class="jaw__el">
-								<a href="blog.html" class="jaw__link">Blog</a>
+								<a href="/blog?lang=ru" class="jaw__link">Блог</a>
 							</div>
 							<div class="jaw__el">
-								<a href="portfolio.html" class="jaw__link">Portfolio</a>
+								<a href="/portfolio?lang=ru" class="jaw__link">Портфолио</a>
 							</div>
 							<div class="jaw__el">
-								<a href="contact.html" class="jaw__link">Contact Us</a>
+								<a href="/contacts?lang=ru" class="jaw__link">Контакты</a>
 							</div>
 							<div class="jaw__el">
-								<a href="#" class="jaw__link"><%= image_tag(asset_path('pl-24.webp')) %></a>
+								<a href="/?lang=pl" class="jaw__link"><%= image_tag(asset_path('pl-24.webp')) %></a>
 							</div>
 							<div class="jaw__el">
-								<a href="#" class="jaw__link"><%= image_tag(asset_path('rus-24.webp')) %></a>
+								<a href="/?lang=ru" class="jaw__link"><%= image_tag(asset_path('rus-24.webp')) %></a>
 							</div>
 							<div class="jaw__el">
-								<a href="#" class="jaw__link"><%= image_tag(asset_path('eng-24.webp')) %></a>
+								<a href="/?lang=en" class="jaw__link"><%= image_tag(asset_path('eng-24.webp')) %></a>
 							</div>
 						</div>
 					</div>
@@ -107,34 +107,30 @@
 			<div class="carousel">
 				<div class="slider">
 					<div class="slider__item ops">
-						<hr class="slider__item-bg1" style="margin: 0;">
+						<span class="slider__item-bg1"></span>
 						<%= image_tag(asset_path('Sl1.jpg'), class: "slider__item-pic") %>
 						<div class="slider__item-box">
-							<div class="slider__item-label">Solution Website For you HTML5 RESPONSIVE</div>
-							<div class="slider__item-sublabel">We use the most modern adaptability solutions for mobile devices to
-								develop websites.</div>
-							<a href="about.html" class="slider__item-btn">Read more</a>
+							<div class="slider__item-label">Нужен быстрый и адаптивный сайт?</div>
+							<div class="slider__item-sublabel">Мы используем самые современные технологии для разрабоки адаптивных и быстрых сайтов.</div>
+							<a href="/about_us?lang=ru" class="slider__item-btn">Подробнее</a>
 						</div>
 					</div>
 					<div class="slider__item ops">
-						<hr class="slider__item-bg2" style="margin: 0;>
+						<span class="slider__item-bg2"></span>
 						<%= image_tag(asset_path('Sl2.webp'), class: "slider__item-pic") %>
 						<div class="slider__item-box">
-							<div class="slider__item-label">Professional <br> web and graphic design</div>
-							<div class="slider__item-sublabel">Our team consists of specialists in the field of programming, web
-								design,
-								system administration, graphic design and Internet advertising.</div>
-							<a href="about.html" class="slider__item-btn">Read more</a>
+							<div class="slider__item-label">Профессиональный <br> графический дизайн</div>
+							<div class="slider__item-sublabel">Наша команда состоит из квалифицированных специалистов в областях веб-программирования, графического дизайна, вёрстки, SEO продвижения.</div>
+							<a href="/about_us?lang=ru" class="slider__item-btn">Подробнее</a>
 						</div>
 					</div>
 					<div class="slider__item ops">
-						<hr class="slider__item-bg3" style="margin: 0;>
+						<span class="slider__item-bg3"></span>
 						<%= image_tag(asset_path('Sl3.webp'), class: "slider__item-pic") %>
 						<div class="slider__item-box">
-							<div class="slider__item-label">Website Development team With Good Skills</div>
-							<div class="slider__item-sublabel">We quickly and efficiently implement your web project in the form of a
-								web application or a website with a unique design</div>
-							<a href="contact.html" class="slider__item-btn">Contact us</a>
+							<div class="slider__item-label">Профессиональный веб-сайт быстро, по доступным ценам</div>
+							<div class="slider__item-sublabel">В короткие сроки мы сможем создать для вас уникальный дизайн сайта, или предложим на выбор множество премиум-шаблонов.</div>
+							<a href="/contacts?lang=ru" class="slider__item-btn">Контакты</a>
 						</div>
 					</div>
 				</div>
@@ -143,35 +139,30 @@
 				<div class="container">
 					<div class="roll__row">
 						<div class="roll__coll">
-							<span class="roll__coll-wall1"></span>
+							<span class="roll__coll-wall1-1"></span>
 							<span class="roll__coll-wall2"></span>
 							<div class="roll__coll-body">
 								<div class="roll__coll-label">01.</div>
 								<div class="roll__coll-title">WORDPRESS CMS</div>
-								<div class="roll__coll-text">Website development with a unique design on the WordPress engine. We have a
-									lot of ready-made premium WordPress templates. Optimization for search engine promotion is also
-									included</div>
+								<div class="roll__coll-text">Наши специалисты быстро создадут и настроят для вас сайт на движке WordPress</div>
 							</div>
 						</div>
 						<div class="roll__coll">
-							<span class="roll__coll-wall1"></span>
+							<span class="roll__coll-wall1-2"></span>
 							<span class="roll__coll-wall2"></span>
 							<div class="roll__coll-body">
 								<div class="roll__coll-label">02.</div>
 								<div class="roll__coll-title">JOOMLA CMS</div>
-								<div class="roll__coll-text">Website development on one of the most popular engines — Joomla. You can
-									choose between your own unique design or using a ready-made premium template. Optimization for search
-									engine promotion is also included</div>
+								<div class="roll__coll-text">Под ключ сделаем и настроим веб-сайт на движке joomla</div>
 							</div>
 						</div>
 						<div class="roll__coll">
-							<span class="roll__coll-wall1"></span>
+							<span class="roll__coll-wall1-3"></span>
 							<span class="roll__coll-wall2"></span>
 							<div class="roll__coll-body">
 								<div class="roll__coll-label">03.</div>
 								<div class="roll__coll-title">HTML & CSS</div>
-								<div class="roll__coll-text">Pure HTML/ CSS development, which guarantees high performance, unique
-									design, high indicators of search engine promotion of the website.</div>
+								<div class="roll__coll-text">Разработаем для вас уникальный дизайн, и реализуем его без использования сторонних движков, это гарантирует феноменальное быстродействие и оптимизацию. Лучший выбор для коммерческих проектов..</div>
 							</div>
 						</div>
 					</div>
@@ -181,7 +172,7 @@
 				<div class="container">
 					<div class="choose__row rob">
 						<div class="choose__col">
-							<div class="choose__label">WHY YOU SHOULD CHOOSE US ?</div>
+							<div class="choose__label">Почему выбирают нас?</div>
 							<div class="choose__vid">
 								<iframe class="choose__vid-frame" src="https://www.youtube.com/embed/NM2rx3dJbvc?controls=0"
 									title="YouTube video player" frameborder="0"
@@ -190,21 +181,17 @@
 							</div>
 						</div>
 						<div class="choose__col">
-							<div class="choose__title">Our team consists of professional programmers, designers and system
-								administrators who will develop a website for you in the shortest possible time, set up domain zones,
-								hosting or a VPS server.</div>
+							<div class="choose__title">Наша команда - спецаилисты не один год работающие с большим стеком современных технологий.</div>
 							<div class="choose__body">
 								<div class="choose__el">
 									<div class="choose__pic"><%= image_tag(asset_path('bu-50.webp')) %></div>
-									<div class="choose__tagline">CREATIVE</div>
-									<div class="choose__text">Our experts will advise you on all issues. We use a creative approach in
-										communicating with the customer and what he needs .</div>
+									<div class="choose__tagline">Креативность</div>
+									<div class="choose__text">Мы в состоянии решить любую проблему, и помочь вам с любым вопросом. К каждому клиенту индивидульный подход.</div>
 								</div>
 								<div class="choose__el">
 									<div class="choose__pic"><%= image_tag(asset_path('bx-50.webp')) %></div>
-									<div class="choose__tagline">STANDARD</div>
-									<div class="choose__text">Our specialists have the necessary qualifications to fulfill your order in
-										accordance with the highest and most modern standards in the field of IT.</div>
+									<div class="choose__tagline">Стандарты</div>
+									<div class="choose__text">Наши специалисты, несмотря на свою креативность, всегда придерживаются основных стандартов, это обеспечивает расширяемость наших продуктов.</div>
 								</div>
 							</div>
 						</div>
@@ -214,77 +201,71 @@
 			<div class="additional">
 				<div class="container">
 					<div class="additional__row rob">
-						<div class="additional__label">ADDITIONAL SERVICES</div>
+						<div class="additional__label">Дополнительные услуги</div>
 						<div class="additional__body">
 							<div class="additional__el">
-								<span class="additional__el-wall1"></span>
+								<span class="additional__el-wall1-1"></span>
 								<span class="additional__el-wall2"></span>
 								<div class="additional__el-body">
 									<div class="additional__pic"><%= image_tag(asset_path('mn-48.webp')) %></div>
 									<div class="additional__text">
-										<div class="additional__title">ONLINE RESEARCH</div>
-										<div class="additional__subtitle">Analytics of competitive websites in the field of search SEO
-											promotion of your queries.</div>
+										<div class="additional__title">Онлайн аналитика</div>
+										<div class="additional__subtitle">Планируете купить коммерческий веб-сайт? Мы проведём аналитику конкуренции, и создатим план продвижения.</div>
 									</div>
 								</div>
 							</div>
 							<div class="additional__el">
-								<span class="additional__el-wall1"></span>
+								<span class="additional__el-wall1-2"></span>
 								<span class="additional__el-wall2"></span>
 								<div class="additional__el-body">
 									<div class="additional__pic"><%= image_tag(asset_path('et-50.webp')) %></div>
 									<div class="additional__text">
-										<div class="additional__title">LOGO BRANDING</div>
-										<div class="additional__subtitle">Logo design for your brand and website. Original and unique
-											solutions.</div>
+										<div class="additional__title">Дизайн логотипов</div>
+										<div class="additional__subtitle">Для ваших сайтов и брендов, наши дизайнеры могут создать уникальный и креативный логотип.</div>
 									</div>
 								</div>
 							</div>
 							<div class="additional__el">
-								<span class="additional__el-wall1"></span>
+								<span class="additional__el-wall1-3"></span>
 								<span class="additional__el-wall2"></span>
 								<div class="additional__el-body">
 									<div class="additional__pic"><%= image_tag(asset_path('html-50.webp')) %></div>
 									<div class="additional__text">
-										<div class="additional__title">WEB DESIGN</div>
-										<div class="additional__subtitle">Developing a unique design or connecting a ready-made template for
-											a website.</div>
+										<div class="additional__title">Веб-дизайн</div>
+										<div class="additional__subtitle">Разработка уникального дизайна, с последующей вёрсткой и доведением продукта до финиша.</div>
 									</div>
 								</div>
 							</div>
 							<div class="additional__el">
-								<span class="additional__el-wall1"></span>
+								<span class="additional__el-wall1-4"></span>
 								<span class="additional__el-wall2"></span>
 								<div class="additional__el-body">
 									<div class="additional__pic"><%= image_tag(asset_path('st-50.webp')) %></div>
 									<div class="additional__text">
-										<div class="additional__title">SEO OPTIMIZATION</div>
-										<div class="additional__subtitle">Website optimization. Search query promotion. Compilation of the
-											semantic core.</div>
+										<div class="additional__title">SEO оптимизация</div>
+										<div class="additional__subtitle">Ваш сайт не видно в поиске? Наши SEO специалисты гарантированно выведут вас в TOP-10.</div>
 									</div>
 								</div>
 							</div>
 							<div class="additional__el">
-								<span class="additional__el-wall1"></span>
+								<span class="additional__el-wall1-5"></span>
 								<span class="additional__el-wall2"></span>
 								<div class="additional__el-body">
 									<div class="additional__pic"><%= image_tag(asset_path('lp-50.webp')) %></div>
 									<div class="additional__text">
-										<div class="additional__title">RESPONSIVE DESIGN</div>
-										<div class="additional__subtitle">We use adaptive design when developing websites and mobile
-											applications.</div>
+										<div class="additional__title">Адаптивный дизайн</div>
+										<div class="additional__subtitle">Наши продукты хорошо адаптированны под любые устройства.</div>
 									</div>
 								</div>
 							</div>
 							<div class="additional__el">
-								<span class="additional__el-wall1"></span>
+								<span class="additional__el-wall1-6"></span>
 								<span class="additional__el-wall2"></span>
 								<div class="additional__el-body">
 									<div class="additional__pic"><%= image_tag(asset_path('pc-50.webp')) %></div>
 									<div class="additional__text">
-										<div class="additional__title">PHOTOGRAPHY</div>
-										<div class="additional__subtitle">We conduct photo shoots for employees and products presented on
-											the website.</div>
+										<div class="additional__title">Фотография</div>
+										<div class="additional__subtitle">Создадим медиа-базу ваших продуктов, или уникализируем фото.</div>
 									</div>
 								</div>
 							</div>
@@ -293,20 +274,19 @@
 				</div>
 			</div>
 			<div class="portfolio">
-				<hr class="portfolio__bg">
+				<span class="portfolio__bg"></span>
 				<div class="container">
 					<div class="portfolio__row">
-						<div class="portfolio__label">ARE YOU IMPRESSED WITH OUR AMAZING PORTFOLIO?</div>
+						<div class="portfolio__label">Ознакомитесь с нашим портфолио?</div>
 						<div class="portfolio__el">
 							<div class="portfolio__pic">
 								<%= image_tag(asset_path('usl.webp')) %>
 							</div>
 							<div class="portfolio__body">
-								<div class="portfolio__title">Website of the Polish electric company</div>
-								<div class="portfolio__text">This project was built on one of our frontend templates. Serious work has
-									been done on SEO optimization and setting up backend functionality.
+								<div class="portfolio__title">Вебсайт польской электрической фирмы</div>
+								<div class="portfolio__text">Визуальная часть проекта была выполнена при помощи премиум-шаблона, так же была разработана программа для удобного ведения бизнес-бухгалтерии.
 								</div>
-								<a href="#" class="portfolio__btn">View</a>
+								<a href="#" class="portfolio__btn">Посмотреть</a>
 							</div>
 						</div>
 						<div class="portfolio__el">
@@ -314,9 +294,9 @@
 								<%= image_tag(asset_path('an.webp')) %>
 							</div>
 							<div class="portfolio__body">
-								<div class="portfolio__title">Website of the Ukrainian animal nursery</div>
-								<div class="portfolio__text">This website was built on wordpress engine by our team.</div>
-								<a href="#" class="portfolio__btn">View</a>
+								<div class="portfolio__title">Сайт питомника</div>
+								<div class="portfolio__text">На движке WordPress наш специалист настроил сайт всего за один день.</div>
+								<a href="#" class="portfolio__btn">Посмотреть</a>
 							</div>
 						</div>
 						<div class="portfolio__el">
@@ -325,11 +305,10 @@
 							</div>
 							<div class="portfolio__body">
 								<div class="portfolio__title">
-									SEO optimization of the company's website for the sale of spare parts and repair of refrigeration
-									equipment</div>
+									SEO оптимизация веб-сайта компании, продающей запчасти к промышленному холодильному оборудованию.</div>
 								<div class="portfolio__text">Google TOP1 - 17 keys, TOP3 - 21 keys, TOP5 - 24 keys, TOP10 - 25 keys,
 									TOP30 - 28 keys</div>
-								<a href="#" class="portfolio__btn">View</a>
+								<a href="#" class="portfolio__btn">Посмотреть</a>
 							</div>
 						</div>
 						<div class="portfolio__el">
@@ -337,13 +316,13 @@
 								<%= image_tag(asset_path('tea.png')) %>
 							</div>
 							<div class="portfolio__body">
-								<div class="portfolio__title">Website of a England tea market</div>
-								<div class="portfolio__text">Website created with unique design on wordpress engine.</div>
-								<a href="#" class="portfolio__btn">View</a>
+								<div class="portfolio__title">Сайт чайной лавки</div>
+								<div class="portfolio__text">Один из наших премиум-шаблонов для движка WordPress.</div>
+								<a href="#" class="portfolio__btn">Посмотреть</a>
 							</div>
 						</div>
-						<a href="portfolio.html" class="portfolio__butt">
-							More works
+						<a href="/portfolio?lang=ru" class="portfolio__butt">
+							Больше наших работ
 						</a>
 					</div>
 				</div>
@@ -351,7 +330,7 @@
 			<div class="briefly">
 				<div class="container">
 					<div class="briefly__row">
-						<div class="briefly__label">SOMETHING ABOUT US</div>
+						<div class="briefly__label">Хотите узнать о нас ещё больше?</div>
 						<div class="briefly__box">
 							<div class="briefly__pic">
 								<%= image_tag(asset_path('banner1.webp')) %>
@@ -360,22 +339,22 @@
 								<div class="briefly__el">
 									<div class="briefly__pic-1"></div>
 									<div class="briefly__el-body">
-										<div class="briefly__title">Unique Designs</div>
-										<div class="briefly__text">We develop a unique design for websites and logos of your company.</div>
+										<div class="briefly__title">Техническое сопровождение</div>
+										<div class="briefly__text">Наши клиенты имеют хорошие скидки на расширение/сопровождение продуктов которые мы разработали.</div>
 									</div>
 								</div>
 								<div class="briefly__el">
 									<div class="briefly__pic-2"></div>
 									<div class="briefly__el-body">
-										<div class="briefly__title">Standard Research</div>
-										<div class="briefly__text">We conduct analytics in the development and promotion of websites.</div>
+										<div class="briefly__title">Мы всегда на связи</div>
+										<div class="briefly__text">Пишите и звоните нам в рабочее время, мы с удовольствием проконсультируем вас по любому вопросу.</div>
 									</div>
 								</div>
 								<div class="briefly__el">
 									<div class="briefly__pic-3"></div>
 									<div class="briefly__el-body">
-										<div class="briefly__title">Project Goal</div>
-										<div class="briefly__text">A modern and high-quality digital product.</div>
+										<div class="briefly__title">Цель проекта</div>
+										<div class="briefly__text">Создание уникальных и высококачественных цифровых продуктов.</div>
 									</div>
 								</div>
 							</div>
@@ -384,16 +363,16 @@
 				</div>
 			</div>
 			<div class="always">
-				<hr class="always__bg">
+				<span class="always__bg"></span>
 				<div class="container">
 					<div class="always__row">
-						<div class="always__label">We Always Provide Responsive WebsiteTemplates</div>
+						<div class="always__label">Вы заинтересованы?</div>
 						<div class="always__body">
 							<div class="always__number">
 								<div class="always__number-pic"></div>
-								<div class="always__number-text">Call us: +48795124042</div>
+								<div class="always__number-text">Позвоните нам: +48795124042</div>
 							</div>
-							<a href="contact.html" class="always__btn wobble">Contact Us</a>
+							<a href="/contacts?lang=ru" class="always__btn wobble">Контакты</a>
 						</div>
 					</div>
 				</div>
@@ -401,7 +380,7 @@
 			<div class="news">
 				<div class="container">
 					<div class="news__row">
-						<div class="news__label">PUBLISHING OUR LATEST NEWS</div>
+						<div class="news__label">Новости</div>
 						<div class="news__el">
 							<div class="news__pic">
 								<a href="blogPostHost.html" class="news__pic-bg1"></a>
@@ -409,10 +388,10 @@
 								<%= image_tag(asset_path('hosting.png')) %>
 							</div>
 							<div class="news__body">
-								<div class="news__title"><a href="blogPostHost.html">Host Services</a></div>
+								<div class="news__title"><a href="blogPostHost.html">Услуги выделенных серверов</a></div>
 								<div class="news__subtitle"><a href="blogAutorAdmin.html"><span class="news__span-pic"></span> admin</a> •<span
 										class="news__span-pic-2"></span> 16 января, 2022</div>
-								<div class="news__text">Promo code for a 10% discount on hosting services When ordering Fozzy …</div>
+								<div class="news__text">Промо-код на 10% скидку при аренде сервера у хостера Fozzy …</div>
 							</div>
 						</div>
 						<div class="news__el">
@@ -438,8 +417,8 @@
 				<div class="footer__row ops">
 					<div class="footer__rank">
 						<div class="footer__coll">
-							<div class="footer__title">Call us</div>
-							<div class="footer__subtitle">Our specialists will answer all your questions</div>
+							<div class="footer__title">Позвоните нам</div>
+							<div class="footer__subtitle">Наши специалисты ответят на все ваши вопросы</div>
 							<div class="footer__list1">
 								<div class="footer__list1-el">
 									<div class="footer__list1-pic"></div>
@@ -456,53 +435,53 @@
 							</div>
 						</div>
 						<div class="footer__coll">
-							<div class="footer__title">Working hours</div>
+							<div class="footer__title">Рабочее время</div>
 							<div class="footer__list2">
 								<div class="footer__list2-el">
-									Mon: 8-00 - 16-00
+									ПН: 8-00 - 16-00
 								</div>
 								<div class="footer__list2-el">
-									Tue: 8-00 - 16-00
+									ВТ: 8-00 - 16-00
 								</div>
 								<div class="footer__list2-el">
-									Wed: 8-00 - 16-00
+									СР: 8-00 - 16-00
 								</div>
 								<div class="footer__list2-el">
-									Thu: 8-00 - 16-00
+									ЧТ: 8-00 - 16-00
 								</div>
 								<div class="footer__list2-el">
-									Fri: 8-00 - 16-00
+									ПТ: 8-00 - 16-00
 								</div>
 								<div class="footer__list2-el">
-									Sat - Sun: Off
+									СБ - ВС: Выходной
 								</div>
 							</div>
 						</div>
 						<div class="footer__coll">
-							<div class="footer__title">Advice Center</div>
+							<div class="footer__title">Консультационный центр</div>
 							<div class="footer__list3">
 								<div class="footer__list3-el">
-									<a href="https://accounts.fozzy.com/aff.php?aff=18138">Domain name</a>
+									<a href="https://accounts.fozzy.com/aff.php?aff=18138">Доменные имена</a>
 								</div>
 								<div class="footer__list3-el">
-									<a href="https://accounts.fozzy.com/aff.php?aff=18138">Hosting</a>
+									<a href="https://accounts.fozzy.com/aff.php?aff=18138">Хостинги</a>
 								</div>
 								<div class="footer__list3-el">
-									<a href="https://accounts.fozzy.com/aff.php?aff=18138">VPS/VDS hosting</a>
+									<a href="https://accounts.fozzy.com/aff.php?aff=18138">VPS/VDS хостинги</a>
 								</div>
 								<div class="footer__list3-el">
-									<a href="https://accounts.fozzy.com/aff.php?aff=18138">Dedicated server</a>
+									<a href="https://accounts.fozzy.com/aff.php?aff=18138">Выделенные сервера</a>
 								</div>
 								<div class="footer__list3-el">
-									<a href="#">Templates Word Press</a>
+									<a href="#">Шаблоны Joomla</a>
 								</div>
 								<div class="footer__list3-el">
-									<a href="#">Templates Joomla</a>
+									<a href="#">Шаблоны WordPress</a>
 								</div>
 							</div>
 						</div>
 						<div class="footer__coll">
-							<div class="footer__title">Photos</div>
+							<div class="footer__title">Фото</div>
 							<div class="footer__list4">
 								<div class="footer__list4-el">
 									<a href="#"><%= image_tag(asset_path('g1.webp')) %></a>
@@ -533,3 +512,10 @@
 			</div>
 		</footer>
 	</div>
+	<script>
+		var strGET = window.location.search.replace( '?', ''); 
+
+		if(strGET != ""){
+			if(window.location.href.indexOf('&reloaded') === -1) window.location.href = window.location.href + "&reloaded=true";
+		};
+	</script>

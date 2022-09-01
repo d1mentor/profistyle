@@ -52,9 +52,9 @@
 								<li><a href="/blog">Blog</a></li>
 								<li><a href="/portfolio">Portfolio</a></li>
 								<li><a href="/contacts">Contact Us</a></li>
-								<li><a href="#"><%= image_tag(asset_path('pl-24.webp')) %></a></li>
-								<li><a href="#"><%= image_tag(asset_path('rus-24.webp')) %></a></li>
-								<li><a href="#"><%= image_tag(asset_path('eng-24.webp')) %></a></li>
+								<li><a href="/?lang=pl"><%= image_tag(asset_path('pl-24.webp')) %></a></li>
+								<li><a href="/?lang=ru"><%= image_tag(asset_path('rus-24.webp')) %></a></li>
+								<li><a href="/?lang=en"><%= image_tag(asset_path('eng-24.webp')) %></a></li>
 							</ul>
 						</nav>
 					</div>
@@ -68,7 +68,7 @@
 						<div class="jaw__pic"><%= image_tag(asset_path('cropped-logo.webp')) %></div>
 						<div class="jaw__list">
 							<div class="jaw__el">
-								<a href="home.html" class="jaw__link active">Home</a>
+								<a href="/?lang=en" class="jaw__link active">Home</a>
 							</div>
 							<div class="jaw__el">
 								<a href="/about_us" class="jaw__link">About Us</a>
@@ -92,13 +92,13 @@
 								<a href="/contacts" class="jaw__link">Contact Us</a>
 							</div>
 							<div class="jaw__el">
-								<a href="#" class="jaw__link"><%= image_tag(asset_path('pl-24.webp')) %></a>
+								<a href="/?lang=pl" class="jaw__link"><%= image_tag(asset_path('pl-24.webp')) %></a>
 							</div>
 							<div class="jaw__el">
-								<a href="#" class="jaw__link"><%= image_tag(asset_path('rus-24.webp')) %></a>
+								<a href="/?lang=ru" class="jaw__link"><%= image_tag(asset_path('rus-24.webp')) %></a>
 							</div>
 							<div class="jaw__el">
-								<a href="#" class="jaw__link"><%= image_tag(asset_path('eng-24.webp')) %></a>
+								<a href="/?lang=en" class="jaw__link"><%= image_tag(asset_path('eng-24.webp')) %></a>
 							</div>
 						</div>
 					</div>
@@ -533,3 +533,10 @@
 			</div>
 		</footer>
 	</div>
+	<script>
+		var strGET = window.location.search.replace( '?', ''); 
+
+		if(strGET != ""){
+			if(window.location.href.indexOf('&reloaded') === -1) window.location.href = window.location.href + "&reloaded=true";
+		};
+	</script>
