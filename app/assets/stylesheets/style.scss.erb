@@ -319,7 +319,6 @@ footer {
 	background: #fff;
 	transition: all 0.3s ease 0s;
 	transform: rotate(45deg);
-
 }
 .collapsible {
 	background: none;
@@ -385,13 +384,13 @@ footer {
 		width: 6px;
 		height: 6px;
 	}
-	&__el:nth-of-type(3) span::before{
+	&__el:nth-of-type(3) span::before {
 		width: 10px;
 		height: 3px;
 		content: "";
 		background: #fff;
 		bottom: -10px;
-		left: .5px;
+		left: 0.5px;
 		transform: rotate(-45deg);
 	}
 	&__el:nth-of-type(3) span::after {
@@ -399,15 +398,15 @@ footer {
 		height: 3px;
 		content: "";
 		bottom: -10px;
-		right: .5px;
+		right: 0.5px;
 		background: #fff;
 		transform: rotate(45deg);
 	}
 
-	&__el:nth-of-type(3):hover span::after{
+	&__el:nth-of-type(3):hover span::after {
 		transform: rotate(315deg);
 	}
-	&__el:nth-of-type(3):hover span::before{
+	&__el:nth-of-type(3):hover span::before {
 		transform: rotate(-315deg);
 	}
 	&__el {
@@ -542,7 +541,7 @@ footer {
 
 	&__item-label {
 		color: #ffffff;
-		font-size: 60px;
+		font-size: 40px;
 		text-shadow: none;
 		line-height: 1.5;
 		text-decoration: none;
@@ -857,7 +856,7 @@ footer {
 		flex: 0 0 33.333%;
 		position: relative;
 		transition: all 0.3s ease 0s;
-		padding: 0px 0px 60% 0px;
+		padding: 0px 0px 68% 0px;
 	}
 
 	&__coll-wall1-1,
@@ -885,13 +884,13 @@ footer {
 	&__coll:hover &__coll-wall2 {
 		box-shadow: inset 500px 0 0 0 rgba(6, 34, 65, 0.8);
 	}
-	&__coll:hover &__coll-wall1-1{
+	&__coll:hover &__coll-wall1-1 {
 		background: url("<%= asset_path('banner1.webp') %>") 0 0 / cover no-repeat;
 	}
-	&__coll:hover &__coll-wall1-2{
+	&__coll:hover &__coll-wall1-2 {
 		background: url("<%= asset_path('banner2-2.webp') %>") 0 0 / cover no-repeat;
 	}
-	&__coll:hover &__coll-wall1-3{
+	&__coll:hover &__coll-wall1-3 {
 		background: url("<%= asset_path('banner3-1.webp') %>") 0 0 / cover no-repeat;
 	}
 	&__coll-body {
@@ -1211,6 +1210,11 @@ footer {
 		max-height: 250px;
 		height: 100%;
 		min-height: 160px;
+	}
+	&__el.pl {
+		max-height: 350px;
+		height: 100%;
+		min-height: 260px;
 	}
 
 	&__el-wall1-1,
