@@ -52,9 +52,9 @@
 					<div class="menu">
 						<nav class="nav mon">
 							<ul>
-								<li><a href="home.html">Home</a></li>
-								<li><a href="about.html">About Us</a></li>
-								<li><a href="servicesMAIN.html">Services</a>
+								<li><a href="/">Home</a></li>
+								<li><a href="/about_us">About Us</a></li>
+								<li><a href="/services">Services</a>
 									<button class="collapsible"></button>
 									<div class="collapsible-content">
 										<a href="servicesRoR.html">RoR development</a>
@@ -62,12 +62,18 @@
 										<a href="servicesSEO.html">SEO Promotion</a>
 									</div>
 								</li>
-								<li><a href="blog.html">Blog</a></li>
-								<li><a href="portfolio.html">Portfolio</a></li>
-								<li><a href="contact.html">Contact Us</a></li>
-								<li><a href="#"><img src="img/pl-24.webp" alt=""></a></li>
-								<li><a href="#"><img src="img/rus-24.webp" alt=""></a></li>
-								<li><a href="#"><img src="img/eng-24.webp" alt=""></a></li>
+								<li><a href="/blog">Blog</a></li>
+								<li><a href="/portfolio">Portfolio</a></li>
+								<li><a href="/contacts">Contact Us</a></li>
+								<li><a href="#">
+								<%= image_tag(asset_path('pl-24.png')) %>
+								</a></li>
+								<li><a href="#">
+								<%= image_tag(asset_path('rus-24.png')) %>
+								</a></li>
+								<li><a href="#">
+								<%= image_tag(asset_path('eng-24.png')) %>
+								</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -78,16 +84,18 @@
 			<div class="jaw bg">
 				<div class="container">
 					<div class="jaw__row mon">
-						<div class="jaw__pic"><img src="img/logo/cropped-logo.webp" alt=""></div>
+						<div class="jaw__pic">
+						<%= image_tag(asset_path('cropped-logo.webp')) %>
+						</div>
 						<div class="jaw__list">
 							<div class="jaw__el">
-								<a href="home.html" class="jaw__link">Home</a>
+								<a href="/" class="jaw__link">Home</a>
 							</div>
 							<div class="jaw__el">
-								<a href="about.html" class="jaw__link">About Us</a>
+								<a href="/about_us" class="jaw__link">About Us</a>
 							</div>
 							<div class="jaw__el">
-								<a href="servicesMAIN.html" class="jaw__link">Services</a>
+								<a href="/services" class="jaw__link">Services</a>
 								<span></span>
 								<div class="jaw__poster">
 									<a href="servicesRoR.html" class="jaw__link">RoR development</a>
@@ -96,22 +104,28 @@
 								</div>
 							</div>
 							<div class="jaw__el">
-								<a href="blog.html" class="jaw__link active">Blog</a>
+								<a href="/blog" class="jaw__link active">Blog</a>
 							</div>
 							<div class="jaw__el">
-								<a href="portfolio.html" class="jaw__link">Portfolio</a>
+								<a href="/portfolio" class="jaw__link">Portfolio</a>
 							</div>
 							<div class="jaw__el">
-								<a href="contact.html" class="jaw__link">Contact Us</a>
+								<a href="/contacts" class="jaw__link">Contact Us</a>
 							</div>
 							<div class="jaw__el">
-								<a href="#" class="jaw__link"><img src="img/pl-24.webp" alt=""></a>
+								<a href="#" class="jaw__link">
+								<%= image_tag(asset_path('pl-24.webp')) %>
+								</a>
 							</div>
 							<div class="jaw__el">
-								<a href="#" class="jaw__link"><img src="img/rus-24.webp" alt=""></a>
+								<a href="#" class="jaw__link">
+								<%= image_tag(asset_path('rus-24.webp')) %>
+								</a>
 							</div>
 							<div class="jaw__el">
-								<a href="#" class="jaw__link"><img src="img/eng-24.webp" alt=""></a>
+								<a href="#" class="jaw__link">
+								<%= image_tag(asset_path('eng-24.webp')) %>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -121,7 +135,7 @@
 				<div class="container">
 					<div class="breadcrumb__row">
 						<div class="breadcrumb__body">
-							<a href="home.html">Home</a> &#187; Blog
+							<a href="/">Home</a> &#187; Blog
 						</div>
 					</div>
 				</div>
@@ -360,7 +374,9 @@
 						</div>
 					</div>
 					<div class="footer__log">
-						<a href="https://accounts.fozzy.com/aff.php?aff=18138"><img src="img/fozzy_button.webp" alt=""></a>
+						<a href="https://accounts.fozzy.com/aff.php?aff=18138">
+						<%= image_tag(asset_path('fozzy_button.webp')) %>
+						</a>
 					</div>
 					<div class="footer__post">Created by <a href="https://profistyle.group/">profistyle.group ©</a></div>
 				</div>
