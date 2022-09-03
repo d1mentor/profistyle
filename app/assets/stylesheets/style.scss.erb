@@ -1214,7 +1214,12 @@ footer {
 	&__el.pl {
 		max-height: 350px;
 		height: 100%;
-		min-height: 260px;
+		min-height: 220px;
+	}
+	&__el.ru {
+		max-height: 350px;
+		height: 100%;
+		min-height: 220px;
 	}
 
 	&__el-wall1-1,
@@ -1526,9 +1531,16 @@ footer {
 		gap: 30px;
 		flex-wrap: wrap;
 	}
+	&__box.ru{
+		flex-wrap: nowrap;
+	}
 
 	&__pic {
-		flex: 1 1 auto;
+		flex: 0 1 350px;
+		padding: 10px;
+	}
+	&__pic.ru {
+		flex: 0 1 auto;
 		padding: 10px;
 	}
 	&__pic img {
@@ -1609,7 +1621,20 @@ footer {
 		transform: scale3d(1, 1, 1);
 	}
 }
-
+@media (max-width: 1062px) {
+	.briefly {
+		&__box.ru{
+			flex-wrap: wrap;
+		}
+	}
+}
+@media (max-width: 1200px) {
+	.briefly {
+		&__box {
+			justify-content: center;
+		}
+	}
+}
 @media (max-width: 424px) {
 	.briefly {
 		&__label {
@@ -1635,7 +1660,6 @@ footer {
 .always {
 	background: url("<%= asset_path('g7.webp') %>") 0 40% /100% auto no-repeat;
 	position: relative;
-
 	&__bg {
 		position: absolute;
 		top: 0;
@@ -1710,6 +1734,11 @@ footer {
 		background-color: #0fa89d;
 		border-radius: 0px 0px 0px 0px;
 		padding: 18px 30px 18px 30px;
+		transition: all 0.3s ease 0s;
+	}
+	&__btn:hover {
+		font-size: 24px;
+		color: #ffffff;
 	}
 }
 
@@ -2521,23 +2550,6 @@ footer {
 	&__body {
 		display: flex;
 	}
-
-	&__el-description a:hover {
-		color: #0fa89d;
-	}
-	&__el-description {
-		flex: 0 0 35%;
-		padding: 10px;
-		display: flex;
-		flex-direction: column;
-		gap: 10px;
-	}
-	&__el-description a {
-		color: #686868;
-		font-family: Montserrat, "Helvetica Neue", sans-serif;
-		font-size: 13;
-		transition: all 0.3s ease 0s;
-	}
 	&__el-user-pic {
 	}
 	&__el-user-nic {
@@ -2554,15 +2566,15 @@ footer {
 		padding: 10px;
 		display: flex;
 		flex-direction: column;
-		gap: 56px;
+		gap: 20px;
 	}
 
 	&__el-title {
-		margin: 0px 0px 28px 0px;
+		margin: 0px 0px 10px 0px;
 		font-size: 24px;
 		font-weight: 900;
 		font-family: sans-serif !important;
-		color: #7a7a7a;
+		color: #1a1a1a;
 	}
 
 	&__el-text {
