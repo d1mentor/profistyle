@@ -362,3 +362,10 @@ Właściwa inwestycja, ponieważ w przyszłości przyniesie lub zwiększy twoje 
 			</div>
 		</footer>
 	</div>
+	<script>
+		var strGET = window.location.search.replace( '?', ''); 
+
+		if(strGET != ""){
+			if(window.location.href.indexOf('&reloaded') === -1) window.location.href = window.location.href + "&reloaded=true";
+		};
+	</script>

@@ -340,3 +340,10 @@ Type II. Наши специалисты могут помочь вам в вы�
 			</div>
 		</footer>
 	</div>
+	<script>
+		var strGET = window.location.search.replace( '?', ''); 
+
+		if(strGET != ""){
+			if(window.location.href.indexOf('&reloaded') === -1) window.location.href = window.location.href + "&reloaded=true";
+		};
+	</script>
