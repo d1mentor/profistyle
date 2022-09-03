@@ -1,49 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="shortcut icon" href="img/cropped-icon2.png" type="image/x-icon">
-	<title>Website development and SEO promotion - ProfiStyle Group</title>
-</head>
-
-<body>
 	<div class="wrapper">
 		<header class="header" id="header">
 			<div class="container">
 				<div class="header__row ops">
 					<div class="header__rank">
 						<div class="header__body">
-							<ul class="header__icon-list">
-								<li class="header__icon-el"><img src="img/fb-24.webp" alt=""></li>
-								<li class="header__icon-el"><img src="img/tw-24.webp" alt=""></li>
-								<li class="header__icon-el"><img src="img/ut-24.webp" alt=""></li>
-								<li class="header__icon-el"><img src="img/in-24.webp" alt=""></li>
-								<li class="header__icon-el"><img src="img/vk-24.webp" alt=""></li>
-							</ul>
+						<ul class="header__icon-list">
+							<li class="header__icon-el"><%= image_tag(asset_path('fb-24.webp')) %></li>
+							<li class="header__icon-el"><%= image_tag(asset_path('tw-24.webp')) %></li>
+							<li class="header__icon-el"><%= image_tag(asset_path('ut-24.webp')) %></li>
+							<li class="header__icon-el"><%= image_tag(asset_path('in-24.webp')) %></li>
+							<li class="header__icon-el"><%= image_tag(asset_path('vk-24.webp')) %></li>
+						</ul>
 							<ul class="header__text-list">
 								<li class="header__icon-box">
-									<img src="img/ph-24.webp" alt="">
+									<%= image_tag(asset_path('ph-24.webp')) %>
 									<div class="header__icon-text"><a href="tel:+48795124042" class="header__icon-link">+48795124042</a>
 									</div>
 								</li>
 								<li class="header__icon-box">
-									<img src="img/ph-24.webp" alt="">
+								<%= image_tag(asset_path('ph-24.webp')) %>
 									<div class="header__icon-text"><a href="tel:+48796128406" class="header__icon-link">+48796128406</a>
 									</div>
 								</li>
 								<li class="header__icon-box">
-									<img src="img/en-24.webp" alt="">
+									<%= image_tag(asset_path('en-24.webp')) %>
 									<div class="header__icon-text"><a href="mailto:biuro@profistyle.group"
 											class="header__icon-link">biuro@profistyle.group</a></div>
 								</li>
 							</ul>
 						</div>
 						<div class="header__logo">
-							<img src="img/logo/cropped-logo.webp" alt="">
+							<%= image_tag(asset_path('cropped-logo.webp')) %>
 						</div>
 						<div class="menu-btn ">
 							<span></span>
@@ -52,22 +39,28 @@
 					<div class="menu">
 						<nav class="nav mon">
 							<ul>
-								<li><a href="home.html">Home</a></li>
-								<li><a href="about.html">About Us</a></li>
-								<li><a href="servicesMAIN.html">Services</a>
+								<li><a href="/?lang=pl">Glovna</a></li>
+								<li><a href="/about_us?lang=pl">O nas</a></li>
+								<li><a href="/services?lang=pl">Usługi</a>
 									<button class="collapsible"></button>
 									<div class="collapsible-content">
-										<a href="servicesRoR.html">RoR development</a>
-										<a href="servicesCMS.html">CMS Development</a>
-										<a href="servicesSEO.html">SEO Promotion</a>
+										<a href="">RoR rozwój</a>
+										<a href="">CMS rozwój</a>
+										<a href="">SEO awans</a>
 									</div>
 								</li>
-								<li><a href="blog.html">Blog</a></li>
-								<li><a href="portfolio.html">Portfolio</a></li>
-								<li><a href="contact.html">Contact Us</a></li>
-								<li><a href="#"><img src="img/pl-24.webp" alt=""></a></li>
-								<li><a href="#"><img src="img/rus-24.webp" alt=""></a></li>
-								<li><a href="#"><img src="img/eng-24.webp" alt=""></a></li>
+								<li><a href="/blog?lang=pl">Blog</a></li>
+								<li><a href="/portfolio?lang=pl">Teczka</a></li>
+								<li><a href="/contacts?lang=pl">Skontaktuj się z nami</a></li>
+								<li><a href="/blog?lang=pl">
+								<%= image_tag(asset_path('pl-24.png')) %>
+								</a></li>
+								<li><a href="/blog?lang=ru">
+								<%= image_tag(asset_path('rus-24.png')) %>
+								</a></li>
+								<li><a href="/blog?lang=en">
+								<%= image_tag(asset_path('eng-24.png')) %>
+								</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -78,40 +71,48 @@
 			<div class="jaw bg">
 				<div class="container">
 					<div class="jaw__row mon">
-						<div class="jaw__pic"><img src="img/logo/cropped-logo.webp" alt=""></div>
+						<div class="jaw__pic">
+						<%= image_tag(asset_path('cropped-logo.webp')) %>
+						</div>
 						<div class="jaw__list">
 							<div class="jaw__el">
-								<a href="home.html" class="jaw__link">Home</a>
+								<a href="/?lang=pl" class="jaw__link">Glovna</a>
 							</div>
 							<div class="jaw__el">
-								<a href="about.html" class="jaw__link">About Us</a>
+								<a href="/about_us?lang=pl" class="jaw__link">O nas</a>
 							</div>
 							<div class="jaw__el">
-								<a href="servicesMAIN.html" class="jaw__link">Services</a>
+								<a href="/services?lang=pl" class="jaw__link">Usługi</a>
 								<span></span>
 								<div class="jaw__poster">
-									<a href="servicesRoR.html" class="jaw__link">RoR development</a>
-									<a href="servicesCMS.html" class="jaw__link">CMS Development</a>
-									<a href="servicesSEO.html" class="jaw__link">SEO Promotion</a>
+									<a href="" class="jaw__link">RoR rozwój</a>
+									<a href="" class="jaw__link">CMS rozwój</a>
+									<a href="" class="jaw__link">SEO awans</a>
 								</div>
 							</div>
 							<div class="jaw__el">
-								<a href="blog.html" class="jaw__link active">Blog</a>
+								<a href="/blog?lang=pl" class="jaw__link active">Blog</a>
 							</div>
 							<div class="jaw__el">
-								<a href="portfolio.html" class="jaw__link">Portfolio</a>
+								<a href="/portfolio?lang=pl" class="jaw__link">Teczka</a>
 							</div>
 							<div class="jaw__el">
-								<a href="contact.html" class="jaw__link">Contact Us</a>
+								<a href="/contacts?lang=pl" class="jaw__link">Skontaktuj się z nami</a>
 							</div>
 							<div class="jaw__el">
-								<a href="#" class="jaw__link"><img src="img/pl-24.webp" alt=""></a>
+								<a href="/blog?lang=pl" class="jaw__link">
+								<%= image_tag(asset_path('pl-24.webp')) %>
+								</a>
 							</div>
 							<div class="jaw__el">
-								<a href="#" class="jaw__link"><img src="img/rus-24.webp" alt=""></a>
+								<a href="/blog?lang=ru" class="jaw__link">
+								<%= image_tag(asset_path('rus-24.webp')) %>
+								</a>
 							</div>
 							<div class="jaw__el">
-								<a href="#" class="jaw__link"><img src="img/eng-24.webp" alt=""></a>
+								<a href="/blog?lang=en" class="jaw__link">
+								<%= image_tag(asset_path('eng-24.webp')) %>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -121,7 +122,7 @@
 				<div class="container">
 					<div class="breadcrumb__row">
 						<div class="breadcrumb__body">
-							<a href="home.html">Home</a> &#187; Blog
+							<a href="/?lang=en">Glovna</a> &#187; Blog
 						</div>
 					</div>
 				</div>
@@ -129,135 +130,137 @@
 			<div class="blog">
 				<div class="container">
 					<div class="blog__row">
-						<div class="blog__label">Рубрика: Blog</div>
+						<div class="blog__label"></div>
 						<div class="blog__el">
-							<a href="blogPostHost.html" class="blog__el-label">Host Services</a>
+							<a href="blogPostHost.html" class="blog__el-label">Usługi hosta</a>
 							<div class="blog__el-pic">
 								<a href="blogPostHost.html" class="blog__el-pic-bg"></a>
-								<a href="blogPostHost.html"><img src="img/hosting.png" alt=""></a>
+								<a href="blogPostHost.html">
+								<%= image_tag(asset_path('hosting.png')) %>
+								</a>
 							</div>
 							<div class="blog__body">
 								<div class="blog__el-description">
-									<a href="blogPostHost.html" class="blog__el-date">16 января, 2022</a>
-									<a href="blogPostHost.html" class="blog__el-com-link">Leave a comment</a>
+									<a href="blogPostHost.html" class="blog__el-date"></a>
+									<a href="blogPostHost.html" class="blog__el-com-link"></a>
 								</div>
 								<div class="blog__el-content">
-									<div class="blog__el-title">Promo code for a 10% discount on hosting services</div>
-									<div class="blog__el-text">When ordering <a href="https://accounts.fozzy.com/aff.php?aff=18138">Fozzy</a> hosting services, use this promo code —
-										PROFISTYLE and get a 10% discount.</div>
+									<div class="blog__el-title">Kod promocyjny dla 10% zniżki na usługi hostingowe</div>
+									<div class="blog__el-text">Podczas zamawiania <a href="https://accounts.fozzy.com/aff.php?aff=18138">Fozzy</a> hosting services, use this promo code —
+										PROFISTYLE i uzyskaj 10% zniżki.</div>
 
-									<div class="blog__el-title">Reliable hosting</div>
-									<div class="blog__el-text">Fozzy provides protection against unauthorized access to your hosting. The
-										abundance of data centers all over the world will not allow your website “crash” for any minute.
-										Data centers are protected not only at the level hardware and software, but also physically.
-										Customer data Fozzy is securely protected in terms of information security. At all data centers have
-										valid ISO 27001:2013 and PCI DSS certificates.</div>
+									<div class="blog__el-title">Niezawodny hosting</div>
+									<div class="blog__el-text">Fozzy zapewnia ochronę przed nieautoryzowanym dostępem do hostingu..
+Obfitość centrów danych na całym świecie nie pozwoli Twojej witrynie „zderzyć się” na minutę.
+Centra danych są chronione nie tylko na poziomowym sprzęcie i oprogramowaniu, ale także fizycznie.
+Dane klienta Fozzy są bezpiecznie chronione pod względem bezpieczeństwa informacji.We wszystkich centrach danych
+Ważne certyfikaty ISO 27001: 2013 i PCI DSS.</div>
 
-									<div class="blog__el-title">Powerful hosting for WordPress, Joomla, ModX, Drupal, Bitrix.</div>
-									<div class="blog__el-text">As web developers, we can assure you that sites on WordPress and other CMS
-										engines are quite resource-intensive, and their location on insufficiently powerful hosting leads to
-										a long load and,
-										as a result, lowers your site in search results
-										systems. For such projects, we recommend using powerful servers.
-										Fozzy provides a wide range of solutions including ready-made plans for your website engine, and our
-										specialists are always ready to advise you on the choice of hosting capacity.</div>
+									<div class="blog__el-title">Potężny hosting dla WordPress, Joomla, Modx, Drupal, Bitrix.</div>
+									<div class="blog__el-text">Jako twórcy stron internetowych możemy zapewnić, że witryny w WordPress i innych CMS
+Silniki są dość wymagające zasobów, a ich lokalizacja na niewystarczająco potężnym hostingu prowadzi do
+długi ładunek i
+W rezultacie obniża witrynę w wynikach wyszukiwania
+systemy.W przypadku takich projektów zalecamy korzystanie z potężnych serwerów.
+Fozzy zapewnia szeroką gamę rozwiązań, w tym gotowe plany dla silnika strony internetowej i nasz
+Specjaliści są zawsze gotowi doradzić w zakresie wyboru zdolności hostingowej.</div>
 
-									<div class="blog__el-title">Your personal VPS</div>
-									<div class="blog__el-text">Fozzy provides the ability to rent a personal VPS server. VPS — this is
-										Your personal server machine where You can host everything. Pay your attention to a set of
-										ready-made solutions for your tasks. There are BitrixVM (a specially configured server for 1C-Bitrix
-										products), Windows VPS (remote desktop based on Windows Server), Forex VPS (Windows VPS with a set
-										of programs for uninterrupted Forex trading), Linux server (both pure and already configured).</div>
+									<div class="blog__el-title">Twój osobisty VPS</div>
+									<div class="blog__el-text">Fozzy zapewnia możliwość wynajęcia osobistego serwera VPS.VPS - to jest
+Twój osobisty komputer serwerowy, w którym możesz hostować wszystko.Zwróć uwagę na zestaw
+gotowe rozwiązania do twoich zadań.Istnieje BitrixVM (specjalnie skonfigurowany serwer dla 1C-bitrix
+Produkty), Windows VPS (zdalny pulpit oparty na systemie Windows Server), VPS Forex (Windows VPS z zestawem
+programów do nieprzerwanego handlu Forex), Linux Server (zarówno czysty, jak i już skonfigurowany).</div>
 
-									<div class="blog__el-title">Sell products online</div>
-									<div class="blog__el-text">The culture of consumption has long been established in the world society.
-										Millions of products are bought every day. In the 21st century everything starts to transition
-										«online», so the owners of online stores have maximum development prospects. Our team of specialists
-										can create a ready-made online store for you, as well as deal with it promotion.</div>
+									<div class="blog__el-title">Sprzedawaj produkty online</div>
+									<div class="blog__el-text">Kultura konsumpcji od dawna powstała w społeczeństwie światowym.
+Miliony produktów są kupowane każdego dnia.W XXI wieku wszystko zaczyna się przechodzić
+«Online», więc właściciele sklepów internetowych mają maksymalne perspektywy rozwoju.Nasz zespół specjalistów
+może stworzyć gotowy sklep internetowy dla Ciebie, a także poradzić sobie z promocją IT.</div>
 
-									<div class="blog__el-title">Convenient website builder</div>
-									<div class="blog__el-text">f you want to learn web development skills, you can try
-										create a website on your own using a free Fozzy website builder.</div>
+									<div class="blog__el-title">Wygodny konstruktor stron internetowych</div>
+									<div class="blog__el-text">Jeśli chcesz nauczyć się umiejętności tworzenia stron internetowych, możesz spróbować
+Utwórz samodzielną stronę internetową za pomocą bezpłatnego konstruktora witryn Fozzy.</div>
 
-									<div class="blog__el-title">Launch your online store in a couple of days!</div>
-									<div class="blog__el-text">Fozzy provides a ready-made online store on Opencart, you can start
-										work in a few days, our specialists can help you with
-										landing the store on hosting, setting it up and promoting it.</div>
+									<div class="blog__el-title">Uruchom swój sklep internetowy za kilka dni!</div>
+									<div class="blog__el-text">Fozzy zapewnia gotowy sklep internetowy na OpenCart, możesz zacząć
+Praca za kilka dni nasi specjaliści mogą ci pomóc
+lądowanie sklepu na temat hostingu, konfigurowanie go i promowanie.</div>
 
-									<div class="blog__el-title">Is your hosting often unavailable?</div>
-									<div class="blog__el-text">There are quite a lot of hosters on the market, but only a few were able to
-										prove Your reliability. Our studio has also become a victim unreliable hosting provider, so we
-										ourselves know perfectly well how
-										this is when the work stops through no fault of ours. By choosing Fozzy you choose a reliable
-										partner who has long been trusted even by such a giant as Forex investment exchange, and many other
-										popular Internet portals.</div>
+									<div class="blog__el-title">Czy Twój hosting jest często niedostępny?</div>
+									<div class="blog__el-text">Na rynku jest wielu hosterów, ale tylko nieliczni było w stanie
+Udowodnij swoją niezawodność.Nasze studio stało się również ofiarą niewiarygodnym dostawcą hostingu, więc my
+my sami wiedzą, jak dobrze
+Wtedy praca nie zatrzymuje się z naszej winy.Wybierając Fozzy, wybierasz niezawodny
+partner, którym od dawna ufał tak giganty
+Popularne portale internetowe.</div>
 
-									<div class="blog__el-title">Are you in doubt about choosing a hosting service?</div>
-									<div class="blog__el-text">Our studio uses the services of Fozzy, and we are sure that
-										our resources will always be available. Fozzy data centers have
-										Tier III (uptime 99.982%) and Tier IV (uptime 99.995%) certifications issued by the Uptime Institute
-										and certified by SSAE 16 SOC 2,
-										Type II. Our experts can help you in choosing and setting up
-										hosting. Contact us for any advise!</div>
+									<div class="blog__el-title">Czy masz wątpliwości co do wyboru usługi hostingowej?</div>
+									<div class="blog__el-text">Nasze studio korzysta z usług Fozzy i jesteśmy pewni, że
+Nasze zasoby będą zawsze dostępne.Fozzy Centra danych mają
+Tier III (czas Uptime 99,982%) i poziom IV (czas Uptime 99,995%) wydane przez Uptime Institute
+i certyfikowane przez SSAE 16 SOC 2,
+Typ II.Nasi eksperci mogą pomóc w wyborze i konfiguracji
+hosting.Skontaktuj się z nami w celu uzyskania jakiejkolwiek porady!</div>
 
-									<div class="blog__el-title">Tech. Is your hosting support not responding for a long time?</div>
-									<div class="blog__el-text">We know about bad service, so for our customers we recommend only hostings
-										that we have personally verified, Fozzy is one of them.
-										Technical support is always in touch, and any question is answered in
-										during the hour. Therefore, in case of difficulties, you can be sure that they will help you.</div>
+									<div class="blog__el-title">Tech.Czy wsparcie hostingowe nie reaguje przez długi czas?</div>
+									<div class="blog__el-text">Wiemy o złych usługach, więc dla naszych klientów zalecamy tylko hosting
+Że osobiście zweryfikowaliśmy, Fozzy jest jednym z nich.
+Wsparcie techniczne jest zawsze w kontakcie, a na każde pytanie jest odpowiedzią
+w ciągu godziny.Dlatego w przypadku trudności możesz mieć pewność, że ci pomogą.</div>
 								</div>
 							</div>
 						</div>
 						<div class="blog__el">
-							<a href="blogPostRuby.html" class="blog__el-label">Ruby on Rails web applications</a>
+							<a href="blogPostRuby.html" class="blog__el-label">Ruby on Rails Aplikacje internetowe</a>
 							<div class="blog__el-pic">
 								<a href="blogPostRuby.html" class="blog__el-pic-bg"></a>
-								<img src="img/Ruby_On_Rails_Logo.svg_.png" alt="">
+								<%= image_tag(asset_path('Ruby_On_Rails_Logo.svg_.png')) %>
 							</div>
 							<div class="blog__body">
 								<div class="blog__el-description">
-									<a href="blogPostRuby.html" class="blog__el-date">6 марта, 2021</a>
-									<a href="blogPostRuby.html" class="blog__el-com-link">1 комментарий</a>
+									<a href="blogPostRuby.html" class="blog__el-date"></a>
+									<a href="blogPostRuby.html" class="blog__el-com-link"></a>
 								</div>
 								<div class="blog__el-content">
-									<div class="blog__el-title">Why do we need web applications?</div>
-									<div class="blog__el-text">Today, the Internet occupies a significant niche in the life of every
-										person. People buy, sell, communicate, relax and develop using the Internet. Considering that today
-										everyone has a smartphone in their pocket, any applications, including web applications based on
-										Ruby on Rails, have become more relevant than ever. What could be more convenient than a social
-										network, or a delivery service right on the smartphone screen? And besides, not in the browser, but
-										as an independent application.</div>
+									<div class="blog__el-title">Dlaczego potrzebujemy aplikacji internetowych?</div>
+									<div class="blog__el-text">Dziś Internet zajmuje znaczącą niszę w życiu każdego
+osoba.Ludzie kupują, sprzedają, komunikują, relaksują się i rozwijają za pomocą Internetu.Biorąc to pod uwagę dzisiaj
+Każdy ma w kieszeni smartfon, wszelkie aplikacje, w tym aplikacje internetowe na podstawie
+Ruby on Rails stały się bardziej odpowiednie niż kiedykolwiek.Co może być wygodniejsze niż społeczne
+Sieć czy usługa dostawy bezpośrednio na ekranie smartfona?A poza tym nie w przeglądarce, ale
+jako niezależna aplikacja.</div>
 
-									<div class="blog__el-title">A variety of development tools</div>
-									<div class="blog__el-text">With the popularization of web applications, came a variety of development
-										tools, today the developer has thousands of tools to work with anything from photo editing to
-										writing code. Among developers, disputes often arise about which tools are better, more efficient.
-										Many professionals choose Ruby in Rails development for its simplicity and efficiency. An
-										experienced developer knows that each tool has its own clear function, you won’t drive a nail with a
-										screwdriver, will you?</div>
+									<div class="blog__el-title">Różnorodne narzędzia programistyczne</div>
+									<div class="blog__el-text">Wraz z popularyzacją aplikacji internetowych pojawiła się różnorodne rozwój
+Narzędzia, dziś programista ma tysiące narzędzi do pracy z czymkolwiek, od edycji zdjęć po
+Pisanie kodu.Wśród programistów często pojawiają się spory o tym, które narzędzia są lepsze, bardziej wydajne.
+Wielu profesjonalistów wybiera Ruby w rozwój Rails ze względu na jego prostotę i wydajność.jakiś
+Doświadczony programista wie, że każde narzędzie ma własną wyraźną funkcję, nie będziesz prowadzić paznokci z
+śrubokręt, czy ty?</div>
 
-									<div class="blog__el-title">Why do our experts work with Ruby on Rails?</div>
-									<div class="blog__el-text">Ruby on Rails is a kind of developer’s multitool, this tool has absorbed
-										all the best from other development tools. RoR allows you to increase the functionality of the
-										application in a matter of minutes without acquiring the so-called «crutches». Developing with Ruby
-										on Rails is convenient and therefore fast. We all understand that after quality, the main factor in
-										development is speed. With Ruby on Rails, a developer can write efficiently and quickly.</div>
+									<div class="blog__el-title">Dlaczego nasi eksperci pracują z Ruby na szynach?</div>
+									<div class="blog__el-text">Ruby on Rails jest rodzajem multitoolla programisty, to narzędzie pochłonęło
+Wszystkiego najlepszego z innych narzędzi programistycznych.ROR pozwala na zwiększenie funkcjonalności
+Zastosowanie w ciągu kilku minut bez nabywania tak zwanych „kul”.Rozwijanie się z Ruby
+na szynach jest wygodne i dlatego szybkie.Wszyscy rozumiemy, że po jakości główny czynnik
+Rozwój to szybkość.Z Ruby na szynach, programista może pisać wydajnie i szybko pisać.</div>
 
-									<div class="blog__el-title">The process of creating a web application using Ruby on Rails</div>
-									<div class="blog__el-text">First of all, a specialist needs to study the subject area. Why is he
-										making an app? After the developer, like a portrait painter, creates the layout of the application,
-										he must outline the main functional parts of the application. If we consider the Model View
-										Controller model, then usually among them are the application entities, their controllers, and what
-										the user sees — views. Then the next step is to write, debug the program code and the Ruby on Rails
-										web application is ready. An experienced developer knows that the more time he devotes to design,
-										the less complexity will arise during the implementation phase of the application.</div>
+									<div class="blog__el-title">Proces tworzenia aplikacji internetowej za pomocą Ruby on Rails</div>
+									<div class="blog__el-text">Przede wszystkim specjalista musi przestudiować obszar tematyczny.Dlaczego on
+Tworzenie aplikacji?Po deweloperie, podobnie jak malarz portretowy, tworzy układ aplikacji,
+Musi nakreślić główne funkcjonalne części aplikacji.Jeśli weźmiemy pod uwagę widok modelu
+Model kontrolera, a następnie zwykle wśród nich są podmioty aplikacyjne, ich kontrolery i co
+Użytkownik widzi - widoki.Następnie następnym krokiem jest napisanie, debugowanie kodu programu i Ruby on Rails
+Aplikacja internetowa jest gotowa.Doświadczony programista wie, że im więcej czasu poświęca na projekt,
+mniej złożoność pojawi się podczas fazy wdrażania aplikacji.</div>
 
-									<div class="blog__el-title">Are you a big business owner and still don’t have your app?</div>
-									<div class="blog__el-text">Then you’ve come to the right place, our specialists can develop an
-										application on Ruby on Rails for every taste, whether it’s a simple inventory application, or an
-										entire online store. You will be able to follow the development stages to make sure your application
-										is reliable. The main thing to remember is that from an economic point of view, a web application is
-										the right investment, because in the future it will bring or increase your income.</div>
+									<div class="blog__el-title">Czy jesteś właścicielem wielkiej firmy i nadal nie masz swojej aplikacji?</div>
+									<div class="blog__el-text">Potem dotarłeś we właściwe miejsce, nasi specjaliści mogą opracować
+Aplikacja na Ruby na szynach dla każdego smaku, niezależnie od tego, czy jest to prosta aplikacja zapasów, czy
+Cały sklep internetowy.Będziesz mógł śledzić etapy rozwoju, aby upewnić się, że aplikacja
+jest niezawodny.Najważniejsze do zapamiętania jest to, że z ekonomicznego punktu widzenia jest aplikacja internetowa
+Właściwa inwestycja, ponieważ w przyszłości przyniesie lub zwiększy twoje dochody.</div>
 								</div>
 							</div>
 						</div>
@@ -270,8 +273,8 @@
 				<div class="footer__row ops">
 					<div class="footer__rank">
 						<div class="footer__coll">
-							<div class="footer__title">Call us</div>
-							<div class="footer__subtitle">Our specialists will answer all your questions</div>
+							<div class="footer__title">Zadzwoń do nas</div>
+							<div class="footer__subtitle">Nasi specjaliści odpowiedzą na wszystkie pytania</div>
 							<div class="footer__list1">
 								<div class="footer__list1-el">
 									<div class="footer__list1-pic"></div>
@@ -288,7 +291,7 @@
 							</div>
 						</div>
 						<div class="footer__coll">
-							<div class="footer__title">Working hours</div>
+							<div class="footer__title">Godziny pracy</div>
 							<div class="footer__list2">
 								<div class="footer__list2-el">
 									Mon: 8-00 - 16-00
@@ -311,7 +314,7 @@
 							</div>
 						</div>
 						<div class="footer__coll">
-							<div class="footer__title">Advice Center</div>
+							<div class="footer__title">Centrum porad</div>
 							<div class="footer__list3">
 								<div class="footer__list3-el">
 									<a href="https://accounts.fozzy.com/aff.php?aff=18138">Domain name</a>
@@ -326,47 +329,44 @@
 									<a href="https://accounts.fozzy.com/aff.php?aff=18138">Dedicated server</a>
 								</div>
 								<div class="footer__list3-el">
-									<a href="#">Templates Word Press</a>
+									<a href="#">Szablony WordPress</a>
 								</div>
 								<div class="footer__list3-el">
-									<a href="#">Templates Joomla</a>
+									<a href="#">Szablony Joomla</a>
 								</div>
 							</div>
 						</div>
 						<div class="footer__coll">
-							<div class="footer__title">Photos</div>
+							<div class="footer__title">Zdjęcia</div>
 							<div class="footer__list4">
 								<div class="footer__list4-el">
-									<a href="#"><img src="img/g1.webp" alt=""></a>
+									<a href="#"><%= image_tag(asset_path('g1.webp')) %></a>
 								</div>
 								<div class="footer__list4-el">
-									<a href="#"><img src="img/g2.webp" alt=""></a>
+									<a href="#"><%= image_tag(asset_path('g2.webp')) %></a>
 								</div>
 								<div class="footer__list4-el">
-									<a href="#"><img src="img/g6.webp" alt=""></a>
+									<a href="#"><%= image_tag(asset_path('g6.webp')) %></a>
 								</div>
 								<div class="footer__list4-el">
-									<a href="#"><img src="img/g7.webp" alt=""></a>
+									<a href="#"><%= image_tag(asset_path('g7.webp')) %></a>
 								</div>
 								<div class="footer__list4-el">
-									<a href="#"><img src="img/g8.webp" alt=""></a>
+									<a href="#"><%= image_tag(asset_path('g8.webp')) %></a>
 								</div>
 								<div class="footer__list4-el">
-									<a href="#"><img src="img/g9.webp" alt=""></a>
+									<a href="#"><%= image_tag(asset_path('g9.webp')) %></a>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="footer__log">
-						<a href="https://accounts.fozzy.com/aff.php?aff=18138"><img src="img/fozzy_button.webp" alt=""></a>
+						<a href="https://accounts.fozzy.com/aff.php?aff=18138">
+						<%= image_tag(asset_path('fozzy_button.webp')) %>
+						</a>
 					</div>
-					<div class="footer__post">Created by <a href="https://profistyle.group/">profistyle.group ©</a></div>
+					<div class="footer__post">Stworzone przez <a href="https://profistyle.group/">profistyle.group ©</a></div>
 				</div>
 			</div>
 		</footer>
 	</div>
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<script src="js/script.js"></script>
-</body>
-
-</html>

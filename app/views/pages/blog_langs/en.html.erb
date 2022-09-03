@@ -1,16 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="shortcut icon" href="img/cropped-icon2.png" type="image/x-icon">
-	<title>Website development and SEO promotion - ProfiStyle Group</title>
-</head>
-
-<body>
 	<div class="wrapper">
 		<header class="header" id="header">
 			<div class="container">
@@ -52,26 +39,26 @@
 					<div class="menu">
 						<nav class="nav mon">
 							<ul>
-								<li><a href="/">Home</a></li>
-								<li><a href="/about_us">About Us</a></li>
-								<li><a href="/services">Services</a>
+								<li><a href="/?lang=en">Home</a></li>
+								<li><a href="/about_us?lang=en">About Us</a></li>
+								<li><a href="/services?lang=en">Services</a>
 									<button class="collapsible"></button>
 									<div class="collapsible-content">
-										<a href="servicesRoR.html">RoR development</a>
-										<a href="servicesCMS.html">CMS Development</a>
-										<a href="servicesSEO.html">SEO Promotion</a>
+										<a href="">RoR development</a>
+										<a href="">CMS Development</a>
+										<a href="">SEO Promotion</a>
 									</div>
 								</li>
-								<li><a href="/blog">Blog</a></li>
-								<li><a href="/portfolio">Portfolio</a></li>
-								<li><a href="/contacts">Contact Us</a></li>
-								<li><a href="#">
+								<li><a href="/blog?lang=en">Blog</a></li>
+								<li><a href="/portfolio?lang=en">Portfolio</a></li>
+								<li><a href="/contacts?lang=en">Contact Us</a></li>
+								<li><a href="/blog?lang=pl">
 								<%= image_tag(asset_path('pl-24.png')) %>
 								</a></li>
-								<li><a href="#">
+								<li><a href="/blog?lang=ru">
 								<%= image_tag(asset_path('rus-24.png')) %>
 								</a></li>
-								<li><a href="#">
+								<li><a href="/blog?lang=en">
 								<%= image_tag(asset_path('eng-24.png')) %>
 								</a></li>
 							</ul>
@@ -89,41 +76,41 @@
 						</div>
 						<div class="jaw__list">
 							<div class="jaw__el">
-								<a href="/" class="jaw__link">Home</a>
+								<a href="/?lang=en" class="jaw__link">Home</a>
 							</div>
 							<div class="jaw__el">
-								<a href="/about_us" class="jaw__link">About Us</a>
+								<a href="/about_us?lang=en" class="jaw__link">About Us</a>
 							</div>
 							<div class="jaw__el">
-								<a href="/services" class="jaw__link">Services</a>
+								<a href="/services?lang=en" class="jaw__link">Services</a>
 								<span></span>
 								<div class="jaw__poster">
-									<a href="servicesRoR.html" class="jaw__link">RoR development</a>
-									<a href="servicesCMS.html" class="jaw__link">CMS Development</a>
-									<a href="servicesSEO.html" class="jaw__link">SEO Promotion</a>
+									<a href="" class="jaw__link">RoR development</a>
+									<a href="" class="jaw__link">CMS Development</a>
+									<a href="" class="jaw__link">SEO Promotion</a>
 								</div>
 							</div>
 							<div class="jaw__el">
-								<a href="/blog" class="jaw__link active">Blog</a>
+								<a href="/blog?lang=en" class="jaw__link active">Blog</a>
 							</div>
 							<div class="jaw__el">
-								<a href="/portfolio" class="jaw__link">Portfolio</a>
+								<a href="/portfolio?lang=en" class="jaw__link">Portfolio</a>
 							</div>
 							<div class="jaw__el">
-								<a href="/contacts" class="jaw__link">Contact Us</a>
+								<a href="/contacts?lang=en" class="jaw__link">Contact Us</a>
 							</div>
 							<div class="jaw__el">
-								<a href="#" class="jaw__link">
+								<a href="/blog?lang=pl" class="jaw__link">
 								<%= image_tag(asset_path('pl-24.webp')) %>
 								</a>
 							</div>
 							<div class="jaw__el">
-								<a href="#" class="jaw__link">
+								<a href="/blog?lang=ru" class="jaw__link">
 								<%= image_tag(asset_path('rus-24.webp')) %>
 								</a>
 							</div>
 							<div class="jaw__el">
-								<a href="#" class="jaw__link">
+								<a href="/blog?lang=en" class="jaw__link">
 								<%= image_tag(asset_path('eng-24.webp')) %>
 								</a>
 							</div>
@@ -135,7 +122,7 @@
 				<div class="container">
 					<div class="breadcrumb__row">
 						<div class="breadcrumb__body">
-							<a href="/">Home</a> &#187; Blog
+							<a href="/?lang=en">Home</a> &#187; Blog
 						</div>
 					</div>
 				</div>
@@ -143,7 +130,7 @@
 			<div class="blog">
 				<div class="container">
 					<div class="blog__row">
-						<div class="blog__label">Рубрика: Blog</div>
+						<div class="blog__label"></div>
 						<div class="blog__el">
 							<a href="blogPostHost.html" class="blog__el-label">Host Services</a>
 							<div class="blog__el-pic">
@@ -154,8 +141,8 @@
 							</div>
 							<div class="blog__body">
 								<div class="blog__el-description">
-									<a href="blogPostHost.html" class="blog__el-date">16 января, 2022</a>
-									<a href="blogPostHost.html" class="blog__el-com-link">Leave a comment</a>
+									<a href="blogPostHost.html" class="blog__el-date"></a>
+									<a href="blogPostHost.html" class="blog__el-com-link"></a>
 								</div>
 								<div class="blog__el-content">
 									<div class="blog__el-title">Promo code for a 10% discount on hosting services</div>
@@ -232,8 +219,8 @@
 							</div>
 							<div class="blog__body">
 								<div class="blog__el-description">
-									<a href="blogPostRuby.html" class="blog__el-date">6 марта, 2021</a>
-									<a href="blogPostRuby.html" class="blog__el-com-link">1 комментарий</a>
+									<a href="blogPostRuby.html" class="blog__el-date"></a>
+									<a href="blogPostRuby.html" class="blog__el-com-link"></a>
 								</div>
 								<div class="blog__el-content">
 									<div class="blog__el-title">Why do we need web applications?</div>
@@ -383,8 +370,3 @@
 			</div>
 		</footer>
 	</div>
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<script src="js/script.js"></script>
-</body>
-
-</html>
