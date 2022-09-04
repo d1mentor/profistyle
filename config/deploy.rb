@@ -1,6 +1,7 @@
 set :application, "profistyle"
 set :repo_url, "git@github.com:d1mentor/profistyle.git"
 set :linked_files, %w{config/master.key}
+set :linked_files, %w{config/credentials/production.key}
 
 # Deploy to the user's home directory
 set :deploy_to, "/home/deploy/#{fetch :application}"
