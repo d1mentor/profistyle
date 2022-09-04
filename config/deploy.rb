@@ -6,8 +6,8 @@ set :linked_files, %w{config/credentials/production.key}
 # Deploy to the user's home directory
 set :deploy_to, "/home/deploy/#{fetch :application}"
 
-append :linked_files, 'config/database.yml', 'config/master.key', 'config/credentials/production.key'
-      append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', '.bundle',
+
+append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', '.bundle',
                            'public/system', 'public/uploads'
 # Only keep the last 5 releases to save disk space
 set :keep_releases, 5
