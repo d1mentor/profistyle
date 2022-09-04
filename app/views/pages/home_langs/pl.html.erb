@@ -44,9 +44,9 @@
 								<li><a href="/services?lang=pl">Usługi</a>
 									<button class="collapsible"></button>
 									<div class="collapsible-content">
-										<a href="">Rozwój ROR</a>
-										<a href="">Rozwój CMS</a>
-										<a href="">Promocja SEO</a>
+										<a href="/services_ror?lang=pl">Rozwój ROR</a>
+										<a href="/services_cms?lang=pl">Rozwój CMS</a>
+										<a href="/services_seo?lang=pl">Promocja SEO</a>
 									</div>
 								</li>
 								<li><a href="/blog?lang=pl">Blog</a></li>
@@ -77,9 +77,9 @@
 								<a href="/services?lang=pl" class="jaw__link">Usługi</a>
 								<span></span>
 								<div class="jaw__poster">
-									<a href="" class="jaw__link">Rozwój ROR</a>
-									<a href="" class="jaw__link">Rozwój CMS</a>
-									<a href="" class="jaw__link">Promocja SEO</a>
+									<a href="/services_ror?lang=pl" class="jaw__link">Rozwój ROR</a>
+									<a href="/services_cms?lang=pl" class="jaw__link">Rozwój CMS</a>
+									<a href="/services_seo?lang=pl" class="jaw__link">Promocja SEO</a>
 								</div>
 							</div>
 							<div class="jaw__el">
@@ -311,6 +311,17 @@ zostały wykonane po optymalizacji SEO i konfiguracji funkcjonalności zaplecza.
 						</div>
 						<div class="portfolio__el">
 							<div class="portfolio__pic">
+							<%= image_tag(asset_path('cmr.png')) %>
+							</div>
+							<div class="portfolio__body">
+								<div class="portfolio__title">CMR dla polskiej firmy elektrycznej</div>
+								<div class="portfolio__text">Ten projekt został zbudowany na ramie Ruby on Rails.Aplikacja pomaga przedsiębiorcy w utrzymaniu kont.
+								</div>
+								<a href="#" class="portfolio__btn">Więcej</a>
+							</div>
+						</div>
+						<div class="portfolio__el">
+							<div class="portfolio__pic">
 								<%= image_tag(asset_path('an.webp')) %>
 							</div>
 							<div class="portfolio__body">
@@ -404,27 +415,27 @@ ekwipunek</div>
 						<div class="news__label">Publikowanie naszych najnowszych wiadomości</div>
 						<div class="news__el">
 							<div class="news__pic">
-								<a href="blogPostHost.html" class="news__pic-bg1"></a>
+								<a href="/blog?lang=pl" class="news__pic-bg1"></a>
 								<span class="news__pic-bg2"></span>
 								<%= image_tag(asset_path('hosting.png')) %>
 							</div>
 							<div class="news__body">
-								<div class="news__title"><a href="blogPostHost.html">Host Services</a></div>
-								<div class="news__subtitle"><a href="blogAutorAdmin.html"><span class="news__span-pic"></span> admin</a> •<span
-										class="news__span-pic-2"></span> 16 января, 2022</div>
+								<div class="news__title"><a href="/blog?lang=pl">Host Services</a></div>
+								<div class="news__subtitle"><a href=""><span class="news__span-pic"></span></a><span
+										class="news__span-pic-2"></span></div>
 								<div class="news__text">Promo code for a 10% discount on hosting services When ordering Fozzy …</div>
 							</div>
 						</div>
 						<div class="news__el">
 							<div class="news__pic">
-								<a href="blogPostRuby.html" class="news__pic-bg1"></a>
+								<a href="/blog?lang=pl" class="news__pic-bg1"></a>
 								<span class="news__pic-bg2"></span>
 								<%= image_tag(asset_path('Ruby_On_Rails_Logo.svg_.webp')) %>
 							</div>
 							<div class="news__body">
-								<div class="news__title"><a href="blogPostRuby.html">Ruby on Rails web applications</a></div>
-								<div class="news__subtitle"><a href="blogAutorAdmin.html"><span class="news__span-pic"></span> admin</a> •<span
-										class="news__span-pic-2"></span> 6 марта, 2021</div>
+								<div class="news__title"><a href="/blog?lang=pl">Ruby on Rails web applications</a></div>
+								<div class="news__subtitle"><a href=""><span class="news__span-pic"></span></a><span
+										class="news__span-pic-2"></span></div>
 								<div class="news__text">Why do we need web applications? Today, the Internet occupies a significant …
 								</div>
 							</div>

@@ -44,9 +44,9 @@
 								<li><a href="/services?lang=ru">Услуги</a>
 									<button class="collapsible"></button>
 									<div class="collapsible-content">
-										<a href="">RoR разработка</a>
-										<a href="">CMS разработка</a>
-										<a href="">SEO продвижение</a>
+										<a href="/services_ror?lang=ru">RoR разработка</a>
+										<a href="/services_cms?lang=ru">CMS разработка</a>
+										<a href="/services_seo?lang=ru">SEO продвижение</a>
 									</div>
 								</li>
 								<li><a href="/blog?lang=ru">Блог</a></li>
@@ -77,9 +77,9 @@
 								<a href="/services?lang=ru" class="jaw__link">Услуги</a>
 								<span></span>
 								<div class="jaw__poster">
-									<a href="" class="jaw__link">RoR разработка</a>
-									<a href="" class="jaw__link">CMS разработка</a>
-									<a href="" class="jaw__link">SEO продвижение</a>
+									<a href="/services_ror?lang=ru" class="jaw__link">RoR разработка</a>
+									<a href="/services_cms?lang=ru" class="jaw__link">CMS разработка</a>
+									<a href="/services_seo?lang=ru" class="jaw__link">SEO продвижение</a>
 								</div>
 							</div>
 							<div class="jaw__el">
@@ -291,6 +291,17 @@
 						</div>
 						<div class="portfolio__el">
 							<div class="portfolio__pic">
+							<%= image_tag(asset_path('cmr.png')) %>
+							</div>
+							<div class="portfolio__body">
+								<div class="portfolio__title">CMR для польской электрической компании</div>
+								<div class="portfolio__text">Этот проект был написан на Ruby On Rails. Приложение помогает предпринимателю вести бухгалтерию.
+								</div>
+								<a href="#" class="portfolio__btn">Подробнее</a>
+							</div>
+						</div>
+						<div class="portfolio__el">
+							<div class="portfolio__pic">
 								<%= image_tag(asset_path('an.webp')) %>
 							</div>
 							<div class="portfolio__body">
@@ -383,28 +394,28 @@
 						<div class="news__label">Новости</div>
 						<div class="news__el">
 							<div class="news__pic">
-								<a href="blogPostHost.html" class="news__pic-bg1"></a>
+								<a href="/blog?lang=ru" class="news__pic-bg1"></a>
 								<span class="news__pic-bg2"></span>
 								<%= image_tag(asset_path('hosting.png')) %>
 							</div>
 							<div class="news__body">
-								<div class="news__title"><a href="blogPostHost.html">Услуги выделенных серверов</a></div>
-								<div class="news__subtitle"><a href="blogAutorAdmin.html"><span class="news__span-pic"></span> admin</a> •<span
-										class="news__span-pic-2"></span> 16 января, 2022</div>
+								<div class="news__title"><a href="/blog?lang=ru">Услуги выделенных серверов</a></div>
+								<div class="news__subtitle"><a href=""><span class="news__span-pic"></span></a><span
+										class="news__span-pic-2"></span></div>
 								<div class="news__text">Промо-код на 10% скидку при аренде сервера у хостера Fozzy …</div>
 							</div>
 						</div>
 						<div class="news__el">
 							<div class="news__pic">
-								<a href="blogPostRuby.html" class="news__pic-bg1"></a>
+								<a href="/blog?lang=en" class="news__pic-bg1"></a>
 								<span class="news__pic-bg2"></span>
 								<%= image_tag(asset_path('Ruby_On_Rails_Logo.svg_.webp')) %>
 							</div>
 							<div class="news__body">
-								<div class="news__title"><a href="blogPostRuby.html">Ruby on Rails web applications</a></div>
-								<div class="news__subtitle"><a href="blogAutorAdmin.html"><span class="news__span-pic"></span> admin</a> •<span
-										class="news__span-pic-2"></span> 6 марта, 2021</div>
-								<div class="news__text">Why do we need web applications? Today, the Internet occupies a significant …
+								<div class="news__title"><a href="/blog?lang=ru">Ruby on Rails web applications</a></div>
+								<div class="news__subtitle"><a href=""><span class="news__span-pic"></span></a><span
+										class="news__span-pic-2"></span></div>
+								<div class="news__text">Зачем нам нужны веб-приложения? Сегодня Интернет занимает значительный ...
 								</div>
 							</div>
 						</div>
