@@ -218,7 +218,7 @@
 								<div class="solutions__el-body">
 									<div class="solutions__el-label">01.</div>
 									<div class="solutions__el-title">WORDPRESS</div>
-									<div class="solutions__el-text">Website with a unique design on CMS WordPress. There are many ready-made premium WordPress themes available. Search engine optimization and <a href="servicesSEO.html">SEO website promotion</a> on WordPress.</div>
+									<div class="solutions__el-text">Website with a unique design on CMS WordPress. There are many ready-made premium WordPress themes available. Search engine optimization and <a href="/services_cms?lang=en">SEO website promotion</a> on WordPress.</div>
 								</div>
 							</div>
 							<div class="solutions__el">
@@ -227,7 +227,7 @@
 								<div class="solutions__el-body">
 									<div class="solutions__el-label">02.</div>
 									<div class="solutions__el-title">JOOMLA</div>
-									<div class="solutions__el-text"><a href="servicesCMS.html">CMS Website Development</a> — Joomla. Unique design or premium template for your website. We are also engaged in SEO promotion and search engine optimization of websites on Joomla.</div>
+									<div class="solutions__el-text"><a href="/services_cms?lang=en">CMS Website Development</a> — Joomla. Unique design or premium template for your website. We are also engaged in SEO promotion and search engine optimization of websites on Joomla.</div>
 								</div>
 							</div>
 							<div class="solutions__el">
@@ -256,7 +256,7 @@
 								<div class="solutions__el-body">
 									<div class="solutions__el-label">05.</div>
 									<div class="solutions__el-title">WEB APP</div>
-									<div class="solutions__el-text">We are <a href="blogPostRuby.html">develop web applications with Ruby on Rails</a>. Reliable, fast, extensible framework. A Rails app is a great and indispensable business tool.</div>
+									<div class="solutions__el-text">We are <a href="/services_ror?lang=en">develop web applications with Ruby on Rails</a>. Reliable, fast, extensible framework. A Rails app is a great and indispensable business tool.</div>
 								</div>
 							</div>
 							<div class="solutions__el">
@@ -384,3 +384,10 @@
 				</div>
 			</div>
 		</footer>
+		<script>
+		var strGET = window.location.search.replace( '?', ''); 
+
+		if(strGET != ""){
+			if(window.location.href.indexOf('&reloaded') === -1) window.location.href = window.location.href + "&reloaded=true";
+		};
+	</script>

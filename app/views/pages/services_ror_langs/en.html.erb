@@ -1,16 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="shortcut icon" href="img/cropped-icon2.png" type="image/x-icon">
-	<title>Website development and SEO promotion - ProfiStyle Group</title>
-</head>
-
-<body>
 	<div class="wrapper">
 		<header class="header" id="header">
 			<div class="container">
@@ -199,7 +186,7 @@
 							There are a number of ready-made and fully customizable modules that allow you to quickly create a Ruby on
 							Rails application. The Ruby programming language was originally created for the convenience of the
 							programmer. But most importantly, the Ruby on Rails web application has high performance and security, and
-							Ruby on Rails web sites have a high potential for <a href="servicesSEO.html">SEO promotion</a> in the TOP of search
+							Ruby on Rails web sites have a high potential for <a href="/services_seo?lang=en">SEO promotion</a> in the TOP of search
 							engines.</div>
 					</div>
 					<div class="ruby__gallery">
@@ -387,9 +374,10 @@
 				</div>
 			</div>
 		</footer>
-	</div>
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<script src="js/script.js"></script>
-</body>
+		<script>
+		var strGET = window.location.search.replace( '?', ''); 
 
-</html>
+		if(strGET != ""){
+			if(window.location.href.indexOf('&reloaded') === -1) window.location.href = window.location.href + "&reloaded=true";
+		};
+		</script>
