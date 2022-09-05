@@ -15,7 +15,7 @@ test:
 
 production:
   <<: *default
-  database: profistyle_production
+  database: profistyle_prod
   username: deploy
   password: <%= ENV["PROFISTYLE_DATABASE_PASSWORD"] %>
 
