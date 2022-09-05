@@ -1,19 +1,17 @@
 set :application, "profistyle"
 set :repo_url, "git@github.com:d1mentor/profistyle.git"
-set :linked_files, %w{config/master.key}
+
+set :branch, "master"
 
 # Deploy to the user's home directory
-set :deploy_to, "/home/deploy/#{fetch :application}"
+set :deploy_to, "/home/deploy/profistyle"
 
-set :passenger_environment_variables, {
-    'PASSENGER_INSTANCE_REGISTRY_DIR' => '/var/run/passenger-instreg'
-  }
-
+append :linked_files, 'config/database.yml', 'config/credentials.yml.enc', 'config/master.key'
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', '.bundle',
-                           'public/system', 'public/uploads'
+                     'public/system', 'public/uploads'
+
 # Only keep the last 5 releases to save disk space
 set :keep_releases, 5
-set :ssh_options, {verify_host_key: :never}
 
 # Optionally, you can symlink your database.yml and/or secrets.yml file from the shared directory during deploy
 # This is useful if you don't want to use ENV variables
