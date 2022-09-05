@@ -1,6 +1,6 @@
 set :application, "profistyle"
 set :repo_url, "git@github.com:d1mentor/profistyle.git"
-
+set :ssh_options, {verify_host_key: :never}
 set :branch, "master"
 
 # Deploy to the user's home directory
