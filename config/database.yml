@@ -1,26 +1,21 @@
+
 default: &default
-        adapter: postgresql
-        encoding: unicode
-        pool: 5
-        timeout: 5000
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
-      development:
-        <<: *default
-        host: localhost
-        port: 5432
-        user: postgres
-        database: rubydeploy_dev
+development:
+  <<: *default
+  database: profistyle_development
 
-      test:
-        <<: *default
-        host: localhost
-        port: 5432
-        database: rubydeploy_test
 
-      production:
-        <<: *default
-        host: localhost
-        port: 5432
-        database: profistyle_prod
-        username: deploy
-        password: ahbplf22
+test:
+  <<: *default
+  database: profistyle_test
+
+production:
+  <<: *default
+  database: profistyle_production
+  username: deploy
+  password: <%= ENV["PROFISTYLE_DATABASE_PASSWORD"] %>
+
