@@ -9,6 +9,7 @@
 
 server '104.248.194.148', user: 'deploy', roles: %w{app db web}
 
+DATABASE_URL=postgresql://deploy:ahbplf22@127.0.0.1/profistyle_production
 # role-based syntax
 # ==================
 
