@@ -5,6 +5,9 @@ set :linked_files, %w{config/master.key}
 # Deploy to the user's home directory
 set :deploy_to, "/home/deploy/#{fetch :application}"
 
+set :passenger_environment_variables, {
+    'PASSENGER_INSTANCE_REGISTRY_DIR' => '/var/run/passenger-instreg'
+  }
 
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', '.bundle',
                            'public/system', 'public/uploads'
