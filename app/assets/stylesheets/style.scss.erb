@@ -781,7 +781,7 @@ footer {
 			top: 0vh;
 			left: 5vw;
 			gap: 10px;
-			padding: 20px;
+			padding: 100px 20px 20px 20px;
 		}
 
 		&__item-label {
@@ -1496,7 +1496,7 @@ footer {
 
 		&__pic {
 			flex: 0 0 75%;
-			width: 50%;
+			width: 75%;
 		}
 	}
 }
@@ -1998,7 +1998,6 @@ footer {
 
 	&__list1-el {
 		display: flex;
-		align-items: center;
 		gap: 10px;
 		padding: 10px 0px;
 	}
@@ -2103,14 +2102,17 @@ footer {
 
 		&__rank {
 			flex-direction: column;
-			align-items: center;
+			//align-items: center;
 			gap: 25px;
 		}
 
 		&__coll {
-			width: 50%;
+			width: 100%;
 			display: flex;
 			flex-direction: column;
+			//align-items: center;
+			text-align: center;
+			gap: 10px;
 		}
 
 		&__title {
@@ -2120,9 +2122,11 @@ footer {
 		}
 
 		&__list1 {
+			max-width: 100%;
 		}
 
 		&__list1-el {
+			justify-content: center;
 		}
 
 		&__list1-pic {
@@ -2130,22 +2134,27 @@ footer {
 
 		&__list1-num {
 		}
-
+		&__list1,
+		&__list2,
+		&__list3 {
+			max-width: 100%;
+			display: flex;
+			flex-direction: column;
+		}
 		&__list2 {
+			align-items: center;
 		}
 
 		&__list2-el {
-		}
-
-		&__list3 {
 		}
 
 		&__list3-el {
 		}
 
 		&__list4 {
+			width: 100%;
+			justify-content: center;
 		}
-
 		&__list4-el {
 		}
 
@@ -2802,40 +2811,20 @@ footer {
 		align-items: center;
 		text-align: center;
 	}
-
 	&__el-pic-1,
 	&__el-pic-2,
 	&__el-pic-3 {
 		width: 60px;
 		height: 60px;
+		overflow: hidden;
 	}
-
-	&__el-pic-1 {
-		background: url("<%= asset_path('loc-100-aq.png') %>") 0 0 / cover no-repeat;
-		transition: all 0.3s ease 0s;
+	&__el-pic-1 img,
+	&__el-pic-2 img,
+	&__el-pic-3 img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
 	}
-	&__el-pic-2 {
-		background: url("<%= asset_path('en-100-aq.png') %>") 0 0 / cover no-repeat;
-		transition: all 0.3s ease 0s;
-	}
-	&__el-pic-3 {
-		background: url("<%= asset_path('tl-100-aq.png') %>") 0 0 / cover no-repeat;
-		transition: all 0.3s ease 0s;
-	}
-
-	&__el-pic-1:hover {
-		background: url("<%= asset_path('loc-100-bl.png') %>") 0 0 / cover no-repeat;
-		animation: puls 0.8s infinite;
-	}
-	&__el-pic-2:hover {
-		background: url("<%= asset_path('en-100-bl.png') %>") 0 0 / cover no-repeat;
-		animation: puls 0.8s infinite;
-	}
-	&__el-pic-3:hover {
-		background: url("<%= asset_path('tl-100-bl.png') %>") 0 0 / cover no-repeat;
-		animation: puls 0.8s infinite;
-	}
-
 	&__el-title {
 		font-size: 16px;
 		line-height: 2.5em;
@@ -2908,6 +2897,15 @@ footer {
 	&__row iframe {
 		width: 100%;
 		padding: 10px;
+	}
+}
+@media (max-width: 1200px) {
+	.map {
+		&__row {
+			padding: 0px;
+		}
+		&__row iframe {
+		}
 	}
 }
 /*--*/
@@ -3189,6 +3187,7 @@ footer {
 
 		&__el {
 			max-width: 100%;
+			width: 100%;
 			min-width: 300px;
 		}
 
