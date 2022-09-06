@@ -1,0 +1,140 @@
+        
+        <header class="header" id="header">
+			<div class="container">
+				<div class="header__row ops">
+					<div class="header__rank">
+						<div class="header__body">
+							<ul class="header__icon-list">
+								<li class="header__icon-el"><%= image_tag(asset_path('fb-24.webp')) %></li>
+								<li class="header__icon-el"><%= image_tag(asset_path('tw-24.webp')) %></li>
+								<li class="header__icon-el"><%= image_tag(asset_path('ut-24.webp')) %></li>
+								<li class="header__icon-el"><%= image_tag(asset_path('in-24.webp')) %></li>
+								<li class="header__icon-el"><%= image_tag(asset_path('vk-24.webp')) %></li>
+							</ul>
+							<ul class="header__text-list">
+								<li class="header__icon-box">
+								<%= image_tag(asset_path('ph-24.webp')) %>
+									<div class="header__icon-text"><a href="tel:+48795124042" class="header__icon-link">+48795124042</a>
+									</div>
+								</li>
+								<li class="header__icon-box">
+								<%= image_tag(asset_path('ph-24.webp')) %>
+									<div class="header__icon-text"><a href="tel:+48796128406" class="header__icon-link">+48796128406</a>
+									</div>
+								</li>
+								<li class="header__icon-box">
+								<%= image_tag(asset_path('en-24.webp')) %>
+									<div class="header__icon-text"><a href="mailto:biuro@profistyle.group"
+											class="header__icon-link">biuro@profistyle.group</a></div>
+								</li>
+							</ul>
+						</div>
+						<div class="header__logo">
+						<%= image_tag(asset_path('cropped-logo.webp')) %>
+						</div>
+						<div class="menu-btn ">
+							<span></span>
+						</div>
+					</div>
+					<div class="menu">
+						<nav class="nav mon">
+							<ul>
+								<li><a href="/?lang=en">Главная</a></li>
+								<li><a href="/about_us?lang=en">О нас</a></li>
+								<li><a href="/services?lang=en">Услуги</a>
+									<button class="collapsible"></button>
+									<div class="collapsible-content">
+										<a href="/services_ror?lang=en">RoR разработка</a>
+										<a href="/services_cms?lang=en">CMS разработка</a>
+										<a href="/services_seo?lang=en">SEO продвижение</a>
+									</div>
+								</li>
+								<li><a href="/blog?lang=en">Блог</a></li>
+								<li><a href="/portfolio?lang=en">Портфолио</a></li>
+								<li><a href="/contacts?lang=en">Контакты</a></li>
+								<li><a href="/services?lang=pl"><%= image_tag(asset_path('pl-24.webp')) %></a></li>
+								<li><a href="/services?lang=ru"><%= image_tag(asset_path('rus-24.webp')) %></a></li>
+								<li><a href="/services?lang=en"><%= image_tag(asset_path('eng-24.webp')) %></a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+
+            <% if current_path == "/" %>
+                <div class="jaw">
+            <% else %>
+                <div class="jaw bg">
+            <% end %>
+				<div class="container">
+					<div class="jaw__row mon">
+						<div class="jaw__pic"><%= image_tag(asset_path('cropped-logo.webp')) %></div>
+						<div class="jaw__list">
+                            <div class="jaw__el">
+                                <% if current_path == "/" %>
+                                    <%= link_to "Главная", "/?lang=#{get_lang}", class: "jaw__link active" %>
+                                <% else %>
+                                    <%= link_to "Главная", "/?lang=#{get_lang}", class: "jaw__link" %>
+                                <% end %>
+                            </div>
+                            <div class="jaw__el">
+                                <% if current_path == "/about_us" %>
+                                    <%= link_to "О нас", "/about_us?lang=#{get_lang}", class: "jaw__link active" %>
+                                <% else %>
+                                    <%= link_to "О нас", "/about_us?lang=#{get_lang}", class: "jaw__link" %>
+                                <% end %>
+                            </div>
+                            <div class="jaw__el">
+                                <% if current_path == "/services" %>
+                                    <%= link_to "Услуги", "/services?lang=#{get_lang}", class: "jaw__link active" %>
+                                <% else %>
+                                    <%= link_to "Услуги", "/services?lang=#{get_lang}", class: "jaw__link" %>
+                                <% end %>
+                                <span></span>
+								<div class="jaw__poster">
+                                    <%= link_to "RoR разработка", "/services_ror?lang=#{get_lang}", class: "jaw__link" %>
+                                    <%= link_to "CMS разработка", "/services_cms?lang=#{get_lang}", class: "jaw__link" %>
+                                    <%= link_to "SEO продвижение", "/services_seo?lang=#{get_lang}", class: "jaw__link" %>
+								</div>
+                            </div>
+                            <div class="jaw__el">
+                                <% if current_path == "/blog" %>
+                                    <%= link_to "Блог", "/blog?lang=#{get_lang}", class: "jaw__link active" %>
+                                <% else %>
+                                    <%= link_to "Блог", "/blog?lang=#{get_lang}", class: "jaw__link" %>
+                                <% end %>
+                            </div>
+                            <div class="jaw__el">
+                                <% if current_path == "/portfolio" %>
+                                    <%= link_to "Портфолио", "/portfolio?lang=#{get_lang}", class: "jaw__link active" %>
+                                <% else %>
+                                    <%= link_to "Портфолио", "/portfolio?lang=#{get_lang}", class: "jaw__link" %>
+                                <% end %>
+                            </div>
+                            <div class="jaw__el">
+                                <% if current_path == "/contact_us" %>
+                                    <%= link_to "Контакты", "/contact_us?lang=#{get_lang}", class: "jaw__link active" %>
+                                <% else %>
+                                    <%= link_to "Контакты", "/contact_us?lang=#{get_lang}", class: "jaw__link" %>
+                                <% end %>
+                            </div>
+                            <div class="jaw__el">
+                                <%= link_to "#{current_path}?lang=pl", class: "jaw__link" do %>
+                                    <%= image_tag(asset_path('pl-24.webp')) %>
+                                <% end %>
+                            </div>
+                            <div class="jaw__el">
+                                <%= link_to "#{current_path}?lang=ru", class: "jaw__link" do %>
+                                    <%= image_tag(asset_path('rus-24.webp')) %>
+                                <% end %>
+                            </div>
+                            <div class="jaw__el">
+                                <%= link_to "#{current_path}?lang=en", class: "jaw__link" do %>
+                                    <%= image_tag(asset_path('eng-24.webp')) %>
+                                <% end %>
+                            </div>
+                        </div>
+					</div>
+				</div>
+			</div>

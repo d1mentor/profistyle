@@ -14,6 +14,8 @@
   </head>
 
   <body>
+    <%= render "pages/header_langs/header_#{get_lang}" %>
     <%= yield %>
+    <%= render "pages/footer_langs/footer_#{get_lang}" %>
   </body>
 </html>

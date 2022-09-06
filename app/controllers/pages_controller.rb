@@ -43,6 +43,15 @@ class PagesController < ApplicationController
 
 	private
 
+	def get_lang
+		if params[:lang] == nil || params[:lang] == ""
+			lang = get_preffered_language
+		else 
+			params[:lang]
+		end		
+	end
+	
+
 	def render_page_by_lang(dir_name, lang)
 		if lang == nil || lang == ""
 			lang = get_preffered_language
