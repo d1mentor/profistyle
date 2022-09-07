@@ -41,8 +41,7 @@ class PagesController < ApplicationController
 	end
 
 	def contacts_form_send
-		@order = { name: params[:name], email: params[:email], subject: params[:subject], message: params[:message] }
-		SendFormMailer.with(order: @order).send_form.deliver_later
+		SendFormMailer.with(name: params[:name], email: params[:email], subject: params[:subject], message: params[:message]).send_form.deliver_later
 	end	
 
 
