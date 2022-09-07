@@ -42,7 +42,7 @@
 			</div>
 			<div class="touch">
 				<div class="container">
-					<%= form_with url: "/contacts_form_send", class: "touch" do |form| %>
+					<%= form_with url: "/contacts_form_send?lang=#{params[:lang]}", class: "touch" do |form| %>
 						<div class="touch__title">Napisz do nas</div>
 						<div class="touch__subtitle">Twoja wiadomość jest dla nas bardzo ważna.Odpowiemy mu tak szybko, jak to możliwe.</div>
 						<div class="touch__body">

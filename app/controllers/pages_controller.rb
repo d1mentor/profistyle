@@ -42,6 +42,17 @@ class PagesController < ApplicationController
 
 	def contacts_form_send
 		SendFormMailer.with(name: params[:name], email: params[:email], subject: params[:subject], message: params[:message]).send_form.deliver_later
+
+		case get_lang
+		when "ru"
+			msg = "Ваше письмо успешно отправлено!"
+		when "en"
+			msg = "Email sent successfully!"
+		when "pl"
+			msg = "Wysłany e-mail z pomyślnie!"
+		end	
+		
+		redirect_to "/contacts?lang=#{params[:lang]}", notice: "#{msg}"
 	end	
 
 

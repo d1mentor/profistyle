@@ -51,7 +51,7 @@
 		</div>
 		<div class="touch">
 			<div class="container">
-				<%= form_with url: "/contacts_form_send", class: "touch" do |form| %>
+				<%= form_with url: "/contacts_form_send?lang=#{params[:lang]}", class: "touch" do |form| %>
 						<div class="touch__title">Write to us</div>
 						<div class="touch__subtitle">Your message is very important for us. We will answer him as soon as possible.</div>
 						<div class="touch__body">
