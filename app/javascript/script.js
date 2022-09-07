@@ -32,6 +32,8 @@ $(document).ready(function () {
 		adaptiveHeight: true,
 		slidesToShow: 1,
 		infinite: true,
+		/*autoplay: true,
+		autoplaySpeed: 2000,*/
 		responsive: [
 			{
 				breakpoint: 1200,
