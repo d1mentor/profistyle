@@ -1,5 +1,5 @@
 class SendFormMailer < ApplicationMailer
-    default from: "profistyle@site.com"
+    default from: "gerasimenkot92@gmail.com"
 
     def send_form
         @order = { name: params[:name], email: params[:email], subject: params[:subject], message: params[:message] }

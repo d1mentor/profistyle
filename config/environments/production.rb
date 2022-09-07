@@ -83,17 +83,13 @@ Rails.application.configure do
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new "app-name")
 
   config.action_mailer.delivery_method = :smtp
-  host = '167.99.209.38' 
-  config.action_mailer.default_url_options = { host: 167.99.209.38 }
-
-  # SMTP settings for gmail
   config.action_mailer.smtp_settings = {
-  :address              => "smtp.gmail.com",
-  :port                 => 587,
-  :user_name            => "gerasimenkot92@gmail.com",
-  :password             => "ahbplf22",
-  :authentication       => "plain",
-  :enable_starttls_auto => true
+    port: 587,
+    address: 'smtp.gmail.com',
+    user_name: 'gerasimenkot92@gmail.com',
+    password: 'dpsdwlvgfdncyaqz',
+    authentication: :plain,
+    enable_starttls_auto: true
   }
 
 
