@@ -51,32 +51,31 @@
 		</div>
 		<div class="touch">
 			<div class="container">
-				<form action="" class="touch">
-					<div class="touch__title">GET IN TOUCH</div>
-					<div class="touch__subtitle">Your message is very important to us. We will answer it as soon as possible.
-					</div>
-					<div class="touch__body">
-						<div class="touch__rank">
-							<div class="touch__el">
-								<label for="" class="touch__label">Your Name *</label>
-								<input type="text" class="touch__input">
+				<%= form_with url: "/contacts_form_send", class: "touch" do |form| %>
+						<div class="touch__title">Write to us</div>
+						<div class="touch__subtitle">Your message is very important for us. We will answer him as soon as possible.</div>
+						<div class="touch__body">
+							<div class="touch__rank">
+								<div class="touch__el">
+									<label for="" class="touch__label">Your name*</label>
+									<%= form.text_field :name, class: "touch__input" %>
+								</div>
+								<div class="touch__el">
+									<label for="" class="touch__label">Your email*</label>
+									<%= form.text_field :email, class: "touch__input" %>
+								</div>
+								<div class="touch__el">
+									<label for="" class="touch__label">Subject</label>								
+									<%= form.text_field :subject, class: "touch__input" %>
+								</div>
 							</div>
-							<div class="touch__el">
-								<label for="" class="touch__label">Your Email*</label>
-								<input type="text" class="touch__input">
+							<div class="touch__el-textarea">
+								<label for="" class="touch__label">Message</label>
+								<%= form.text_area :message, class: "touch__el-textarea", rows: 25 %>
 							</div>
-							<div class="touch__el">
-								<label for="" class="touch__label">Subject</label>
-								<input type="text" class="touch__input">
-							</div>
+							<%= form.submit "Отправить", class: "touch__btn" %>
 						</div>
-						<div class="touch__el-textarea">
-							<label for="" class="touch__label">Messages</label>
-							<textarea name="" id="" rows="20" class="touch__el-textarea"></textarea>
-						</div>
-						<button class="touch__btn">SEND</button>
-					</div>
-				</form>
+					<% end %>
 			</div>
 		</div>
 	</main>

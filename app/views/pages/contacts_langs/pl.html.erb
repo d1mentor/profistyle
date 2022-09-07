@@ -42,31 +42,31 @@
 			</div>
 			<div class="touch">
 				<div class="container">
-					<form action="" class="touch">
-						<div class="touch__title">Skontaktuj się</div>
-						<div class="touch__subtitle">Twoja wiadomość jest dla nas bardzo ważna.Odpowiemy na to tak szybko, jak to możliwe.</div>
+					<%= form_with url: "/contacts_form_send", class: "touch" do |form| %>
+						<div class="touch__title">Napisz do nas</div>
+						<div class="touch__subtitle">Twoja wiadomość jest dla nas bardzo ważna.Odpowiemy mu tak szybko, jak to możliwe.</div>
 						<div class="touch__body">
 							<div class="touch__rank">
 								<div class="touch__el">
-									<label for="" class="touch__label">Twoje imię *</label>
-									<input type="text" class="touch__input">
+									<label for="" class="touch__label">Twoje imię*</label>
+									<%= form.text_field :name, class: "touch__input" %>
 								</div>
 								<div class="touch__el">
 									<label for="" class="touch__label">Twój email*</label>
-									<input type="text" class="touch__input">
+									<%= form.text_field :email, class: "touch__input" %>
 								</div>
 								<div class="touch__el">
-									<label for="" class="touch__label">Temat</label>
-									<input type="text" class="touch__input">
+									<label for="" class="touch__label">Motyw</label>								
+									<%= form.text_field :subject, class: "touch__input" %>
 								</div>
 							</div>
 							<div class="touch__el-textarea">
-								<label for="" class="touch__label">Wiadomości</label>
-								<textarea name="" id="" rows="20" class="touch__el-textarea"></textarea>
+								<label for="" class="touch__label">Wiadomość</label>
+								<%= form.text_area :message, class: "touch__el-textarea", rows: 25 %>
 							</div>
-							<button class="touch__btn">WYSŁAĆ</button>
+							<%= form.submit "Отправить", class: "touch__btn" %>
 						</div>
-					</form>
+					<% end %>
 				</div>
 			</div>
 		</main>

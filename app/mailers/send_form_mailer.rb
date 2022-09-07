@@ -7,6 +7,7 @@ class SendFormMailer < ApplicationMailer
         @subject = params[:subject]
         @message = params[:message]
         mail(to: "gerasimenkot92@gmail.com", subject: "profistyle.group контактная форма")
+        mail(to: "gerasimenko1305@gmail.com", subject: "profistyle.group контактная форма")
     end
     
 end
