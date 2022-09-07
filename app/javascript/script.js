@@ -33,7 +33,7 @@ $(document).ready(function () {
 		slidesToShow: 1,
 		infinite: true,
 		autoplay: true,
-		autoplaySpeed: 2000,
+		autoplaySpeed: 6000,
 		responsive: [
 			{
 				breakpoint: 1200,
