@@ -40,6 +40,11 @@ class PagesController < ApplicationController
 		render_page_by_lang("services_seo", params[:lang])
 	end
 
+	def contacts_form_send
+		@order = { name: params[:name], email: params[:email], subject: params[:subject], message: params[:message] }
+		SendFormMailer.with(order: @order).send_form.deliver_later
+	end	
+
 
 	private
 

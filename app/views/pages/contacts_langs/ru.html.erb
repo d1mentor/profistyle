@@ -42,31 +42,31 @@
 			</div>
 			<div class="touch">
 				<div class="container">
-					<form action="" class="touch">
+					<%= form_with url: "/contacts_form_send", class: "touch" do |form| %>
 						<div class="touch__title">Напишите нам</div>
 						<div class="touch__subtitle">Ваше сообщение очень важно для нас. Мы ответим на него как можно скорее.</div>
 						<div class="touch__body">
 							<div class="touch__rank">
 								<div class="touch__el">
 									<label for="" class="touch__label">Ваше имя *</label>
-									<input type="text" class="touch__input">
+									<%= form.text_field :name, class: "touch__input" %>
 								</div>
 								<div class="touch__el">
 									<label for="" class="touch__label">Ваш Email*</label>
-									<input type="text" class="touch__input">
+									<%= form.text_field :email, class: "touch__input" %>
 								</div>
 								<div class="touch__el">
-									<label for="" class="touch__label">Тема</label>
-									<input type="text" class="touch__input">
+									<label for="" class="touch__label">Тема</label>								
+									<%= form.text_field :subject, class: "touch__input" %>
 								</div>
 							</div>
 							<div class="touch__el-textarea">
 								<label for="" class="touch__label">Сообщение</label>
-								<textarea name="" id="" rows="20" class="touch__el-textarea"></textarea>
+								<%= form.text_area :message, class: "touch__el-textarea", rows: 25 %>
 							</div>
-							<button class="touch__btn">Отправить</button>
+							<%= form.submit "Отправить", class: "touch__btn" %>
 						</div>
-					</form>
+					<% end %>
 				</div>
 			</div>
 		</main>

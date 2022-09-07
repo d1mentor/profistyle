@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   get "/services_cms", to: "pages#services_cms"
   get "/services_seo", to: "pages#services_seo"
   get "/services_cmr", to: "pages#services_cmr"
+  post "/contacts_form_send", to: "pages#contacts_form_send" 
 end

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>Новое письмо с profistyle.group</p>
+    <p>
+    Детали:<br>
+    --------------------------
+    </p>
+    <p>Имя отправителя: <%= @order[:name] %></p>
+    <p>Email отправителя: <%= @order[:email] %></p>
+    <p>Тема: <%= @order[:subject] %></p>
+    <p>
+    Сообщение:<br>
+    ----------
+    </p>
+    <p><%= @order[message] %></p>
+  </body>
+</html>
