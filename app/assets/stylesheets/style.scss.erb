@@ -97,6 +97,7 @@ body {
 	width: 100%;
 	margin: 0px auto;
 	position: relative;
+	padding: 0;
 }
 header {
 	flex: 1;
@@ -208,7 +209,7 @@ footer {
 			display: flex;
 			justify-content: space-between;
 			position: relative;
-			padding: 10px 5px 10px 5px;
+			padding: 10px;
 		}
 
 		&__logo {
@@ -849,87 +850,60 @@ footer {
 		font-family: sans-serif;
 		max-width: 840px;
 		width: 100%;
-		margin: 0 auto;
 		display: flex;
+		margin: 0 auto;
 		margin-top: -100px;
 		padding: 0px 0px 90px 0px;
 	}
-
 	&__coll {
 		flex: 0 0 33.333%;
 		position: relative;
 		transition: all 0.3s ease 0s;
-		padding: 0px 0px 68% 0px;
-	}
-	&__coll.ru {
-		padding: 0px 0px 90% 0px;
-	}
-
-	&__coll-wall1-1,
-	&__coll-wall1-2,
-	&__coll-wall1-3 {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		left: 0;
 		background-color: #fff;
 		z-index: 1;
+		padding: 60px 30px;
 		box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.1);
 	}
-	&__coll-wall2 {
+	&__coll::before,
+	&__coll::after {
+		content: "";
 		position: absolute;
 		width: 100%;
 		height: 100%;
 		top: 0;
 		left: 0;
-		z-index: 2;
+		transition: all 0.3s ease 0s;
+	}
+	&__coll::after {
+		z-index: -1;
 		box-shadow: inset 0 0 0 0 rgba(6, 34, 65, 0.8);
-		transition: ease-out 0.5s;
 	}
-	&__coll:hover &__coll-wall2 {
-		box-shadow: inset 500px 0 0 0 rgba(6, 34, 65, 0.8);
+	&__coll:hover::after {
+		box-shadow: inset 1000px 0 0 0 rgba(6, 34, 65, 0.8);
 	}
-	&__coll:hover &__coll-wall1-1 {
+	&__coll::before.roll__coll-1 {
+		z-index: -2;
 		background: url("<%= asset_path('banner1.webp') %>") 0 0 / cover no-repeat;
+		opacity: 0;
 	}
-	&__coll:hover &__coll-wall1-2 {
+	&__coll::before.roll__coll-2 {
+		z-index: -2;
 		background: url("<%= asset_path('banner2-2.webp') %>") 0 0 / cover no-repeat;
+		opacity: 0;
 	}
-	&__coll:hover &__coll-wall1-3 {
+	&__coll::before.roll__coll-3 {
+		z-index: -2;
 		background: url("<%= asset_path('banner3-1.webp') %>") 0 0 / cover no-repeat;
+		opacity: 0;
 	}
-	&__coll-body {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		left: 0;
-		padding: 60px 30px;
-		z-index: 5;
+	&__coll:hover::before {
+		opacity: 1;
 	}
-
 	&__coll-label {
 		color: #0fa89d;
 		font-size: 40px;
 		font-weight: 700;
-		margin: 0px 0px 60px 0px;
-	}
-
-	&__coll-title {
-		color: #212529;
-		font-size: 20px;
-		font-weight: 600;
-		margin: 0px 0px 45px 0px;
-		transition: all 0.3s ease 0s;
-	}
-
-	&__coll-text {
-		font-size: 16px;
-		letter-spacing: 0.025em;
-		line-height: 1.5;
-		color: #7a7a7a;
-		transition: all 0.3s ease 0s;
+		padding: 0px 0px 60px 0px;
 	}
 	&__coll:hover &__coll-title {
 		color: #fff;
@@ -937,30 +911,27 @@ footer {
 	&__coll:hover &__coll-text {
 		color: #fff;
 	}
+	&__coll-title {
+		color: #212529;
+		font-size: 20px;
+		font-weight: 600;
+		padding: 0px 0px 45px 0px;
+		transition: all 0.3s ease 0s;
+	}
+	&__coll-text {
+		font-size: 16px;
+		letter-spacing: 0.025em;
+		line-height: 1.5;
+		color: #7a7a7a;
+		transition: all 0.3s ease 0s;
+	}
 }
-
 @media (max-width: 1024px) {
 	.roll {
 		&__row {
 			max-width: 100%;
-		}
-		&__coll.ru {
-			padding: 0px 0px 60% 0px;
-		}
-	}
-}
-
-@media (max-width: 896px) {
-	.roll {
-		&__row {
 			margin-top: 0;
-		}
-		&__coll,
-		&__coll.ru {
-			padding: 0px 0px 70% 0px;
-		}
-		&__coll.ru {
-			padding: 0px 0px 80% 0px;
+			padding: 10px;
 		}
 	}
 }
@@ -968,47 +939,23 @@ footer {
 	.roll {
 		&__row {
 			flex-direction: column;
+			padding: 0px;
 		}
 
 		&__coll {
 			flex: 1 1 auto;
-			padding: 0px 0px 0px 0px;
+
 			box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.05);
 		}
 
-		&__coll-wall1 {
-			display: none;
-		}
-
-		&__coll-wall2 {
-			display: none;
-		}
-
-		&__coll-body {
-			position: relative;
-		}
-
 		&__coll-label {
+			padding: 20px 0px 0px 0px;
 		}
 
 		&__coll-title {
 		}
 
 		&__coll-text {
-		}
-	}
-}
-@media (max-width: 1360px) {
-	.roll {
-		&__row {
-			margin-top: -50px;
-		}
-	}
-}
-@media (max-width: 1192px) {
-	.roll {
-		&__row {
-			margin-top: 0px;
 		}
 	}
 }
@@ -1210,101 +1157,69 @@ footer {
 	}
 
 	&__el {
-		max-width: 350px;
-		width: 100%;
+		flex: 0 1 350px;
 		margin: 20px 10px;
 		border-style: solid;
 		border-width: 1px 1px 1px 1px;
 		border-color: #cccccc;
 		box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.1);
 		position: relative;
-		transition: all 0.3s ease 0s;
-		max-height: 250px;
-		height: 100%;
-		min-height: 160px;
-	}
-	&__el.pl {
-		max-height: 350px;
-		height: 100%;
-		min-height: 220px;
-	}
-	&__el.ru {
-		max-height: 350px;
-		height: 100%;
-		min-height: 220px;
-	}
-
-	&__el-wall1-1,
-	&__el-wall1-2,
-	&__el-wall1-3,
-	&__el-wall1-4,
-	&__el-wall1-5,
-	&__el-wall1-6,
-	&__el-wall2 {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		left: 0;
-	}
-
-	&__el-wall1,
-	&__el-wall1-2,
-	&__el-wall1-3,
-	&__el-wall1-4,
-	&__el-wall1-5,
-	&__el-wall1-6 {
-		background-color: #fff;
-		z-index: 1;
-	}
-
-	&__el-wall2 {
-		z-index: 2;
-		box-shadow: inset 0 0 0 0 rgba(6, 34, 65, 0.8);
-		transition: ease-out 0.5s;
-	}
-	&__el:hover &__el-wall1-1 {
-		background: url("<%= asset_path('pr1.webp') %>") 0 0 / cover no-repeat;
-	}
-	&__el:hover &__el-wall1-2 {
-		background: url("<%= asset_path('pr2.webp') %>") 0 0 / cover no-repeat;
-	}
-	&__el:hover &__el-wall1-3 {
-		background: url("<%= asset_path('pr3.webp') %>") 0 0 / cover no-repeat;
-	}
-	&__el:hover &__el-wall1-4 {
-		background: url("<%= asset_path('pr4.webp') %>") 0 0 / cover no-repeat;
-	}
-	&__el:hover &__el-wall1-5 {
-		background: url("<%= asset_path('pr5.webp') %>") 0 0 / cover no-repeat;
-	}
-	&__el:hover &__el-wall1-6 {
-		background: url("<%= asset_path('pr6.webp') %>") 0 0 / cover no-repeat;
-	}
-	&__el:hover &__el-wall2 {
-		box-shadow: inset 500px 0 0 0 rgba(6, 34, 65, 0.8);
-	}
-	&__el:hover &__title {
-		color: #fff;
-	}
-	&__el:hover &__subtitle {
-		color: #fff;
-	}
-
-	&__el-body {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		left: 0;
 		padding: 30px 20px;
 		z-index: 5;
 		display: flex;
 		gap: 5px;
+		transition: all 0.3s ease 0s;
 	}
-
+	&__el::after,
+	&__el::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		transition: all 0.3s ease 0s;
+	}
+	&__el::after {
+		z-index: -1;
+		box-shadow: inset 0 0 0 0 rgba(6, 34, 65, 0.8);
+	}
+	&__el:hover::after {
+		box-shadow: inset 1000px 0 0 0 rgba(6, 34, 65, 0.8);
+	}
+	&__el::before {
+		z-index: -2;
+	}
+	&__el::before.add__el-1 {
+		background: url("<%= asset_path('pr1.webp') %>") 0 0 / cover no-repeat;
+		opacity: 0;
+	}
+	&__el::before.add__el-2 {
+		background: url("<%= asset_path('pr2.webp') %>") 0 0 / cover no-repeat;
+		opacity: 0;
+	}
+	&__el::before.add__el-3 {
+		background: url("<%= asset_path('pr3.webp') %>") 0 0 / cover no-repeat;
+		opacity: 0;
+	}
+	&__el::before.add__el-4 {
+		background: url("<%= asset_path('pr4.webp') %>") 0 0 / cover no-repeat;
+		opacity: 0;
+	}
+	&__el::before.add__el-5 {
+		background: url("<%= asset_path('pr5.webp') %>") 0 0 / cover no-repeat;
+		opacity: 0;
+	}
+	&__el::before.add__el-6 {
+		background: url("<%= asset_path('pr6.webp') %>") 0 0 / cover no-repeat;
+		opacity: 0;
+	}
+	&__el:hover::before {
+		opacity: 1;
+	}
 	&__pic {
 	}
+
 	&__pic:hover img {
 		animation: puls 0.8s infinite;
 	}
@@ -1327,47 +1242,17 @@ footer {
 		line-height: 1.5;
 		transition: all 0.3s ease 0s;
 	}
-}
-
-@keyframes puls {
-	0% {
-		transform: scale3d(1, 1, 1);
+	&__el:hover &__title {
+		color: #fff;
 	}
-	50% {
-		transform: scale3d(0.8, 0.8, 0.8);
-	}
-	100% {
-		transform: scale3d(1, 1, 1);
+	&__el:hover &__subtitle {
+		color: #fff;
 	}
 }
 
-@media (max-width: 1199px) {
-	.additional {
-		&__body {
-			justify-content: center;
-		}
-		&__el {
-		}
-		&__el-body {
-			align-items: center;
-			justify-content: center;
-		}
-	}
-}
-@media (max-width: 960px) {
-	.additional {
-		&__body {
-		}
-		&__el {
-		}
-		&__el-body {
-		}
-	}
-}
 @media (max-width: 425px) {
 	.additional {
-		&__text {
-		}
+		&__text {}
 		&__title {
 			font-size: 16px;
 			margin: 0px 0px 10px 0px;
@@ -1379,9 +1264,7 @@ footer {
 }
 @media (max-width: 350px) {
 	.additional {
-		&__text {
-			//gap: 5px;
-		}
+		&__text {}
 		&__title {
 			font-size: 14px;
 			margin: 0px 0px 5px 0px;
@@ -1389,6 +1272,18 @@ footer {
 		&__subtitle {
 			font-size: 12px;
 		}
+	}
+}
+
+@keyframes puls {
+	0% {
+		transform: scale3d(1, 1, 1);
+	}
+	50% {
+		transform: scale3d(0.8, 0.8, 0.8);
+	}
+	100% {
+		transform: scale3d(1, 1, 1);
 	}
 }
 
