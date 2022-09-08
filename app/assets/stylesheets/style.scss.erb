@@ -680,7 +680,9 @@ footer {
 }
 @media (max-width: 1600px) {
 	.slider {
-		
+		&__item-label {
+			padding: 5% 0px 0px 0px;
+		}
 	}
 }
 @media (max-width: 1200px) {
@@ -943,8 +945,17 @@ footer {
 
 		&__coll {
 			flex: 1 1 auto;
-
 			box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.05);
+		}
+		&__coll::after,
+		&__coll::before {
+			display: none;
+		}
+		&__coll:hover &__coll-title {
+			color: #212529;
+		}
+		&__coll:hover &__coll-text {
+			color: #7a7a7a;
 		}
 
 		&__coll-label {
@@ -1246,6 +1257,20 @@ footer {
 	}
 	&__el:hover &__subtitle {
 		color: #fff;
+	}
+}
+@media (max-width: 768px) {
+	.additional {
+		&__el::after,
+		&__el::before {
+			display: none;
+		}
+		&__el:hover &__title {
+			color: #444444;
+		}
+		&__el:hover &__subtitle {
+			color: #7a7a7a;
+		}
 	}
 }
 
@@ -3164,67 +3189,66 @@ footer {
 	&__rank {
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: center;
 	}
 
 	&__el {
 		flex: 0 0 33.333%;
+		min-width: 350px;
 		position: relative;
+		font-family: sans-serif !important;
+		padding: 60px 30px;
 		transition: all 0.3s ease 0s;
-		padding: 0px 0px 28.3333333% 0px;
-	}
-
-	&__el-bg1-1,
-	&__el-bg1-2,
-	&__el-bg1-3,
-	&__el-bg1-4,
-	&__el-bg1-5,
-	&__el-bg1-6,
-	&__el-bg2,
-	&__el-body {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-	}
-
-	&__el-bg1-1,
-	&__el-bg1-2,
-	&__el-bg1-3,
-	&__el-bg1-4,
-	&__el-bg1-5,
-	&__el-bg1-6 {
-		z-index: 1;
+		z-index: 0;
 		box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.1);
 		background-color: #fff;
+	}
+	&__el::after,
+	&__el::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
 		transition: all 0.3s ease 0s;
 	}
-
-	&__el-bg2 {
-		z-index: 2;
+	&__el::after {
+		z-index: -1;
 		box-shadow: inset 0 0 0 0 rgba(6, 34, 65, 0.8);
-		transition: ease-out 0.5s;
 	}
-	&__el:hover &__el-bg1-1 {
+	&__el:hover::after {
+		box-shadow: inset 1000px 0 0 0 rgba(6, 34, 65, 0.8);
+	}
+	&__el::before {
+		z-index: -2;
+	}
+	&__el::before.sol__el-1 {
 		background: url("<%= asset_path('banner1.jpg') %>") 0 0 / cover no-repeat;
+		opacity: 0;
 	}
-	&__el:hover &__el-bg1-2 {
+	&__el::before.sol__el-2 {
 		background: url("<%= asset_path('banner2-2.jpg') %>") 0 0 / cover no-repeat;
+		opacity: 0;
 	}
-	&__el:hover &__el-bg1-3 {
+	&__el::before.sol__el-3 {
 		background: url("<%= asset_path('banner3-1.jpg') %>") 0 0 / cover no-repeat;
+		opacity: 0;
 	}
-	&__el:hover &__el-bg1-4 {
-		background: url("<%= asset_path('pr1.jpg') %>") 0 0 / cover no-repeat;
+	&__el::before.sol__el-4 {
+		background: url("<%= asset_path('pr1.webp') %>") 0 0 / cover no-repeat;
+		opacity: 0;
 	}
-	&__el:hover &__el-bg1-5 {
-		background: url("<%= asset_path('pr3.jpg') %>") 0 0 / cover no-repeat;
+	&__el::before.sol__el-5 {
+		background: url("<%= asset_path('pr3.webp') %>") 0 0 / cover no-repeat;
+		opacity: 0;
 	}
-	&__el:hover &__el-bg1-6 {
-		background: url("<%= asset_path('pr4.jpg') %>") 0 0 / cover no-repeat;
+	&__el::before.sol__el-6 {
+		background: url("<%= asset_path('pr4.webp') %>") 0 0 / cover no-repeat;
+		opacity: 0;
 	}
-	&__el:hover &__el-bg2 {
-		box-shadow: inset 500px 0 0 0 rgba(6, 34, 65, 0.8);
+	&__el:hover::before {
+		opacity: 1;
 	}
 
 	&__el:hover &__el-title {
@@ -3232,12 +3256,6 @@ footer {
 	}
 	&__el:hover &__el-text {
 		color: #fff;
-	}
-
-	&__el-body {
-		z-index: 3;
-		font-family: sans-serif !important;
-		padding: 60px 30px;
 	}
 
 	&__el-label {
@@ -3268,27 +3286,7 @@ footer {
 		color: #0fa89d;
 	}
 }
-@media (max-width: 1200px) {
-	.solutions {
-		&__el {
-			padding: 0px 0px 32% 0px;
-		}
-	}
-}
-@media (max-width: 1060px) {
-	.solutions {
-		&__el {
-			padding: 0px 0px 36% 0px;
-		}
-	}
-}
-@media (max-width: 1000px) {
-	.solutions {
-		&__el {
-			padding: 0px 0px 40% 0px;
-		}
-	}
-}
+
 @media (max-width: 960px) {
 	.solutions {
 		&__row {
@@ -3305,37 +3303,14 @@ footer {
 		}
 
 		&__el {
-			width: 100%;
+			min-width: 100%;
 			flex: 1 1 auto;
-			padding: 0px 0px 0px 0px;
 			box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.05);
 		}
 
-		&__el-bg1-1,
-		&__el-bg1-2,
-		&__el-bg1-3,
-		&__el-bg1-4,
-		&__el-bg1-5,
-		&__el-bg1-6 {
+		&__el::after,
+		&__el::before {
 			display: none;
-		}
-
-		&__el-bg2 {
-			display: none;
-		}
-
-		&__el-body {
-			position: relative;
-			display: block;
-		}
-
-		&__el-label {
-		}
-
-		&__el-title {
-		}
-
-		&__el-text {
 		}
 		&__el:hover &__el-title {
 			color: #212529;
