@@ -130,17 +130,13 @@
                                     <%= link_to "Контакты", "/contacts?lang=#{get_lang}", class: "jaw__link" %>
                                 <% end %>
                             </div>
-							<div class="jaw__el">
+                            <div class="jaw__el">
                                 <%= link_to "#{current_path}?lang=pl", class: "jaw__link" do %>
                                     <%= image_tag(asset_path('pl-24.webp')) %>
                                 <% end %>
-                            </div>
-                            <div class="jaw__el">
                                 <%= link_to "#{current_path}?lang=ru", class: "jaw__link" do %>
                                     <%= image_tag(asset_path('rus-24.png')) %>
                                 <% end %>
-                            </div>
-                            <div class="jaw__el">
                                 <%= link_to "#{current_path}?lang=en", class: "jaw__link" do %>
                                     <%= image_tag(asset_path('eng-24.webp')) %>
                                 <% end %>

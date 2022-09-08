@@ -368,29 +368,23 @@ footer {
 		align-items: center;
 	}
 
-	&__el:nth-of-type(3),
-	&__el:nth-of-type(7) {
+	&__el:nth-of-type(3) {
 		padding: 9px 2.25em 9px 12px;
 	}
 	&__el:nth-of-type(3) span,
 	&__el:nth-of-type(3) span::before,
-	&__el:nth-of-type(3) span::after,
-	&__el:nth-of-type(7) span,
-	&__el:nth-of-type(7) span::before,
-	&__el:nth-of-type(7) span::after {
+	&__el:nth-of-type(3) span::after {
 		display: block;
 		position: absolute;
 		transition: all 0.3s ease 0s;
 	}
-	&__el:nth-of-type(3) span,
-	&__el:nth-of-type(7) span {
+	&__el:nth-of-type(3) span {
 		top: 0;
 		right: 12px;
 		width: 6px;
 		height: 6px;
 	}
-	&__el:nth-of-type(3) span::before,
-	&__el:nth-of-type(7) span::before {
+	&__el:nth-of-type(3) span::before {
 		width: 10px;
 		height: 3px;
 		content: "";
@@ -399,8 +393,7 @@ footer {
 		left: 0.5px;
 		transform: rotate(-45deg);
 	}
-	&__el:nth-of-type(3) span::after,
-	&__el:nth-of-type(7) span::after {
+	&__el:nth-of-type(3) span::after {
 		width: 10px;
 		height: 3px;
 		content: "";
@@ -409,19 +402,11 @@ footer {
 		background: #fff;
 		transform: rotate(45deg);
 	}
-	&__el:nth-of-type(7) span::before {
-		bottom: -18px;
-	}
-	&__el:nth-of-type(7) span::after {
-		bottom: -18px;
-	}
 
-	&__el:nth-of-type(3):hover span::after,
-	&__el:nth-of-type(7):hover span::after {
+	&__el:nth-of-type(3):hover span::after {
 		transform: rotate(315deg);
 	}
-	&__el:nth-of-type(3):hover span::before,
-	&__el:nth-of-type(7):hover span::before {
+	&__el:nth-of-type(3):hover span::before {
 		transform: rotate(-315deg);
 	}
 	&__el {
@@ -456,18 +441,11 @@ footer {
 	&__link:nth-of-type(3) {
 		border: none;
 	}
-	&__el:nth-of-type(7) > &__poster > &__link:nth-of-type(2) {
-		border: none;
-	}
 	&__el:hover > &__link {
 		color: #0fa89d;
 	}
 	&__poster > &__link:hover {
 		color: #0fa89d;
-	}
-	&__el:nth-of-type(7):hover &__poster {
-		width: 48px;
-		background-color: rgba(15, 168, 157, 0.75);
 	}
 	&__el:hover &__poster {
 		display: flex;
@@ -489,9 +467,6 @@ footer {
 		border-right: 8px solid transparent;
 		right: 6px;
 		top: -8px;
-	}
-	&__el:nth-of-type(7):hover &__poster::after {
-		border-bottom: 8px solid rgba(15, 168, 157, 0.75);
 	}
 }
 
@@ -574,7 +549,7 @@ footer {
 		text-transform: uppercase;
 		font-weight: 700;
 		max-width: 923px;
-		padding: 7% 0px 0px 0px;
+		padding: 15% 0px 0px 0px;
 	}
 
 	&__item-sublabel {
@@ -784,12 +759,12 @@ footer {
 }
 @media (max-width: 960px) {
 	.carousel {
-		max-height: 700px;
+		max-height: 900px;
 	}
 	.slider {
-		max-height: 700px;
+		max-height: 900px;
 		&__item {
-			max-height: 700px;
+			max-height: 900px;
 		}
 		&__item img {
 			display: none;
@@ -878,7 +853,6 @@ footer {
 		display: flex;
 		margin-top: -100px;
 		padding: 0px 0px 90px 0px;
-		height: 850px;
 	}
 
 	&__coll {
@@ -886,6 +860,9 @@ footer {
 		position: relative;
 		transition: all 0.3s ease 0s;
 		padding: 0px 0px 68% 0px;
+	}
+	&__coll.ru {
+		padding: 0px 0px 90% 0px;
 	}
 
 	&__coll-wall1-1,
@@ -967,6 +944,9 @@ footer {
 		&__row {
 			max-width: 100%;
 		}
+		&__coll.ru {
+			padding: 0px 0px 60% 0px;
+		}
 	}
 }
 
@@ -975,8 +955,12 @@ footer {
 		&__row {
 			margin-top: 0;
 		}
-		&__coll {
+		&__coll,
+		&__coll.ru {
 			padding: 0px 0px 70% 0px;
+		}
+		&__coll.ru {
+			padding: 0px 0px 80% 0px;
 		}
 	}
 }
@@ -1033,12 +1017,11 @@ footer {
 //choose
 .choose {
 	background: #062241;
-	height: 700px;
 
 	&__row {
 		padding: 90px 30px 90px 30px;
 		display: flex;
-		max-height: 570px;
+		max-height: 900px;
 	}
 
 	&__col {

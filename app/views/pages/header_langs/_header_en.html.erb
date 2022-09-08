@@ -52,16 +52,17 @@
 								<li><%= link_to "Blog", "/blog?lang=#{get_lang}" %></li>
 								<li><%= link_to "Portfolio", "/portfolio?lang=#{get_lang}" %></li>
 								<li><%= link_to "Contact us", "/contacts?lang=#{get_lang}" %></li>
-								<li><%= link_to "#{current_path}?lang=pl", class: "jaw__link" do %>
+								<li>
+                                    <%= link_to "#{current_path}?lang=pl", class: "jaw__link" do %>
                                         <%= image_tag(asset_path('pl-24.webp')) %>
                                     <% end %>
                                 </li>
-								<li>
+                                <li>
                                     <%= link_to "#{current_path}?lang=ru", class: "jaw__link" do %>
                                         <%= image_tag(asset_path('rus-24.png')) %>
                                     <% end %>
                                 </li>
-								<li>
+                                <li>
                                     <%= link_to "#{current_path}?lang=en", class: "jaw__link" do %>
                                         <%= image_tag(asset_path('eng-24.webp')) %>
                                     <% end %>
@@ -134,13 +135,9 @@
                                 <%= link_to "#{current_path}?lang=pl", class: "jaw__link" do %>
                                     <%= image_tag(asset_path('pl-24.webp')) %>
                                 <% end %>
-                            </div>
-                            <div class="jaw__el">
                                 <%= link_to "#{current_path}?lang=ru", class: "jaw__link" do %>
                                     <%= image_tag(asset_path('rus-24.png')) %>
                                 <% end %>
-                            </div>
-                            <div class="jaw__el">
                                 <%= link_to "#{current_path}?lang=en", class: "jaw__link" do %>
                                     <%= image_tag(asset_path('eng-24.webp')) %>
                                 <% end %>
