@@ -44,7 +44,7 @@
 				<div class="container">
 					<%= form_with url: "/contacts_form_send?lang=#{params[:lang]}", class: "touch" do |form| %>
 						<div class="touch__title">Napisz do nas</div>
-						<div class="touch__subtitle">Twoja wiadomość jest dla nas bardzo ważna.Odpowiemy mu tak szybko, jak to możliwe.</div>
+						<div class="touch__subtitle">Twoja wiadomość jest dla nas bardzo ważna.  Odpowiemy jak najszybciej.</div>
 						<div class="touch__body">
 							<div class="touch__rank">
 								<div class="touch__el">
@@ -64,7 +64,7 @@
 								<label for="" class="touch__label">Wiadomość</label>
 								<%= form.text_area :message, class: "touch__el-textarea", rows: 25 %>
 							</div>
-							<%= form.submit "Отправить", class: "touch__btn" %>
+							<%= form.submit "Wysłać", class: "touch__btn" %>
 						</div>
 					<% end %>
 				</div>
