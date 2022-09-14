@@ -1,0 +1,22 @@
+<%= render "admin_panel/sidebar" %>
+<div class="col py-3">
+    <div class="container">
+    <%= form_with url: "/admin_panel/create_post" do |f| %>
+        <h2 class="text-center">РУССКАЯ ВЕРСИЯ</h2>
+        <%= f.label "Имя поста RU", class: "form-label" %>: <%= f.text_field :name_ru, class: "form-control" %> <br>
+        <div class="field"><%= f.label "Текст RU", class: "form-label" %>: <%= text_area_tag :text_ru, "Hello, World!", :class => "tinymce" %><%= tinymce %></div>
+        <br>
+        <h2 class="text-center">ПОЛЬСКАЯ ВЕРСИЯ</h2>
+        <%= f.label "Имя поста PL", class: "form-label" %>: <%= f.text_field :name_pl, class: "form-control" %> <br>
+        <div class="field"><%= f.label "Текст PL", class: "form-label" %>: <%= text_area_tag :text_pl, "Hello, World!", :class => "tinymce" %><%= tinymce %></div>
+        <br>
+        <h2 class="text-center">АНГЛИЙСКАЯ ВЕРСИЯ</h2>
+         <%= f.label "Имя поста EN", class: "form-label" %>: <%= f.text_field :name_en, class: "form-control" %> <br>
+        <div class="field"><%= f.label "Текст EN", class: "form-label" %>: <%= text_area_tag :text_en, "Hello, World!", :class => "tinymce" %><%= tinymce %></div>
+        <br>
+        <%= f.submit "Создать пост", class: "text-center btn btn-success" %>
+    <% end %>
+    </div>
+</div>
+</div>
+</div>

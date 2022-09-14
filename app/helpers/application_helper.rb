@@ -11,6 +11,14 @@ module ApplicationHelper
         current_uri = request.env['PATH_INFO']
     end    
 	
+	def login_path_check(route)
+		if route == "/admin_panel/login"
+			true
+		else
+			false
+		end		
+	end	
+
     private
 	#Метод автоопределния предпочтиемого языка пользователя
 	def get_preffered_language

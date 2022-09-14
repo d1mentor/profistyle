@@ -1,5 +1,6 @@
 // Entry point for the build script in your package.json
 import "@hotwired/turbo-rails"
 import "./controllers"
-import "./script.js"
 import * as bootstrap from "bootstrap"
+import "./script.js"
+
