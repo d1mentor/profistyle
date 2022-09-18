@@ -21,7 +21,8 @@ class PagesController < ApplicationController
 	end
 
 	def blog
-		render_page_by_lang("blog", params[:lang])
+		@posts = BlogPost.all
+		render_blog_by_lang(params[:lang], @posts)
 	end
 
 	def services_ror
@@ -81,6 +82,21 @@ class PagesController < ApplicationController
 				render "pages/#{dir_name}_langs/en"
 		end
 	end
+
+	def render_blog_by_lang(lang, posts)
+		if lang == nil || lang == ""
+			lang = get_preffered_language
+		end 
+
+		case lang
+			when "ru"
+				render "pages/blog_langs/ru", posts: posts
+			when "pl"
+				render "pages/blog_langs/pl", posts: posts
+			when "en" 
+				render "pages/blog_langs/en", posts: posts
+		end
+	end	
 
 	#Метод автоопределния предпочтиемого языка пользователя
 	def get_preffered_language

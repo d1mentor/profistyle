@@ -13,109 +13,19 @@
 				<div class="container">
 					<div class="blog__row">
 						<div class="blog__label"></div>
-						<div class="blog__el">
-							<a href="" class="blog__el-label"><h1>Hosting provision services</h1></a>
-							<div class="blog__el-pic">
-								<a href="" class="blog__el-pic-bg"></a>
-								<a href="">
-								<%= image_tag(asset_path('hosting.png')) %>
-								</a>
-							</div>
-							<div class="blog__body">
-								<div class="blog__el-content">
-									<div class="blog__el-title">Promo code for 10% discount on hosting services</div>
-									<div class="blog__el-text">When ordering hosting from <a href="https://accounts.fozzy.com/aff.php?aff=18138">Fozzy</a>, Use the promotional code PROFISTYLE And get a discount 10%.</div>
-
-									<div class="blog__el-title"><h2>Hosting with reliable protection</h2></div>
-									<div class="blog__el-text">Fozzy provides protection against unauthorized access to your
-Hosting.Abundance date for centers around the world will not allow your site
-"Fall" for a minute.Date centers are protected not only at the level
-hardware and software, but also physically.Customer data
-Fozzy is reliably protected from the point of view of information security.U
-All data centers are valid certificates ISO 27001: 2013 and PCI DSS.</div>
-
-									<div class="blog__el-title"><h2>Powerful hosting for WordPress, Joomla, ModX, Drupal, Bitrix.</h2></div>
-									<div class="blog__el-text">As specialists in the field of web development, we can assure you that
-Websites "on WordPress" and other sites of sites are quite resource -recently, and their location on insufficiently powerful hosting leads to long loading and,,,,,,,
-As a result, reduces your site in the issuance of search
-systems.For such projects, we recommend using powerful servers.
-Fozzy presents a wide selection of solutions including ready -made plans for your sites, and our experts all
-Ready to advise you on power selection.</div>
-
-									<div class="blog__el-title"><h2>Your personal VPS</h2></div>
-									<div class="blog__el-text">Fozzy Provides the ability to rent a personal VPS server.VPS -
-This is your personal server machine, on which you can place everything that
-you want.Pay your attention to the set of ready -made solutions for your tasks.This is Bitrixvm (specially tuned server for the work of 1C-bitrix products), Windows VPS (remote desktop based on Windows Server), Forex VPS (Windows VPS with a set of uninterrupted trade on the Forex exchange), Linux Server (both clean and cleanAlready configured).</div>
-
-									<div class="blog__el-title"><h2>Sell goods online</h2></div>
-									<div class="blog__el-text">The consumption culture has long been established in world society, people
-Millions of goods are bought every day.In the 21st century, everything begins to cross
-"On online", therefore, owners of online stores have
-Maximum development prospects.The team of our experts can with
-zero create a ready -made online store for you, as well as engage in it
-promotion.</div>
-
-									<div class="blog__el-title"><h2>Convenient designer for creating sites</h2></div>
-									<div class="blog__el-text">If you want to get skills in web development, you can try
-On your own, create a web site by means of a free designer
-sites from Fozzy.</div>
-
-									<div class="blog__el-title"><h2>Launch your online store for a couple of days!</h2></div>
-									<div class="blog__el-text">Fozzy provides a ready -made online store on Opencart, you can start
-work in a few days, our experts can help you with
-Planting a store on hosting, setting it up and promotion.</div>
-
-									<div class="blog__el-title"><h2>Is your hosting often unavailable?</h2></div>
-									<div class="blog__el-text">There are a lot of hosts on the market, but only a few could
-Prove your reliability.Our studio also became a victim
-unreliable hosting provider, so we ourselves know very well how
-This is when work is not through our fault.Choosing Fozzy you choose
-a reliable partner who has long been trusted even by such a giant as
-Forex investment exchange, and many other popular Internet portals.</div>
-
-									<div class="blog__el-title"><h2>Do you doubt the choice of hosting?</h2></div>
-									<div class="blog__el-text">Our studio uses Fozzy services, and we are sure that
-Our resources will always be available.Fozzy data centers have
-Tier III standards certificates (uptime 99.982%) and Tier IV (uptime
-99.995%) issued by Uptime Institute, as well as the SSAE 16 SOC 2 certificate,
-Type II.Our experts can help you in choosing and setting up
-Hosting, contact us!</div>
-
-									<div class="blog__el-title"><h2>Those.Does your hosting support do not answer for a long time?</h2></div>
-									<div class="blog__el-text">We know what bad maintenance is, so your clients
-We recommend only hosting personally by us, Fozzy one of these.
-Technical support is always in touch, and they answer in any tyket in
-the flow of an hour.Therefore, in case of difficulties arise, you can be
-are sure that they will help you.</div>
+						<% @posts.each do |post| %>
+								<div class="blog__el">
+								<a class="blog__el-label"><h2><%= post.name_en %></h2></a>
+									<div class="blog__el-pic">
+										<%= image_tag(post.post_intro.url) %>
+									</div>
+									<div class="blog__body">
+										<div class="blog__el-content">
+											<%= sanitize post.text_en %>
+										</div>
+									</div>
 								</div>
-							</div>
-						</div>
-						<div class="blog__el">
-							<a href="" class="blog__el-label"><h2>Web applications on Ruby on Rails</h2></a>
-							<div class="blog__el-pic">
-								<a href="" class="blog__el-pic-bg"></a>
-								<%= image_tag(asset_path('Ruby_On_Rails_Logo.svg_.png')) %>
-							</div>
-							<div class="blog__body">
-								<div class="blog__el-content">
-									<div class="blog__el-title"><h3>Why do web applications are needed?</h3></div>
-									<div class="blog__el-text">Today, the Internet has a significant niche in the life of every person.
-People buy, sell, communicate, rest and develop using the Internet.Given that today everyone has a smartphone in your pocket, any applications, including the web applications on Ruby On Rails, have become relevant than ever.What could be more convenient than a social network, or a delivery service right on the smartphone screen?And besides, not in a browser, but in the form of an independent application.</div>
-
-									<div class="blog__el-title"><h3>A variety of development tools</h3></div>
-									<div class="blog__el-text">With the popularization of applications web, a variety of development tools has come, today the developer has thousands of tools for working with anything, from editing photos, to writing software code.Among the developers, disputes often arise about which means is better, more effective.Many experts choose development on Ruby On Rails, for simplicity and efficiency.An experienced developer knows that each tool has its own clear function, you will not clog a nail with a screwed?</div>
-
-									<div class="blog__el-title"><h3>Почему наши специалисты работают с Ruby on Rails?</h3></div>
-									<div class="blog__el-text">Ruby On Rails is a kind of developer multi -tunnel, this tool has incorporated all the best from other means of development.Ror allows you to build up the functionality of the application in a matter of minutes, not developing the so -called “crutches”.It is convenient to develop on Ruby On Rails, which means quickly.We all understand that after quality, the main factor in development is speed.With Ruby On Rails, the developer can write efficiently and quickly.</div>
-
-									<div class="blog__el-title"><h3>The process of creating a web application on Ruby On Rails</h3></div>
-									<div class="blog__el-text">First of all, a specialist needs to study the subject area. Why is he doing the application? After that, the developer, as if the portraitist artist creates an application layout, he must outline the main functional parts of the application. If we consider Model Viev Controller Model, then usually among them the essence of the application, their controllers, and what the user sees is representations. Further things are small, write, debug the program code and web application on Ruby On Rails are ready. An experienced developer knows that the more time he will devote to design, the less difficulties will arise at the stage of implementation of the application. </div>
-
-									<div class="blog__el-title"><h3>Are you a major entrepreneur, and still do not have your application?</h3></div>
-									<div class="blog__el-text">Then you got to the address, our experts can develop an application on Ruby On Rails for every taste, whether it is a simple application for goods, or an entire online store.You can follow the development stages to make sure of your application reliability.Remember the main thing, from an economic point of view, the web application is the right investment, because it, in the future, will increase your income.</div>
-								</div>
-							</div>
-						</div>
+							<% end %>
 					</div>
 				</div>
 			</div>

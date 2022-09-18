@@ -19,10 +19,12 @@ Rails.application.routes.draw do
   get "/services_cmr", to: "pages#services_cmr"
   post "/contacts_form_send", to: "pages#contacts_form_send" 
 
-  get 'admin_panel/home', to: "admin_panel#home"
-  get 'admin_panel/posts', to: "admin_panel#posts"
-  get 'admin_panel/new_post', to: "admin_panel#new_post"
-  post 'admin_panel/create_post', to: "admin_panel#create_post"
-  get 'admin_panel/post/:id', to: "admin_panel#show_post"
-  get 'admin_panel/portfolio', to: "admin_panel#portfolio"
+  get '/admin_panel/home', to: "admin_panel#home"
+  get '/admin_panel/posts', to: "admin_panel#posts"
+  get '/admin_panel/new_post', to: "admin_panel#new_post"
+  post '/admin_panel/create_post', to: "admin_panel#create_post"
+  get '/admin_panel/post/:id', to: "admin_panel#show_post"
+  get '/admin_panel/post/:id/edit', to: "admin_panel#edit_post"
+  post '/admin_panel/post/:id/update', to: "admin_panel#update_post"
+  get '/admin_panel/portfolio', to: "admin_panel#portfolio"
 end

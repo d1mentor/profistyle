@@ -1,0 +1,31 @@
+<%= render "admin_panel/sidebar" %>
+<div class="col py-3">
+    <div class="container">
+    <%= form_with url: "/admin_panel/post/#{@post.id}/update" do |f| %>
+        <h2><strong>Интро поста</strong></h2>
+        <%= f.file_field('post_intro', multiple: false, value: @post.post_intro.url) %> <br> <br>
+        <h2><strong>Текущее интро:</strong></h2>
+        <%
+        if @post.post_intro.url
+           concat image_tag(@post.post_intro.url)
+        end    
+        %> <br>
+        <br>
+        <h2 class="text-center">РУССКАЯ ВЕРСИЯ</h2>
+        <%= f.label "Имя поста RU", class: "form-label" %>: <%= f.text_field :name_ru, class: "form-control", value: "#{@post.name_ru}" %> <br>
+        <div class="field"><%= f.label "Текст RU", class: "form-label" %>: <%= text_area_tag :text_ru, "#{@post.text_ru}", :class => "tinymce" %><%= tinymce %></div>
+        <br>
+        <h2 class="text-center">ПОЛЬСКАЯ ВЕРСИЯ</h2>
+        <%= f.label "Имя поста PL", class: "form-label" %>: <%= f.text_field :name_pl, class: "form-control", value: "#{@post.name_pl}" %> <br>
+        <div class="field"><%= f.label "Текст PL", class: "form-label" %>: <%= text_area_tag :text_pl, "#{@post.text_pl}", :class => "tinymce" %><%= tinymce %></div>
+        <br>
+        <h2 class="text-center">АНГЛИЙСКАЯ ВЕРСИЯ</h2>
+         <%= f.label "Имя поста EN", class: "form-label" %>: <%= f.text_field :name_en, class: "form-control", value: "#{@post.name_en}" %> <br>
+        <div class="field"><%= f.label "Текст EN", class: "form-label" %>: <%= text_area_tag :text_en, "#{@post.text_en}", :class => "tinymce" %><%= tinymce %></div>
+        <br>
+        <%= f.submit "Сохранить изменения", class: "text-center btn btn-success" %>
+    <% end %>
+    </div>
+</div>
+</div>
+</div>

@@ -25,7 +25,18 @@ class AdminPanelController < ApplicationController
   end  
 
   def show_post
-    render "admin_panel/blog/show_post"
+  end
+
+  def edit_post
+    @post = BlogPost.find_by(id: params[:id])
+    render "admin_panel/blog/post_edit", post: @post
+  end
+
+  def update_post
+    @post = BlogPost.find_by(id: params[:id])
+    @post.update(post_params)
+    @post.save!
+    redirect_to "/admin_panel/posts"
   end
   
   def portfolio
@@ -35,6 +46,6 @@ class AdminPanelController < ApplicationController
   private
 
   def post_params 
-    params.permit(:name_ru, :name_pl, :name_en, :text_ru, :text_pl, :text_en)
+    params.permit(:name_ru, :name_pl, :name_en, :text_ru, :text_pl, :text_en, :post_intro)
   end  
 end
