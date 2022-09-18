@@ -22,6 +22,9 @@ class AdminPanelController < ApplicationController
   end
 
   def destroy_post
+    @post = BlogPost.find_by(id: params[:id])
+    @post.destroy
+    redirect_to "/admin_panel/posts"
   end  
 
   def show_post

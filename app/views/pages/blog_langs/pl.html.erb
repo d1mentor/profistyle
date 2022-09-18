@@ -17,7 +17,11 @@
 								<div class="blog__el">
 								<a class="blog__el-label"><h2><%= post.name_pl %></h2></a>
 									<div class="blog__el-pic">
-										<%= image_tag(post.post_intro.url) %>
+									<%	
+										if post.post_intro.url
+										  concat image_tag(post.post_intro.url)
+										end
+									%>
 									</div>
 									<div class="blog__body">
 										<div class="blog__el-content">

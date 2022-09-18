@@ -4,7 +4,7 @@
     <h1 class="text-center">ПОСТЫ</h1>
     <% @posts.reverse.each do |post| %>
         <h1 class="text-center">Пост №<%= post.id %></h1>
-        <%= link_to 'Редактировать', "/admin_panel/post/#{post.id}/edit", class: "btn btn-success", id: post.id %> <br> <br>
+        <%= link_to 'Редактировать', "/admin_panel/post/#{post.id}/edit", class: "btn btn-success", id: post.id %> <br> <br> <%= button_to 'Удалить пост', {controller: "admin_panel", action: "destroy_post", id: post.id} ,class: "btn btn-danger", form: { data: { turbo_confirm: 'Шо, внатуре??' } } %> <br> <br>
         <%
         if post.post_intro.url
            concat image_tag(post.post_intro.url)

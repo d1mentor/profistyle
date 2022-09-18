@@ -26,5 +26,6 @@ Rails.application.routes.draw do
   get '/admin_panel/post/:id', to: "admin_panel#show_post"
   get '/admin_panel/post/:id/edit', to: "admin_panel#edit_post"
   post '/admin_panel/post/:id/update', to: "admin_panel#update_post"
+  post '/admin_panel/post/:id/destroy', to: "admin_panel#destroy_post"
   get '/admin_panel/portfolio', to: "admin_panel#portfolio"
 end
