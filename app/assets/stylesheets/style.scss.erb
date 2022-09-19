@@ -1,5 +1,3 @@
-
-
 // null
 * {
 	padding: 0;
@@ -881,7 +879,12 @@ footer {
 		height: 100%;
 		top: 0;
 		left: 0;
-		transition: all 0.3s ease 0s;
+	}
+	&__coll::after {
+		transition: all 1.2s ease 0s;
+	}
+	&__coll::before {
+		transition: all 0.1s linear 0s;
 	}
 	&__coll::after {
 		z-index: -1;
