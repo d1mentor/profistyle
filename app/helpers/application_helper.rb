@@ -11,8 +11,8 @@ module ApplicationHelper
         current_uri = request.env['PATH_INFO']
     end    
 	
-	def login_path_check(route)
-		if route == "/admin_panel/login"
+	def admin_panel_path_check(route)
+		if route.include?("admin_panel")
 			true
 		else
 			false

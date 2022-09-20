@@ -19,7 +19,7 @@
   </head>
 
   <body>
-    <% if !user_signed_in? && !login_path_check(current_path) %>
+    <% if !admin_panel_path_check(current_path) %>
       <%= render "pages/header_langs/header_#{get_lang}" %>
       <%= yield %>
       <%= render "pages/footer_langs/footer_#{get_lang}" %>
