@@ -24,7 +24,7 @@ class AdminPanelController < ApplicationController
   def create_post
     @post = BlogPost.new(post_params)
     @post.save!
-    redirect_to "/admin_panel/posts"
+    redirect_to "/admin_panel/posts_base"
   end
 
   def destroy_post
