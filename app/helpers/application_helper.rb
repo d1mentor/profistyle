@@ -19,6 +19,14 @@ module ApplicationHelper
 		end		
 	end	
 
+	def check_valid_post_for_lang(text, post_intro, name)
+        if text == "" || post_intro.url.nil? || name == ""
+            false
+        else
+            true    
+        end    
+    end   
+
     private
 	#Метод автоопределния предпочтиемого языка пользователя
 	def get_preffered_language

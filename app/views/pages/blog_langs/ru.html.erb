@@ -1,19 +1,11 @@
 	<div class="wrapper">
-		<main class="main">
-			<div class="breadcrumb">
-				<div class="container">
-					<div class="breadcrumb__row">
-						<div class="breadcrumb__body">
-							<a href="/?lang=ru">Главная</a> &#187; Блог
-						</div>
-					</div>
-				</div>
-			</div>
+		<main class="main" style="margin-top: 100px;">
 			<div class="blog">
 				<div class="container">
+					<% @posts.each do |post| %>
+					  <% if check_valid_post_for_lang(post.text_ru, post.post_intro, post.name_ru) %>
 					<div class="blog__row">
 						<div class="blog__label text-center"></div>
-							<% @posts.each do |post| %>
 								<div class="blog__el">
 								<a class="blog__el-label"><h2><%= post.name_ru %></h2></a>
 									<div class="blog__el-pic">
@@ -29,9 +21,9 @@
 										</div>
 									</div>
 								</div>
-							<% end %>
-			
 					</div>
+					  <% end %>
+					<% end %>
 				</div>
 			</div>
 		</main>

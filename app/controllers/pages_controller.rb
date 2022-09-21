@@ -21,7 +21,7 @@ class PagesController < ApplicationController
 	end
 
 	def blog
-		@posts = BlogPost.all
+		@posts = BlogPost.all.reverse
 		render_blog_by_lang(params[:lang], @posts)
 	end
 

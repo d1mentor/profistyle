@@ -1,19 +1,11 @@
 	<div class="wrapper">
 		<main class="main">
-			<div class="breadcrumb">
-				<div class="container">
-					<div class="breadcrumb__row">
-						<div class="breadcrumb__body">
-							<a href="/?lang=en">Home</a> &#187; Blog
-						</div>
-					</div>
-				</div>
-			</div>
 			<div class="blog">
 				<div class="container">
+				<% @posts.each do |post| %>
+				  <% if check_valid_post_for_lang(post.text_en, post.post_intro, post.name_en) %>
 					<div class="blog__row">
 						<div class="blog__label"></div>
-						<% @posts.each do |post| %>
 								<div class="blog__el">
 								<a class="blog__el-label"><h2><%= post.name_en %></h2></a>
 									<div class="blog__el-pic">
@@ -29,8 +21,9 @@
 										</div>
 									</div>
 								</div>
-							<% end %>
 					</div>
+					  <% end %>
+					<% end %>
 				</div>
 			</div>
 		</main>

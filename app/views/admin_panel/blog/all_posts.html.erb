@@ -1,29 +1,15 @@
 <%= render "admin_panel/sidebar" %>
 <div class="col py-3">
-
-    <h1 class="text-center">ПОСТЫ</h1>
-    <% @posts.reverse.each do |post| %>
-        <h1 class="text-center">Пост №<%= post.id %></h1>
-        <%= link_to 'Редактировать', "/admin_panel/post/#{post.id}/edit", class: "btn btn-success", id: post.id %> <br> <br> <%= button_to 'Удалить пост', {controller: "admin_panel", action: "destroy_post", id: post.id} ,class: "btn btn-danger", form: { data: { turbo_confirm: 'Шо, внатуре??' } } %> <br> <br>
-        <%
-        if post.post_intro.url
-           concat image_tag(post.post_intro.url)
-        end    
-        %>
-        <h2 class="text-center">Русская версия</h2>
-        <%= post.name_ru %> <br>
-        <%= if post.text_ru != nil then sanitize post.text_ru end %> <br>
-<br>
-        <h2 class="text-center">польская версия</h2> <br>
-        <%= post.name_pl %> <br>
-        <%= if post.text_pl != nil then sanitize post.text_pl end %> <br>
-        <%= post.created_at %> <br>
-<br>
-        <h2 class="text-center">английская версия</h2> <br>
-        <%= post.name_en %> <br>
-        <%= if post.text_en != nil then sanitize post.text_en end %> <br>
-        <%= post.created_at %> <br>
-    <% end %>
+    <%
+        case params[:lang]
+        when "ru"
+            concat render template: "pages/blog_langs/ru"
+        when "pl"
+            concat render template: "pages/blog_langs/pl"
+        when "en"
+            concat render template: "pages/blog_langs/en"
+        end
+    %>
 </div>
 </div>
 </div>

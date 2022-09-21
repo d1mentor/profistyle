@@ -6,10 +6,16 @@ class AdminPanelController < ApplicationController
   end
 
   def posts
-    @posts = BlogPost.all
+    @posts = BlogPost.all.reverse
 
     render "admin_panel/blog/all_posts"
   end
+
+  def posts_base
+    @posts = BlogPost.all.reverse
+
+    render "admin_panel/blog/posts_base"
+  end  
 
   def new_post
     render "admin_panel/blog/new_post"

@@ -1,0 +1,99 @@
+<%= render "admin_panel/sidebar" %>
+<div class="col py-3">
+        <% @posts.each do |post| %>
+        <div class="container" style="border: 4px solid ;"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col py-3">
+                        <br>
+                        <h2>POST ID: <%= post.id %> <br> POST_CREATE_DATE: <%= post.created_at %> <br> NAME_RU: <%= post.name_ru %></h2>
+                    </div>
+                    <div class="col py-3">
+                        <%= link_to 'Редактировать', "/admin_panel/post/#{post.id}/edit", class: "btn btn-primary", id: post.id %> <br> <br> <%= button_to 'Удалить пост', {controller: "admin_panel", action: "destroy_post", id: post.id} ,class: "btn btn-danger", form: { data: { turbo_confirm: 'Шо, внатуре??' } } %> <br> <br>
+                    </div>
+                </div>
+            </div>
+        
+            <% if !post.post_intro.url.nil? %>
+            <div class="container">
+                <%= image_tag(post.post_intro.url) %>
+                <br>
+                <br>
+            </div>
+            <% end %>
+            <% if post.post_intro.url.nil? %>
+                <div class="alert alert-danger" role="button">
+                    К посту не прикреплена фотография! Пост не отображается в блоге.
+                </div>
+            
+            <% else %>
+
+            <% if !check_valid_post_for_lang(post.text_ru, post.post_intro, post.name_ru) %>
+                <div class="alert alert-danger" role="button" data-bs-toggle="collapse" href="#post_ru<%= post.id %>" aria-expanded="false">
+                    RU Версия - Отсутсвует заголовок или текст поста. Языковая версия не отображается в блоге!
+                </div>
+            <% else %>
+                <div class="alert alert-success" role="button" data-bs-toggle="collapse" href="#post_ru<%= post.id %>" aria-expanded="false">
+                    RU Версия отображается в блоге!
+                </div>
+            <% end %>
+            <div class="collapse" id="post_ru<%= post.id %>">
+                <br>
+                <div class="card card-body">
+                    <h1><%= post.name_ru %></h1>
+                    <div class="blog__body">
+                        <div class="blog__el-content">
+                            <%= sanitize post.text_ru %>
+                        </div>
+                    </div>    
+                </div>
+                <br>
+            </div>
+            <% if !check_valid_post_for_lang(post.text_pl, post.post_intro, post.name_pl) %>
+                <div class="alert alert-danger" role="button" data-bs-toggle="collapse" href="#post_pl<%= post.id %>" aria-expanded="false">
+                    PL Версия - Отсутсвует заголовок или текст поста. Языковая версия не отображается в блоге!
+                </div>
+            <% else %>
+                <div class="alert alert-success" role="button" data-bs-toggle="collapse" href="#post_pl<%= post.id %>" aria-expanded="false">
+                    PL Версия отображается в блоге!
+                </div>
+            <% end %>
+            <div class="collapse" id="post_pl<%= post.id %>">
+                <br>
+                <div class="card card-body">
+                    <h1><%= post.name_pl %></h1>
+                    <div class="blog__body">
+                        <div class="blog__el-content">
+                            <%= sanitize post.text_pl %>
+                        </div>
+                    </div> 
+                </div>
+                <br>
+            </div>
+            <% if !check_valid_post_for_lang(post.text_en, post.post_intro, post.name_en) %>
+                <div class="alert alert-danger" role="button" data-bs-toggle="collapse" href="#post_en<%= post.id %>" aria-expanded="false">
+                    EN Версия - Отсутсвует заголовок или текст поста. Языковая версия не отображается в блоге!
+                </div>
+            <% else %>
+                <div class="alert alert-success" role="button" data-bs-toggle="collapse" href="#post_en<%= post.id %>" aria-expanded="false">
+                    EN Версия отображается в блоге!
+                </div>
+            <% end %>
+            <div class="collapse" id="post_en<%= post.id %>">
+                <br>
+                <div class="card card-body">
+                    <h1><%= post.name_en %></h1>
+                    <div class="blog__body">
+                        <div class="blog__el-content">
+                            <%= sanitize post.text_en %>
+                        </div>
+                    </div> 
+                </div>
+                <br>
+            </div>
+            <% end %>
+
+        <% end %>
+</div>
+</div>
+</div>
