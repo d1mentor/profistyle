@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   get '/admin_panel/posts_base', to: "admin_panel#posts_base"
   get '/admin_panel/new_post', to: "admin_panel#new_post"
   post '/admin_panel/create_post', to: "admin_panel#create_post"
-  get '/admin_panel/post/:id', to: "admin_panel#show_post"
+  get '/blog/post/:id', to: "pages#show_post"
   get '/admin_panel/post/:id/edit', to: "admin_panel#edit_post"
   post '/admin_panel/post/:id/update', to: "admin_panel#update_post"
   post '/admin_panel/post/:id/destroy', to: "admin_panel#destroy_post"

@@ -25,6 +25,43 @@ class PagesController < ApplicationController
 		render_blog_by_lang(params[:lang], @posts)
 	end
 
+	def show_post
+		@post_ver = BlogPost.find_by(id: params[:id])
+		@post = BlogPost.new
+		@post.post_intro = @post_ver.post_intro
+
+		case get_lang
+		when "ru"
+			if check_valid_post_for_lang(@post_ver.text_ru, @post_ver.post_intro, @post_ver.name_ru)
+			  @post.name_ru = @post_ver.name_ru
+			  @post.text_ru = @post_ver.text_ru
+			  render "pages/show_post", post: @post
+			else
+			  redirect_to "/blog?lang=ru"
+			end	
+		when "pl"
+			if check_valid_post_for_lang(@post_ver.text_pl, @post_ver.post_intro, @post_ver.name_pl)
+			  @post.name_ru = @post_ver.name_pl
+			  @post.text_ru = @post_ver.text_pl
+			  render "pages/show_post", post: @post
+			else
+			  redirect_to "/blog?lang=pl"
+			end	
+		when "en"
+			if check_valid_post_for_lang(@post_ver.text_en, @post_ver.post_intro, @post_ver.name_en)
+			  @post.name_ru = @post_ver.name_en
+			  @post.text_ru = @post_ver.text_en
+			  render "pages/show_post", post: @post
+			else
+			  redirect_to "/blog?lang=en"
+			end	
+		else
+			@post.name_ru = @post_ver.name_ru
+			@post.text_ru = @post_ver.text_ru
+			render "pages/show_post", post: @post
+		end		
+	  end
+
 	def services_ror
 		render_page_by_lang("services_ror", params[:lang])
 	end
@@ -58,6 +95,14 @@ class PagesController < ApplicationController
 
 
 	private
+
+	def check_valid_post_for_lang(text, post_intro, name)
+        if text == "" || post_intro.url.nil? || name == ""
+            false
+        else
+            true    
+        end    
+    end  
 
 	def get_lang
 		if params[:lang] == nil || params[:lang] == ""

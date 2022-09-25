@@ -2,32 +2,34 @@
 		<main class="main" style="margin-top: 100px;">
 			<div class="blog">
 				<div class="container">
-				<% @posts.each do |post| %>
-				  <% if check_valid_post_for_lang(post.text_en, post.post_intro, post.name_en) %>
-					<div class="blog__row">
-						<div class="blog__label"></div>
-								<div class="blog__el">
-								<a class="blog__el-label"><h2><%= post.name_en %></h2></a>
-									<div class="blog__el-pic">
-									<%	
-										if post.post_intro.url
-										  concat image_tag(post.post_intro.url)
-										end
-									%>
-									</div>
-									<div class="blog__body">
-										<div class="blog__el-content">
-											<%= sanitize post.text_en %>
-										</div>
-									</div>
-								</div>
-					</div>
+					<% @posts.each do |post| %>
+					  <% if check_valid_post_for_lang(post.text_en, post.post_intro, post.name_en) %>
+					  <div class="news__el" style="padding-top: 1%; padding-bottom: 1%; padding-left: 15%; padding-right: 15%;">
+						<div class="news__pic">
+							<a href="<%= "/blog/post/#{post.id}?lang=en" %>" class="news__pic-bg1"></a>
+							<span class="news__pic-bg2"></span>
+							<img src="<%= "#{post.post_intro.url}" %>" alt="">
+						</div>
+						<div class="news__body">
+							<div class="news__title"><a href="<%= "/blog/post/#{post.id}?lang=en" %>"><%= post.name_en %></a></div>
+							<div class="news__subtitle"><a href="<%= "/blog/post/#{post.id}?lang=en" %>"><span class="news__span-pic"></span> admin</a> •<span
+									class="news__span-pic-2"></span><%= post.created_at %></div>
+							<% if post.text_en.index("</h2>") %>
+								<div class="news__text"><%= sanitize post.text_en[0..post.text_en.index("</h2>")+1]+"…" %></div>
+							<% elsif post.text_en.index("</h3>") %>
+								<div class="news__text"><%= sanitize post.text_en[0..post.text_en.index("</h3>")+1]+"…" %></div>
+							<% else %>
+								<div class="news__text"><%= sanitize post.text_en[0..post.text_en.index("</p>")+1]+"…" %></div>
+							<% end %>
+					    </div>
+					  </div>
 					  <% end %>
 					<% end %>
 				</div>
 			</div>
 		</main>
 	</div>
+
 	<script>
 		var strGET = window.location.search.replace( '?', ''); 
 

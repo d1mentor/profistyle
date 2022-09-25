@@ -1,0 +1,32 @@
+<div class="wrapper">
+		<main class="main" style="margin-top: 100px;">
+			<div class="blog">
+                    <div class="blog__row" style="border: 0;">
+						<div class="blog__label text-center"></div>
+								<div class="blog__el">
+								<a class="blog__el-label"><h2><%= @post.name_ru %></h2></a>
+									<div class="blog__el-pic">
+										<%	
+										if @post.post_intro.url
+										  concat image_tag(@post.post_intro.url)
+										end
+										%>
+									</div>
+									<div class="blog__body">
+										<div class="blog__el-content">
+											<%= sanitize @post.text_ru %>
+										</div>
+									</div>
+								</div>
+					</div>
+                </div>
+        </main>
+</div>
+
+	<script>
+		var strGET = window.location.search.replace( '?', ''); 
+
+		if(strGET != ""){
+			if(window.location.href.indexOf('&reloaded') === -1) window.location.href = window.location.href + "&reloaded=true";
+		};
+	</script>

@@ -4,24 +4,25 @@
 				<div class="container">
 					<% @posts.each do |post| %>
 					  <% if check_valid_post_for_lang(post.text_ru, post.post_intro, post.name_ru) %>
-					<div class="blog__row">
-						<div class="blog__label text-center"></div>
-								<div class="blog__el">
-								<a class="blog__el-label"><h2><%= post.name_ru %></h2></a>
-									<div class="blog__el-pic">
-										<%	
-										if post.post_intro.url
-										  concat image_tag(post.post_intro.url)
-										end
-										%>
-									</div>
-									<div class="blog__body">
-										<div class="blog__el-content">
-											<%= sanitize post.text_ru %>
-										</div>
-									</div>
-								</div>
-					</div>
+					  <div class="news__el" style="padding-top: 1%; padding-bottom: 1%; padding-left: 15%; padding-right: 15%;">
+						<div class="news__pic">
+							<a href="<%= "/blog/post/#{post.id}?lang=ru" %>" class="news__pic-bg1"></a>
+							<span class="news__pic-bg2"></span>
+							<img src="<%= "#{post.post_intro.url}" %>" alt="">
+						</div>
+						<div class="news__body">
+							<div class="news__title"><a href="<%= "/blog/post/#{post.id}?lang=ru" %>"><%= post.name_ru %></a></div>
+							<div class="news__subtitle"><a href="<%= "/blog/post/#{post.id}?lang=ru" %>"><span class="news__span-pic"></span> admin</a> •<span
+									class="news__span-pic-2"></span><%= post.created_at %></div>
+							<% if post.text_ru.index("</h2>") %>
+								<div class="news__text"><%= sanitize post.text_ru[0..post.text_ru.index("</h2>")+1]+"…" %></div>
+							<% elsif post.text_ru.index("</h3>") %>
+								<div class="news__text"><%= sanitize post.text_ru[0..post.text_ru.index("</h3>")+1]+"…" %></div>
+							<% else %>
+								<div class="news__text"><%= sanitize post.text_ru[0..post.text_ru.index("</p>")+1]+"…" %></div>
+							<% end %>
+					    </div>
+					  </div>
 					  <% end %>
 					<% end %>
 				</div>
