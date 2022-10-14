@@ -21,15 +21,9 @@
 
   <body>
     <% if !admin_panel_path_check(current_path) %>
-      <% if get_lang != "" && get_lang != " " && get_lang != "  "  %>
-        <%= render partial: "pages/header_langs/header_#{get_lang}", :formats => [:html] %>
-        <%= yield %>
-        <%= render partial: "pages/footer_langs/footer_#{get_lang}", :formats => [:html] %>
-      <% else %>
-        <%= render partial: "pages/header_langs/header_en", :formats => [:html] %>
-        <%= yield %>
-        <%= render partial: "pages/footer_langs/footer_en", :formats => [:html] %>
-      <% end %>
+      <%= render partial: "pages/header_langs/header_#{get_lang}", :formats => [:html] rescue render partial: "pages/header_langs/header_en", :formats => [:html] %>
+      <%= yield %>
+      <%= render partial: "pages/footer_langs/footer_#{get_lang}", :formats => [:html] rescue render partial: "pages/footer_langs/footer_en", :formats => [:html] %>
     <% else %>
       <%= yield %>
     <% end %>
