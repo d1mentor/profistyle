@@ -21,9 +21,9 @@
 
   <body>
     <% if !admin_panel_path_check(current_path) %>
-      <%= render "pages/header_langs/header_#{get_lang}" %>
+      <%= render partial: "pages/header_langs/header_#{get_lang}", :formats => [:html] %>
       <%= yield %>
-      <%= render "pages/footer_langs/footer_#{get_lang}" %>
+      <%= render partial: "pages/footer_langs/footer_#{get_lang}", :formats => [:html] %>
     <% else %>
       <%= yield %>
     <% end %>
