@@ -33,9 +33,6 @@ class AdminPanelController < ApplicationController
     redirect_to "/admin_panel/posts"
   end  
 
-  def show_post
-  end
-
   def edit_post
     @post = BlogPost.find_by(id: params[:id])
     render "admin_panel/blog/post_edit", post: @post
