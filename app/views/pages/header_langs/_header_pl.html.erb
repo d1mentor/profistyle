@@ -13,24 +13,24 @@
 							</ul>
 							<ul class="header__text-list">
 								<li class="header__icon-box">
-								<%= image_tag(asset_path('ph-24.webp')) %>
+								<%= image_tag(asset_path('ph-24.webp'), alt: "phone") %>
 									<div class="header__icon-text"><a href="tel:+48795124042" class="header__icon-link">+48795124042</a>
 									</div>
 								</li>
 								<li class="header__icon-box">
-								<%= image_tag(asset_path('ph-24.webp')) %>
+								<%= image_tag(asset_path('ph-24.webp'), alt: "phone") %>
 									<div class="header__icon-text"><a href="tel:+48796128406" class="header__icon-link">+48796128406</a>
 									</div>
 								</li>
 								<li class="header__icon-box">
-								<%= image_tag(asset_path('en-24.webp')) %>
+								<%= image_tag(asset_path('en-24.webp'), alt: "mail") %>
 									<div class="header__icon-text"><a href="mailto:biuro@profistyle.group"
 											class="header__icon-link">biuro@profistyle.group</a></div>
 								</li>
 							</ul>
-						</div>
+						</div>mail
 						<div class="header__logo">
-						<%= image_tag(asset_path('cropped-logo.webp')) %>
+						<%= image_tag(asset_path('cropped-logo.webp'), alt: "logo") %>
 						</div>
 						<div class="menu-btn ">
 							<span></span>
@@ -54,17 +54,17 @@
 								<li><%= link_to "Skontaktuj się z nami", "/contacts?lang=#{get_lang}" %></li>
 								<li>
                                     <%= link_to "#{current_path}?lang=pl", class: "jaw__link" do %>
-                                        <%= image_tag(asset_path('pl-24.webp')) %>
+                                        <%= image_tag(asset_path('pl-24.webp'), alt: "pl") %>
                                     <% end %>
                                 </li>
                                 <li>
                                     <%= link_to "#{current_path}?lang=ru", class: "jaw__link" do %>
-                                        <%= image_tag(asset_path('rus-24.png')) %>
+                                        <%= image_tag(asset_path('rus-24.png'), alt: "ru") %>
                                     <% end %>
                                 </li>
                                 <li>
                                     <%= link_to "#{current_path}?lang=en", class: "jaw__link" do %>
-                                        <%= image_tag(asset_path('eng-24.webp')) %>
+                                        <%= image_tag(asset_path('eng-24.webp'), alt: "en") %>
                                     <% end %>
                                 </li>
 							</ul>
@@ -81,7 +81,7 @@
             <% end %>
 				<div class="container">
 					<div class="jaw__row mon">
-						<div class="jaw__pic"><%= image_tag(asset_path('cropped-logo.webp')) %></div>
+						<div class="jaw__pic"><%= image_tag(asset_path('cropped-logo.webp'), alt: "logo") %></div>
 						<div class="jaw__list">
                             <div class="jaw__el">
                                 <% if current_path == "/" %>
@@ -133,13 +133,13 @@
                             </div>
                             <div class="jaw__el">
                                 <%= link_to "#{current_path}?lang=pl", class: "jaw__link" do %>
-                                    <%= image_tag(asset_path('pl-24.webp')) %>
+                                    <%= image_tag(asset_path('pl-24.webp'), alt: "pl") %>
                                 <% end %>
                                 <%= link_to "#{current_path}?lang=ru", class: "jaw__link" do %>
-                                    <%= image_tag(asset_path('rus-24.png')) %>
+                                    <%= image_tag(asset_path('rus-24.png'), alt: "ru") %>
                                 <% end %>
                                 <%= link_to "#{current_path}?lang=en", class: "jaw__link" do %>
-                                    <%= image_tag(asset_path('eng-24.webp')) %>
+                                    <%= image_tag(asset_path('eng-24.webp'), alt: "en") %>
                                 <% end %>
                             </div>
                         </div>
