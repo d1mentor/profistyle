@@ -9,7 +9,7 @@
 	<meta property="og:title" content="Сайты на CMS WordPress и Joomla" />
     <meta property="og:description" content="Разработка веб-сайтов на CMS Wordpress, Joomla и любой другой. Оптимизация под поисковые системы.
 	Настройка плагинов." />
-    <meta property="og:image" content="" />
+    <meta property="og:image" content="<%= image_tag(asset_path('cropped-icon2.png')) %>" />
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "style", "data-turbo-track": "reload" %>
@@ -111,7 +111,7 @@
 					<div class="ruby__gallery">
 						<div class="ruby__el">
 							<div class="ruby__el-pic">
-							<%= image_tag(asset_path('php.webp')) %>
+							<%= image_tag(asset_path('php.webp'), alt: "Разработка приложений") %>
 							</div>
 							<div class="ruby__el-body">
 								<div class="ruby__el-title">Разработка приложений</div>
@@ -120,7 +120,7 @@
 						</div>
 						<div class="ruby__el">
 							<div class="ruby__el-pic">
-							<%= image_tag(asset_path('ui.webp')) %>
+							<%= image_tag(asset_path('ui.webp'), alt: "Веб-портал") %>
 							</div>
 							<div class="ruby__el-body">
 								<div class="ruby__el-title">Веб-портал</div>
@@ -129,7 +129,7 @@
 						</div>
 						<div class="ruby__el">
 							<div class="ruby__el-pic">
-							<%= image_tag(asset_path('mockup.png')) %>
+							<%= image_tag(asset_path('mockup.png'), alt: "Открытый исходный код") %>
 							</div>
 							<div class="ruby__el-body">
 								<div class="ruby__el-title">Открытый исходный код</div>
@@ -138,7 +138,7 @@
 						</div>
 						<div class="ruby__el">
 							<div class="ruby__el-pic">
-							<%= image_tag(asset_path('responsive.png')) %>
+							<%= image_tag(asset_path('responsive.png'), alt: "CRM") %>
 							</div>
 							<div class="ruby__el-body">
 								<div class="ruby__el-title">CRM</div>
@@ -147,7 +147,7 @@
 						</div>
 						<div class="ruby__el">
 							<div class="ruby__el-pic">
-							<%= image_tag(asset_path('brainstorm.png')) %>
+							<%= image_tag(asset_path('brainstorm.png'), alt: "Корпоративный портал") %>
 							</div>
 							<div class="ruby__el-body">
 								<div class="ruby__el-title">Корпоративный портал</div>
@@ -156,7 +156,7 @@
 						</div>
 						<div class="ruby__el">
 							<div class="ruby__el-pic">
-							<%= image_tag(asset_path('web-design.png')) %>
+							<%= image_tag(asset_path('web-design.png'), alt: "Пользовательская электронная коммерция") %>
 							</div>
 							<div class="ruby__el-body">
 								<div class="ruby__el-title">Пользовательская электронная коммерция</div>
@@ -165,7 +165,7 @@
 						</div>
 						<div class="ruby__el">
 							<div class="ruby__el-pic">
-							<%= image_tag(asset_path('website.png')) %>
+							<%= image_tag(asset_path('website.png'), alt: "CMS") %>
 							</div>
 							<div class="ruby__el-body">
 								<div class="ruby__el-title">CMS</div>
@@ -174,7 +174,7 @@
 						</div>
 						<div class="ruby__el">
 							<div class="ruby__el-pic">
-							<%= image_tag(asset_path('wireframe.png')) %>
+							<%= image_tag(asset_path('wireframe.png'), alt: "обслуживание веб-сайта") %>
 							</div>
 							<div class="ruby__el-body">
 								<div class="ruby__el-title">Техническое обслуживание веб-сайта</div>
@@ -183,7 +183,7 @@
 						</div>
 						<div class="ruby__el">
 							<div class="ruby__el-pic">
-							<%= image_tag(asset_path('browser.png')) %>
+							<%= image_tag(asset_path('browser.png'), alt: "Экономическая эффективность") %>
 							</div>
 							<div class="ruby__el-body">
 								<div class="ruby__el-title">Экономическая эффективность</div>

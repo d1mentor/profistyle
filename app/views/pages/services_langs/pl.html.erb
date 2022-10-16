@@ -9,7 +9,7 @@
 	<meta property="og:title" content="Tworzenie stron internetowych, promocja seo i reklama kontekstowa" />
     <meta property="og:description" content="worzenie stron internetowych na CMS i frameworkach. Optymalizacja strony pod wyszukiwarki. Reklama kontekstowa.
     Niezawodny i szybki hosting." />
-    <meta property="og:image" content="" />
+    <meta property="og:image" content="<%= image_tag(asset_path('cropped-icon2.png')) %>" />
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "style", "data-turbo-track": "reload" %>
@@ -38,7 +38,7 @@
 						<div class="additional__body">
 							<div class="additional__el add__el-1">
 								<div class="additional__pic">
-									<%= image_tag(asset_path('mn-48.webp')) %>
+									<%= image_tag(asset_path('mn-48.webp'), alt: "Analityka online") %>
 								</div>
 								<div class="additional__text">
 									<div class="additional__title"><h3>Analityka online</h3></div>
@@ -49,7 +49,7 @@
 							</div>
 							<div class="additional__el add__el-2">
 								<div class="additional__pic">
-									<%= image_tag(asset_path('et-50.webp')) %>
+									<%= image_tag(asset_path('et-50.webp'), alt: "Projekt strony") %>
 								</div>
 								<div class="additional__text">
 									<div class="additional__title"><h3>Projekt strony</h3></div>
@@ -59,7 +59,7 @@
 							</div>
 							<div class="additional__el add__el-3">
 								<div class="additional__pic">
-									<%= image_tag(asset_path('html-50.webp')) %>
+									<%= image_tag(asset_path('html-50.webp'), alt: "Tworzenie stron internetowych") %>
 								</div>
 								<div class="additional__text">
 									<div class="additional__title"><h3>Tworzenie stron internetowych</h3></div>
@@ -69,7 +69,7 @@
 							</div>
 							<div class="additional__el add__el-4">
 								<div class="additional__pic">
-									<%= image_tag(asset_path('st-50.webp')) %>
+									<%= image_tag(asset_path('st-50.webp'), alt: "Pozycjonowanie SEO") %>
 								</div>
 								<div class="additional__text">
 									<div class="additional__title"><h3>Pozycjonowanie SEO</h3></div>
@@ -79,7 +79,7 @@
 							</div>
 							<div class="additional__el add__el-5">
 								<div class="additional__pic">
-									<%= image_tag(asset_path('lp-50.webp')) %>
+									<%= image_tag(asset_path('lp-50.webp'), alt: "Układ adaptacyjny") %>
 								</div>
 								<div class="additional__text">
 									<div class="additional__title"><h3>Układ adaptacyjny</h3></div>
@@ -89,7 +89,7 @@
 							</div>
 							<div class="additional__el add__el-6">
 								<div class="additional__pic">
-									<%= image_tag(asset_path('pc-50.webp')) %>
+									<%= image_tag(asset_path('pc-50.webp'), alt: "Hosting") %>
 								</div>
 								<div class="additional__text">
 									<div class="additional__title"><h3>Hosting</h3></div>

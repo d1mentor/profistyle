@@ -9,7 +9,7 @@
     <meta property="og:title" content="Development of websites in CMS and RoR" />
     <meta property="og:description" content="Development of websites in CMS Wordpress, Joomla and in Ruby on Rails. SEO website promotion.
 	 Contextual advertising." />
-    <meta property="og:image" content="" />
+    <meta property="og:image" content="<%= image_tag(asset_path('cropped-icon2.png')) %>" />
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "style", "data-turbo-track": "reload" %>
@@ -30,7 +30,7 @@
 			<div class="slider">
 				<div class="slider__item ops">
 					<span class="slider__item-bg1"></span>
-					<%= image_tag(asset_path('Sl1.jpg'), class: "slider__item-pic" ) %>
+					<%= image_tag(asset_path('Sl1.jpg'), alt: "Development of websites", class: "slider__item-pic" ) %>
 						<div class="slider__item-box">
 							<div class="slider__item-label"><h1>Development of websites<br> Any complexity</h1></div>
 							<div class="slider__item-sublabel">We quickly and effectively implement your web project in the form of a web application
@@ -41,7 +41,7 @@ On Ruby On Rails.We will develop a website with a unique design or on the finish
 				</div>
 				<div class="slider__item ops">
 					<span class="slider__item-bg2"></span>
-					<%= image_tag(asset_path('Sl2.webp'), class: "slider__item-pic" ) %>
+					<%= image_tag(asset_path('Sl2.webp'), alt: "Contribution of contextual advertising", class: "slider__item-pic" ) %>
 						<div class="slider__item-box">
 							<div class="slider__item-label"><h1>Contribution of contextual advertising</h1></div>
 							<div class="slider__item-sublabel">Create and set up an advertising company for your business in contextual
@@ -51,7 +51,7 @@ Google ADS advertising network.</div>
 				</div>
 				<div class="slider__item ops">
 					<span class="slider__item-bg3"></span>
-					<%= image_tag(asset_path('Sl3.webp'), class: "slider__item-pic" ) %>
+					<%= image_tag(asset_path('Sl3.webp'), alt: "SEO promotion", class: "slider__item-pic" ) %>
 						<div class="slider__item-box">
 							<div class="slider__item-label"><h1>SEO website promotion<br> In Top Google</h1></div>
 							<div class="slider__item-sublabel">We will carry out SEO analytics of competitors of your site.We optimize your site
@@ -95,7 +95,7 @@ goods and visitors to your thematic site.</div>
 					<div class="choose__col">
 						<div class="choose__label"><h2>Site Development and Support</h2></div>
 						<div class="choose__vid">
-							<%= image_tag(asset_path('usl.webp')) %>
+							<%= image_tag(asset_path('usl.webp'), alt: "Site Development and Support") %>
 						</div>
 					</div>
 					<div class="choose__col">
@@ -105,7 +105,7 @@ VDS/VPS or DEDICATE server.</div>
 						<div class="choose__body">
 							<div class="choose__el">
 								<div class="choose__pic">
-									<%= image_tag(asset_path('bu-50.webp')) %>
+									<%= image_tag(asset_path('bu-50.webp'), alt: "Development") %>
 								</div>
 								<div class="choose__tagline"><h3>Development</h3></div>
 								<div class="choose__text">Development is carried out at our hosting, on a technical domain of several
@@ -114,7 +114,7 @@ specialists.The customer has the opportunity to directly observe the process of 
 							</div>
 							<div class="choose__el">
 								<div class="choose__pic">
-									<%= image_tag(asset_path('bx-50.webp')) %>
+									<%= image_tag(asset_path('bx-50.webp'), alt: "Support") %>
 								</div>
 								<div class="choose__tagline"><h3>Support</h3></div>
 								<div class="choose__text">We provide services for subsequent support and maintenance of the website.
@@ -133,7 +133,7 @@ Setting up the domain zone.</div>
 					<div class="additional__body">
 						<div class="additional__el add__el-1">
 							<div class="additional__pic">
-								<%= image_tag(asset_path('mn-48.webp')) %>
+								<%= image_tag(asset_path('mn-48.webp'), alt: "SEO analytics") %>
 							</div>
 							<div class="additional__text">
 								<div class="additional__title"><h3>SEO analytics</h3></div>
@@ -143,17 +143,17 @@ optimization.</div>
 						</div>
 						<div class="additional__el add__el-2">
 							<div class="additional__pic">
-								<%= image_tag(asset_path('et-50.webp')) %>
+								<%= image_tag(asset_path('et-50.webp'), alt: "Site on HTML5/CSS") %>
 							</div>
 							<div class="additional__text">
-								<div class="additional__title"><h3>Site on HTML5 / CSS</h3></div>
+								<div class="additional__title"><h3>Site on HTML5/CSS</h3></div>
 								<div class="additional__subtitle">Development of a website on pure HTML/CSS.One of the best solutions for
 website promotion in the top.</div>
 							</div>
 						</div>
 						<div class="additional__el add__el-3">
 							<div class="additional__pic">
-								<%= image_tag(asset_path('html-50.webp')) %>
+								<%= image_tag(asset_path('html-50.webp'), alt: "Optimization site") %>
 							</div>
 							<div class="additional__text">
 								<div class="additional__title"><h3>Optimization site</h3></div>
@@ -163,7 +163,7 @@ errors, speeds, semantics.</div>
 						</div>
 						<div class="additional__el add__el-4">
 							<div class="additional__pic">
-								<%= image_tag(asset_path('st-50.webp')) %>
+								<%= image_tag(asset_path('st-50.webp'), alt: "SEO images") %>
 							</div>
 							<div class="additional__text">
 								<div class="additional__title"><h3>SEO images</h3></div>
@@ -173,7 +173,7 @@ search engines.</div>
 						</div>
 						<div class="additional__el add__el-5">
 							<div class="additional__pic">
-								<%= image_tag(asset_path('lp-50.webp')) %>
+								<%= image_tag(asset_path('lp-50.webp'), alt: "SEO promotion") %>
 							</div>
 							<div class="additional__text">
 								<div class="additional__title"><h3>SEO promotion</h3></div>
@@ -183,7 +183,7 @@ resources.Linkbuilding.</div>
 						</div>
 						<div class="additional__el add__el-6">
 							<div class="additional__pic">
-								<%= image_tag(asset_path('pc-50.webp')) %>
+								<%= image_tag(asset_path('pc-50.webp'), alt: "Detailed reports") %>
 							</div>
 							<div class="additional__text">
 								<div class="additional__title"><h3>Detailed reports</h3></div>
@@ -202,7 +202,7 @@ Work on website promotion.</div>
 					<div class="portfolio__label"><h2>Portfolio</h2></div>
 					<div class="portfolio__el">
 						<div class="portfolio__pic">
-							<%= image_tag(asset_path('usl.webp')) %>
+							<%= image_tag(asset_path('usl.webp'), alt: "Web site of the electric company") %>
 						</div>
 						<div class="portfolio__body">
 							<div class="portfolio__title"><h3>Web site of the Polish electric company</h3></div>
@@ -213,7 +213,7 @@ Contains a CRM system for doing business (accounting, accounting, personnel, etc
 					</div>
 					<div class="portfolio__el">
 						<div class="portfolio__pic">
-							<%= image_tag(asset_path('cmr.png')) %>
+							<%= image_tag(asset_path('cmr.png'), alt: "CRM for a electric company") %>
 						</div>
 						<div class="portfolio__body">
 							<div class="portfolio__title"><h3>CRM for a Polish electric company</h3></div>
@@ -225,7 +225,7 @@ Lead accounting.
 					</div>
 					<div class="portfolio__el">
 						<div class="portfolio__pic">
-							<%= image_tag(asset_path('an.webp')) %>
+							<%= image_tag(asset_path('an.webp'), alt: "Web site of the nursery of animals") %>
 						</div>
 						<div class="portfolio__body">
 							<div class="portfolio__title"><h3>Web site of the Ukrainian nursery of animals</h3></div>
@@ -235,7 +235,7 @@ Lead accounting.
 					</div>
 					<div class="portfolio__el">
 						<div class="portfolio__pic">
-							<%= image_tag(asset_path('tea.webp')) %>
+							<%= image_tag(asset_path('tea.webp'), alt: "Web site of teaspoon") %>
 						</div>
 						<div class="portfolio__body">
 							<div class="portfolio__title"><h3>Web site of English teaspoon</h3></div>
@@ -245,7 +245,7 @@ Lead accounting.
 					</div>
 					<div class="portfolio__el">
 						<div class="portfolio__pic">
-							<%= image_tag(asset_path('agroseller.webp')) %>
+							<%= image_tag(asset_path('agroseller.webp'), alt: "Web site of the agricultural company") %>
 						</div>
 						<div class="portfolio__body">
 							<div class="portfolio__title"><h3>Web site of the Ukrainian agricultural company</h3></div>
@@ -255,7 +255,7 @@ Lead accounting.
 					</div>
 					<div class="portfolio__el">
 						<div class="portfolio__pic">
-							<%= image_tag(asset_path('toros.webp')) %>
+							<%= image_tag(asset_path('toros.webp'), alt: "SEO promoting the company's website") %>
 						</div>
 						<div class="portfolio__body">
 							<div class="portfolio__title">
@@ -267,7 +267,7 @@ Lead accounting.
 						</div>
 					</div>
 					<a href="/portfolio?lang=en" class="portfolio__butt" target="blank">
-						Больше наших работ
+						More of our work
 					</a>
 				</div>
 			</div>
@@ -278,7 +278,7 @@ Lead accounting.
 					<div class="briefly__label"><h2>Contribution of contextual advertising</h2></div>
 					<div class="briefly__box ru">
 						<div class="briefly__pic ru">
-							<%= image_tag(asset_path('banner1.webp')) %>
+							<%= image_tag(asset_path('banner1.webp'), alt: "Contribution of contextual advertising") %>
 						</div>
 						<div class="briefly__el-box">
 							<div class="briefly__el">

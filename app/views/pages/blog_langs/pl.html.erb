@@ -7,7 +7,7 @@
     <meta name="description" content="Nasz blog dotyczący tworzenia stron internetowych.">
 	<meta property="og:title" content="Blog dla programistów internetowych" />
     <meta property="og:description" content="Nasz blog dotyczący tworzenia stron internetowych." />
-    <meta property="og:image" content="" />
+    <meta property="og:image" content="<%= image_tag(asset_path('cropped-icon2.png')) %>" />
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "style", "data-turbo-track": "reload" %>
@@ -28,7 +28,7 @@
 						<div class="news__pic">
 							<a href="<%= "/blog/post/#{post.id}?lang=pl" %>" class="news__pic-bg1"></a>
 							<span class="news__pic-bg2"></span>
-							<img src="<%= "#{post.post_intro.url}" %>" alt="">
+							<img src="<%= "#{post.post_intro.url}" %>" alt="post img">
 						</div>
 						<div class="news__body">
 							<div class="news__title"><a href="<%= "/blog/post/#{post.id}?lang=pl" %>"><h2><%= post.name_pl %></h2></a></div>

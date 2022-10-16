@@ -7,7 +7,7 @@
     <meta name="description" content="Портфолио - галерея наших работ.">
 	<meta property="og:title" content="Портфолио наших разработок" />
     <meta property="og:description" content="Портфолио - галерея наших работ." />
-    <meta property="og:image" content="" />
+    <meta property="og:image" content="<%= image_tag(asset_path('cropped-icon2.png')) %>" />
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "style", "data-turbo-track": "reload" %>
@@ -35,7 +35,7 @@
 						<div class="portfolio__label"><h1>Портфолио наших веб-приложений</h1></div>
 						<div class="portfolio__el">
 							<div class="portfolio__pic">
-								<%= image_tag(asset_path('usl.webp')) %>
+								<%= image_tag(asset_path('usl.webp'), alt: "веб-сайт электрической фирмы") %>
 							</div>
 							<div class="portfolio__body">
 								<div class="portfolio__title"><h3>Веб-сайт польской электрической фирмы</h3></div>
@@ -46,7 +46,7 @@
 						</div>
 						<div class="portfolio__el">
 							<div class="portfolio__pic">
-								<%= image_tag(asset_path('cmr.png')) %>
+								<%= image_tag(asset_path('cmr.png'), alt: "RM для электрической компании") %>
 							</div>
 							<div class="portfolio__body">
 								<div class="portfolio__title"><h2>CRM для польской электрической компании</h2></div>
@@ -58,7 +58,7 @@
 						</div>
 						<div class="portfolio__el">
 							<div class="portfolio__pic">
-								<%= image_tag(asset_path('an.webp')) %>
+								<%= image_tag(asset_path('an.webp'), alt: "Веб-сайт питомника животных") %>
 							</div>
 							<div class="portfolio__body">
 								<div class="portfolio__title"><h2>Веб-сайт украинского питомника животных</h2></div>
@@ -68,7 +68,7 @@
 						</div>
 						<div class="portfolio__el">
 							<div class="portfolio__pic">
-								<%= image_tag(asset_path('tea.webp')) %>
+								<%= image_tag(asset_path('tea.webp'), alt: "Веб-сайт чайной лавки") %>
 							</div>
 							<div class="portfolio__body">
 								<div class="portfolio__title"><h2>Веб-сайт английской чайной лавки</h2></div>
@@ -78,7 +78,7 @@
 						</div>
 						<div class="portfolio__el">
 							<div class="portfolio__pic">
-								<%= image_tag(asset_path('agroseller.webp')) %>
+								<%= image_tag(asset_path('agroseller.webp'), alt: "Веб-сайт агрофирмы") %>
 							</div>
 							<div class="portfolio__body">
 								<div class="portfolio__title"><h2>Веб-сайт украинской агрофирмы</h2></div>
@@ -88,7 +88,7 @@
 						</div>
 						<div class="portfolio__el">
 							<div class="portfolio__pic">
-								<%= image_tag(asset_path('toros.webp')) %>
+								<%= image_tag(asset_path('toros.webp'), alt: "SEO продвижение сайта компании") %>
 							</div>
 							<div class="portfolio__body">
 								<div class="portfolio__title">

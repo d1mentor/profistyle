@@ -7,7 +7,7 @@
     <meta name="description" content="Portfolio - galeria naszych prac.">
 	<meta property="og:title" content="Portfolio naszych realizacji" />
     <meta property="og:description" content="Portfolio - galeria naszych prac." />
-    <meta property="og:image" content="" />
+    <meta property="og:image" content="<%= image_tag(asset_path('cropped-icon2.png')) %>" />
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "style", "data-turbo-track": "reload" %>
@@ -35,7 +35,7 @@
 					<div class="portfolio__label"><h1>Portfolio naszych aplikacji internetowych</h1></div>
 					<div class="portfolio__el">
 						<div class="portfolio__pic">
-							<%= image_tag(asset_path('usl.webp')) %>
+							<%= image_tag(asset_path('usl.webp'), alt: "Strona firmy elektrycznej") %>
 						</div>
 						<div class="portfolio__body">
 							<div class="portfolio__title"><h2>Strona internetowa polskiej firmy elektrycznej</h2></div>
@@ -46,7 +46,7 @@ Zawiera system CRM do prowadzenia działalności (rachunkowość, rachunkowość
 					</div>
 					<div class="portfolio__el">
 						<div class="portfolio__pic">
-							<%= image_tag(asset_path('cmr.png')) %>
+							<%= image_tag(asset_path('cmr.png'), alt: "CRM dla firmy elektrycznej") %>
 						</div>
 						<div class="portfolio__body">
 							<div class="portfolio__title"><h2>CRM dla polskiej firmy elektrycznej</h2></div>
@@ -58,7 +58,7 @@ Rachunkowość ołowiu.Ta strona jest zbudowana na frameworku Ruby on Rails, cz�
 					</div>
 					<div class="portfolio__el">
 						<div class="portfolio__pic">
-							<%= image_tag(asset_path('an.webp')) %>
+							<%= image_tag(asset_path('an.webp'), alt: "Strona Szkółki Zwierząt") %>
 						</div>
 						<div class="portfolio__body">
 							<div class="portfolio__title"><h2>Strona internetowa Ukraińskiej Szkółki Zwierząt</h2></div>
@@ -68,7 +68,7 @@ Rachunkowość ołowiu.Ta strona jest zbudowana na frameworku Ruby on Rails, cz�
 					</div>
 					<div class="portfolio__el">
 						<div class="portfolio__pic">
-							<%= image_tag(asset_path('tea.webp')) %>
+							<%= image_tag(asset_path('tea.webp'), alt: "Strona sklepu herbaciany") %>
 						</div>
 						<div class="portfolio__body">
 							<div class="portfolio__title"><h2>Strona internetowa angielskiego sklepu herbaciany</h2></div>
@@ -78,7 +78,7 @@ Rachunkowość ołowiu.Ta strona jest zbudowana na frameworku Ruby on Rails, cz�
 					</div>
 					<div class="portfolio__el">
 						<div class="portfolio__pic">
-							<%= image_tag(asset_path('agroseller.webp')) %>
+							<%= image_tag(asset_path('agroseller.webp'), alt: "Strona agrofirmy") %>
 						</div>
 						<div class="portfolio__body">
 							<div class="portfolio__title"><h2>Strona ukraińskiej agrofirmy</h2></div>
@@ -88,7 +88,7 @@ Rachunkowość ołowiu.Ta strona jest zbudowana na frameworku Ruby on Rails, cz�
 					</div>
 					<div class="portfolio__el">
 						<div class="portfolio__pic">
-							<%= image_tag(asset_path('toros.webp')) %>
+							<%= image_tag(asset_path('toros.webp'), alt: "Pozycjonowanie strony SEO") %>
 						</div>
 						<div class="portfolio__body">
 							<div class="portfolio__title">

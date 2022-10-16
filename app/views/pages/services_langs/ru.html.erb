@@ -9,7 +9,7 @@
 	<meta property="og:title" content="Разработка веб-сайтов, сео продвижение и контекстная реклама" />
     <meta property="og:description" content="Разработка веб-сайтов на CMS и фреймворках. Оптимизация сайта под поисковые системы. Контекстная реклама.
 	Надежный и быстрый хостинг." />
-    <meta property="og:image" content="" />
+    <meta property="og:image" content="<%= image_tag(asset_path('cropped-icon2.png')) %>" />
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "style", "data-turbo-track": "reload" %>
@@ -38,7 +38,7 @@
 						<div class="additional__body">
 							<div class="additional__el add__el-1">
 								<div class="additional__pic">
-									<%= image_tag(asset_path('mn-48.webp')) %>
+									<%= image_tag(asset_path('mn-48.webp'), alt: "Онлайн аналитика") %>
 								</div>
 								<div class="additional__text">
 									<div class="additional__title"><h3>Онлайн аналитика</h3></div>
@@ -47,7 +47,7 @@
 							</div>
 							<div class="additional__el add__el-2">
 								<div class="additional__pic">
-									<%= image_tag(asset_path('et-50.webp')) %>
+									<%= image_tag(asset_path('et-50.webp'), alt: "Дизайн сайта") %>
 								</div>
 								<div class="additional__text">
 									<div class="additional__title"><h3>Дизайн сайта</h3></div>
@@ -56,7 +56,7 @@
 							</div>
 							<div class="additional__el add__el-3">
 								<div class="additional__pic">
-									<%= image_tag(asset_path('html-50.webp')) %>
+									<%= image_tag(asset_path('html-50.webp'), alt: "Веб-разработка") %>
 								</div>
 								<div class="additional__text">
 									<div class="additional__title"><h3>Веб-разработка</h3></div>
@@ -66,7 +66,7 @@
 							</div>
 							<div class="additional__el add__el-4">
 								<div class="additional__pic">
-									<%= image_tag(asset_path('st-50.webp')) %>
+									<%= image_tag(asset_path('st-50.webp'), alt: "SEO продвижение") %>
 								</div>
 								<div class="additional__text">
 									<div class="additional__title"><h3>SEO продвижение</h3></div>
@@ -75,7 +75,7 @@
 							</div>
 							<div class="additional__el add__el-5">
 								<div class="additional__pic">
-									<%= image_tag(asset_path('lp-50.webp')) %>
+									<%= image_tag(asset_path('lp-50.webp'), alt: "Адаптивная верстка") %>
 								</div>
 								<div class="additional__text">
 									<div class="additional__title"><h3>Адаптивная верстка</h3></div>
@@ -85,7 +85,7 @@
 							</div>
 							<div class="additional__el add__el-6">
 								<div class="additional__pic">
-									<%= image_tag(asset_path('pc-50.webp')) %>
+									<%= image_tag(asset_path('pc-50.webp'), alt: "Хостинг") %>
 								</div>
 								<div class="additional__text">
 									<div class="additional__title"><h3>Хостинг</h3></div>

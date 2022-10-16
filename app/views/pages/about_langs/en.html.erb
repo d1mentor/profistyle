@@ -7,7 +7,7 @@
     <meta name="description" content="Our team consists of professional programmers, designers, system administrators.">
 	<meta property="og:title" content="Our development team" />
     <meta property="og:description" content="Our team consists of professional programmers, designers, system administrators." />
-    <meta property="og:image" content="" />
+    <meta property="og:image" content="<%= image_tag(asset_path('cropped-icon2.png')) %>" />
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "style", "data-turbo-track": "reload" %>
@@ -35,7 +35,7 @@
 						<div class="staff__gallery">
 							<div class="staff__el wobble">
 								<div class="staff__pic">
-								<%= image_tag(asset_path('ruslan.webp')) %>
+								<%= image_tag(asset_path('ruslan.webp'), alt: "Web developer") %>
 								</div>
 								<div class="staff__body">
 									<div class="staff__body-title">Ruslan</div>
@@ -45,7 +45,7 @@
 							</div>
 							<div class="staff__el wobble">
 								<div class="staff__pic">
-								<%= image_tag(asset_path('daniil-1.webp')) %>
+								<%= image_tag(asset_path('daniil-1.webp'), alt: "Fronted Developer") %>
 								</div>
 								<div class="staff__body">
 									<div class="staff__body-title">Daniel</div>
@@ -55,7 +55,7 @@
 							</div>
 							<div class="staff__el wobble">
 								<div class="staff__pic">
-								<%= image_tag(asset_path('dmytro.webp')) %>
+								<%= image_tag(asset_path('dmytro.webp'), alt: "Bekend Developer") %>
 								</div>
 								<div class="staff__body">
 									<div class="staff__body-title">Dmitry</div>
@@ -65,7 +65,7 @@
 							</div>
 							<div class="staff__el wobble">
 								<div class="staff__pic">
-								<%= image_tag(asset_path('image.webp')) %>
+								<%= image_tag(asset_path('image.webp'), alt: "Fronted Developer") %>
 								</div>
 								<div class="staff__body">
 									<div class="staff__body-title">Daniel</div>
@@ -75,7 +75,7 @@
 							</div>
 							<div class="staff__el wobble">
 								<div class="staff__pic">
-								<%= image_tag(asset_path('andrey.webp')) %>
+								<%= image_tag(asset_path('andrey.webp'), alt: "Full-Stack Developer") %>
 								</div>
 								<div class="staff__body">
 									<div class="staff__body-title">Andrew</div>
@@ -104,12 +104,12 @@ SEO specialist.</h2></div>
 							<div class="choose__title">Our team consists of professional programmers, designers, system administrators who will develop a site for you as soon as possible, set up domain zones, hosting, VDS/VPS or DEDICATE server.</div>
 							<div class="choose__body">
 								<div class="choose__el">
-									<div class="choose__pic"><%= image_tag(asset_path('bu-50.webp')) %></div>
+									<div class="choose__pic"><%= image_tag(asset_path('bu-50.webp'), alt: "Development") %></div>
 									<div class="choose__tagline"><h3>Development</h3></div>
 									<div class="choose__text">Development is carried out at our hosting, on a technical domain by several specialists.The customer has the opportunity to directly observe the process of developing a website.</div>
 								</div>
 								<div class="choose__el">
-									<div class="choose__pic"><%= image_tag(asset_path('bx-50.webp')) %></div>
+									<div class="choose__pic"><%= image_tag(asset_path('bx-50.webp'), alt: "Support") %></div>
 									<div class="choose__tagline"><h3>Support</h3></div>
 									<div class="choose__text">We provide services for subsequent support and maintenance of the website.We recommend reliable fast -acting hosting.Installing or transferring the site to the customer hosting, setting up the domain zone.</div>
 								</div>
@@ -125,28 +125,28 @@ SEO specialist.</h2></div>
 						<div class="product__body">
 							<div class="product__el">
 								<div class="product__el-pic">
-								<%= image_tag(asset_path('st-80.png')) %>
+								<%= image_tag(asset_path('st-80.png'), alt: "Startups") %>
 								</div>
 								<div class="product__el-num">7</div>
 								<div class="product__el-text">Startups are launched</div>
 							</div>
 							<div class="product__el">
 								<div class="product__el-pic">
-								<%= image_tag(asset_path('gr-80.png')) %>
+								<%= image_tag(asset_path('gr-80.png'), alt: "Divine customers") %>
 								</div>
 								<div class="product__el-num">1204</div>
 								<div class="product__el-text">Divine customers</div>
 							</div>
 							<div class="product__el">
 								<div class="product__el-pic">
-								<%= image_tag(asset_path('en-80.png')) %>
+								<%= image_tag(asset_path('en-80.png'), alt: "Letters") %>
 								</div>
 								<div class="product__el-num">120450</div>
 								<div class="product__el-text">Letters per month</div>
 							</div>
 							<div class="product__el">
 								<div class="product__el-pic">
-								<%= image_tag(asset_path('tp-80.png')) %>
+								<%= image_tag(asset_path('tp-80.png'), alt: "templates") %>
 								</div>
 								<div class="product__el-num">800</div>
 								<div class="product__el-text">Premium templates</div>

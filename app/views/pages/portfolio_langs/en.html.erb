@@ -7,7 +7,7 @@
     <meta name="description" content="Portfolio - gallery of our works.">
 	<meta property="og:title" content="Portfolio of our developments" />
     <meta property="og:description" content="Portfolio - gallery of our works." />
-    <meta property="og:image" content="" />
+    <meta property="og:image" content="<%= image_tag(asset_path('cropped-icon2.png')) %>" />
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "style", "data-turbo-track": "reload" %>
@@ -35,7 +35,7 @@
 					<div class="portfolio__label"><h1>Portfolio of our web applications</h1></div>
 					<div class="portfolio__el">
 						<div class="portfolio__pic">
-							<%= image_tag(asset_path('usl.webp')) %>
+							<%= image_tag(asset_path('usl.webp'), alt: "Web site of the electric company") %>
 						</div>
 						<div class="portfolio__body">
 							<div class="portfolio__title"><h2>Web site of the Polish electric company</h2></div>
@@ -46,7 +46,7 @@ Contains a CRM system for doing business (accounting, accounting, personnel, etc
 					</div>
 					<div class="portfolio__el">
 						<div class="portfolio__pic">
-							<%= image_tag(asset_path('cmr.png')) %>
+							<%= image_tag(asset_path('cmr.png'), alt: "CRM for electric company") %>
 						</div>
 						<div class="portfolio__body">
 							<div class="portfolio__title"><h2>CRM for a Polish electric company</h2></div>
@@ -58,7 +58,7 @@ Lead accounting.
 					</div>
 					<div class="portfolio__el">
 						<div class="portfolio__pic">
-							<%= image_tag(asset_path('an.webp')) %>
+							<%= image_tag(asset_path('an.webp'), alt: "Web site of the nursery of animals") %>
 						</div>
 						<div class="portfolio__body">
 							<div class="portfolio__title"><h2>Web site of the Ukrainian nursery of animals</h2></div>
@@ -68,7 +68,7 @@ Lead accounting.
 					</div>
 					<div class="portfolio__el">
 						<div class="portfolio__pic">
-							<%= image_tag(asset_path('tea.webp')) %>
+							<%= image_tag(asset_path('tea.webp'), alt: "Web site of teaspoon") %>
 						</div>
 						<div class="portfolio__body">
 							<div class="portfolio__title"><h2>Web site of English teaspoon</h2></div>
@@ -78,7 +78,7 @@ Lead accounting.
 					</div>
 					<div class="portfolio__el">
 						<div class="portfolio__pic">
-							<%= image_tag(asset_path('agroseller.webp')) %>
+							<%= image_tag(asset_path('agroseller.webp'), alt: "Web site of the agricultural company") %>
 						</div>
 						<div class="portfolio__body">
 							<div class="portfolio__title"><h2>Web site of the Ukrainian agricultural company</h2></div>
@@ -88,7 +88,7 @@ Lead accounting.
 					</div>
 					<div class="portfolio__el">
 						<div class="portfolio__pic">
-							<%= image_tag(asset_path('toros.webp')) %>
+							<%= image_tag(asset_path('toros.webp'), alt: "SEO promoting the company's website") %>
 						</div>
 						<div class="portfolio__body">
 							<div class="portfolio__title">

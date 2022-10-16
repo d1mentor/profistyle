@@ -7,7 +7,7 @@
     <meta name="description" content="Contact us in any way convenient for you.">
 	<meta property="og:title" content="Contact us in any way" />
     <meta property="og:description" content="Contact us in any way convenient for you." />
-    <meta property="og:image" content="" />
+    <meta property="og:image" content="<%= image_tag(asset_path('cropped-icon2.png')) %>" />
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "style", "data-turbo-track": "reload" %>
@@ -35,21 +35,21 @@
 					<div class="contact__block">
 						<div class="contact__el">
 							<div class="contact__el-pic-1" id="pic">
-								<%= image_tag(asset_path('loc-100-aq.png')) %>
+								<%= image_tag(asset_path('loc-100-aq.png'), alt: "adress") %>
 							</div>
 							<div class="contact__el-title">ADDRESS</div>
 							<div class="contact__el-subtitle">Str. Ludwika Rydygiera 16/1, 50-249, Wroclaw</div>
 						</div>
 						<div class="contact__el">
 							<div class="contact__el-pic-2">
-								<%= image_tag(asset_path('en-100-aq.png')) %>
+								<%= image_tag(asset_path('en-100-aq.png'), alt: "email") %>
 							</div>
 							<div class="contact__el-title">EMAIL</div>
 							<div class="contact__el-subtitle">biuro@profistyle.group</div>
 						</div>
 						<div class="contact__el">
 							<div class="contact__el-pic-3">
-								<%= image_tag(asset_path('tl-100-aq.png')) %>
+								<%= image_tag(asset_path('tl-100-aq.png'), alt: "phone") %>
 							</div>
 							<div class="contact__el-title">PHONE</div>
 							<div class="contact__el-subtitle">+48795124042</div>

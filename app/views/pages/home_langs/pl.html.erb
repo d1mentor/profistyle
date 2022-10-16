@@ -9,7 +9,7 @@
 	<meta property="og:title" content="Tworzenie stron internetowych CMS oraz RoR" />
     <meta property="og:description" content="Tworzenie stron internetowych CMS Wordpress, Joomla oraz Ruby on Rails. SEO Pozycjonowanie. 
 	Reklama kontekstowa." />
-    <meta property="og:image" content="" />
+    <meta property="og:image" content="<%= image_tag(asset_path('cropped-icon2.png')) %>" />
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "style", "data-turbo-track": "reload" %>
@@ -26,28 +26,33 @@
 			<div class="slider">
 				<div class="slider__item ops">
 					<span class="slider__item-bg1"></span>
-					<%= image_tag(asset_path('Sl1.jpg'), class: "slider__item-pic" ) %>
+					<%= image_tag(asset_path('Sl1.jpg'), alt: "projekt webowy", class: "slider__item-pic" ) %>
 						<div class="slider__item-box">
 							<div class="slider__item-label"><h1>TWORZENIE STRON INTERNETOWYCH<br> O DOWOLNEJ ZŁOŻONOŚCI</h1></div>
-							<div class="slider__item-sublabel">&nbsp;Szybko i sprawnie realizujemy Twój projekt webowy jako aplikację webową w Ruby on Rails. Opracujemy stronę internetową o unikalnym designie lub na gotowym szablonie najpopularniejszego CMS - WordPress, Joomla, ModX lub dowolny inny.</div>
+							<div class="slider__item-sublabel">&nbsp;Szybko i sprawnie realizujemy Twój projekt webowy jako aplikację webową w 
+							Ruby on Rails. Opracujemy stronę internetową o unikalnym designie lub na gotowym szablonie najpopularniejszego CMS - 
+							WordPress, Joomla, ModX lub dowolny inny.</div>
 							<a href="/services_ror?lang=pl" class="slider__item-btn">Czytaj więcej</a>
 						</div>
 				</div>
 				<div class="slider__item ops">
 					<span class="slider__item-bg2"></span>
-					<%= image_tag(asset_path('Sl2.webp'), class: "slider__item-pic" ) %>
+					<%= image_tag(asset_path('Sl2.webp'), alt: "Stworzymy kampanię reklamową", class: "slider__item-pic" ) %>
 						<div class="slider__item-box">
 							<div class="slider__item-label"><h1>KONFIGURACJA REKLAMY KONTEKSTOWEJ</h1></div>
-							<div class="slider__item-sublabel">&nbsp;Stworzymy i skonfigurujemy kampanię reklamową dla Twojej firmy w sieci reklamy kontekstowej Google Ads.</div>
+							<div class="slider__item-sublabel">&nbsp;Stworzymy i skonfigurujemy kampanię reklamową dla Twojej firmy w sieci reklamy 
+							kontekstowej Google Ads.</div>
 							<a href="/services_seo?lang=pl" class="slider__item-btn">Czytaj więcej</a>
 						</div>
 				</div>
 				<div class="slider__item ops">
 					<span class="slider__item-bg3"></span>
-					<%= image_tag(asset_path('Sl3.webp'), class: "slider__item-pic" ) %>
+					<%= image_tag(asset_path('Sl3.webp'), alt: "Przeprowadzimy SEO analizę", class: "slider__item-pic" ) %>
 						<div class="slider__item-box">
 							<div class="slider__item-label"><h1>SEO POZYCJONOWANIE<br>STRON INTERNETOWYCH<br> W TOP GOOGLE</h1></div>
-							<div class="slider__item-sublabel">&nbsp;Przeprowadzimy SEO analizę konkurencji Twojej strony internetowej. Optymalizujemy Twoją stronę internetową pod wyszukiwarki. Modyfikujemy rdzeń semantyczny pod SEO. Wykonamy pozycjonowanie strony w TOP wyszukiwarki Google. Dostarczymy szczegółowe raporty dotyczące analityki i promocji.</div>
+							<div class="slider__item-sublabel">&nbsp;Przeprowadzimy SEO analizę konkurencji Twojej strony internetowej. Optymalizujemy 
+							Twoją stronę internetową pod wyszukiwarki. Modyfikujemy rdzeń semantyczny pod SEO. Wykonamy pozycjonowanie strony w TOP 
+							wyszukiwarki Google. Dostarczymy szczegółowe raporty dotyczące analityki i promocji.</div>
 							<a href="/services_seo?lang=pl" class="slider__item-btn">Czytaj więcej</a>
 						</div>
 				</div>
@@ -85,7 +90,7 @@
 					<div class="choose__col">
 						<div class="choose__label"><h2>Tworzenie i wsparcie strony internetowej</h2></div>
 						<div class="choose__vid">
-							<%= image_tag(asset_path('usl.webp')) %>
+							<%= image_tag(asset_path('usl.webp'), alt: "Tworzenie strony internetowej") %>
 						</div>
 					</div>
 					<div class="choose__col">
@@ -95,7 +100,7 @@
 						<div class="choose__body">
 							<div class="choose__el">
 								<div class="choose__pic">
-									<%= image_tag(asset_path('bu-50.webp')) %>
+									<%= image_tag(asset_path('bu-50.webp'), alt: "Tworzenie") %>
 								</div>
 								<div class="choose__tagline"><h3>Tworzenie</h3></div>
 								<div class="choose__text">&nbsp;Tworzenie odbywa się na naszym hostingu, na domenie technicznej przez grupę specjalistów.
@@ -104,7 +109,7 @@
 							</div>
 							<div class="choose__el">
 								<div class="choose__pic">
-									<%= image_tag(asset_path('bx-50.webp')) %>
+									<%= image_tag(asset_path('bx-50.webp'), alt: "Wsparcie") %>
 								</div>
 								<div class="choose__tagline"><h3>Wsparcie</h3></div>
 								<div class="choose__text">&nbsp;Świadczymy usługi późniejszego wsparcia i utrzymania serwisu. Polecamy niezawodny, szybki
@@ -122,7 +127,7 @@
 					<div class="additional__body">
 						<div class="additional__el add__el-1">
 							<div class="additional__pic">
-								<%= image_tag(asset_path('mn-48.webp')) %>
+								<%= image_tag(asset_path('mn-48.webp'), alt: "Analityka SEO") %>
 							</div>
 							<div class="additional__text">
 								<div class="additional__title"><h3>Analityka SEO</h3></div>
@@ -132,7 +137,7 @@
 						</div>
 						<div class="additional__el add__el-2">
 							<div class="additional__pic">
-								<%= image_tag(asset_path('et-50.webp')) %>
+								<%= image_tag(asset_path('et-50.webp'), alt: "Strona internetowa w HTML5/CSS") %>
 							</div>
 							<div class="additional__text">
 								<div class="additional__title"><h3>Strona internetowa w HTML5/CSS</h3></div>
@@ -142,7 +147,7 @@
 						</div>
 						<div class="additional__el add__el-3">
 							<div class="additional__pic">
-								<%= image_tag(asset_path('html-50.webp')) %>
+								<%= image_tag(asset_path('html-50.webp'), alt: "Optymalizacja strony") %>
 							</div>
 							<div class="additional__text">
 								<div class="additional__title"><h3>Optymalizacja strony</h3></div>
@@ -152,7 +157,7 @@
 						</div>
 						<div class="additional__el add__el-4">
 							<div class="additional__pic">
-								<%= image_tag(asset_path('st-50.webp')) %>
+								<%= image_tag(asset_path('st-50.webp'), alt: "Seo obrazów") %>
 							</div>
 							<div class="additional__text">
 								<div class="additional__title"><h3>Seo obrazów</h3></div>
@@ -162,7 +167,7 @@
 						</div>
 						<div class="additional__el add__el-5">
 							<div class="additional__pic">
-								<%= image_tag(asset_path('lp-50.webp')) %>
+								<%= image_tag(asset_path('lp-50.webp'), alt: "SEO pozycjonowanie") %>
 							</div>
 							<div class="additional__text">
 								<div class="additional__title"><h3>SEO pozycjonowanie</h3></div>
@@ -172,7 +177,7 @@
 						</div>
 						<div class="additional__el add__el-6">
 							<div class="additional__pic">
-								<%= image_tag(asset_path('pc-50.webp')) %>
+								<%= image_tag(asset_path('pc-50.webp'), alt: "Rozszerzone raporty") %>
 							</div>
 							<div class="additional__text">
 								<div class="additional__title"><h3>Rozszerzone raporty</h3></div>
@@ -191,7 +196,7 @@
 					<div class="portfolio__label"><h2>Portfolio</h2></div>
 					<div class="portfolio__el">
 						<div class="portfolio__pic">
-							<%= image_tag(asset_path('usl.webp')) %>
+							<%= image_tag(asset_path('usl.webp'), alt: "Strona firmy elektrycznej") %>
 						</div>
 						<div class="portfolio__body">
 							<div class="portfolio__title"><h3>Strona internetowa polskiej firmy elektrycznej</h3></div>
@@ -202,7 +207,7 @@
 					</div>
 					<div class="portfolio__el">
 						<div class="portfolio__pic">
-							<%= image_tag(asset_path('cmr.png')) %>
+							<%= image_tag(asset_path('cmr.png'), alt: "CRM dla firmy elektrycznej") %>
 						</div>
 						<div class="portfolio__body">
 							<div class="portfolio__title"><h3>CRM dla polskiej firmy elektrycznej</h3></div>
@@ -213,7 +218,7 @@
 					</div>
 					<div class="portfolio__el">
 						<div class="portfolio__pic">
-							<%= image_tag(asset_path('an.webp')) %>
+							<%= image_tag(asset_path('an.webp'), alt: "Strona Szkółki Zwierząt") %>
 						</div>
 						<div class="portfolio__body">
 							<div class="portfolio__title"><h3>Strona internetowa Ukraińskiej Szkółki Zwierząt</h3></div>
@@ -223,7 +228,7 @@
 					</div>
 					<div class="portfolio__el">
 						<div class="portfolio__pic">
-							<%= image_tag(asset_path('tea.webp')) %>
+							<%= image_tag(asset_path('tea.webp'), alt: "Strona sklepu herbaciany") %>
 						</div>
 						<div class="portfolio__body">
 							<div class="portfolio__title"><h3>Strona internetowa angielskiego sklepu herbaciany</h3></div>
@@ -233,7 +238,7 @@
 					</div>
 					<div class="portfolio__el">
 						<div class="portfolio__pic">
-							<%= image_tag(asset_path('agroseller.webp')) %>
+							<%= image_tag(asset_path('agroseller.webp'), alt: "Strona agrofirmy") %>
 						</div>
 						<div class="portfolio__body">
 							<div class="portfolio__title"><h3>Strona ukraińskiej agrofirmy</h3></div>
@@ -243,7 +248,7 @@
 					</div>
 					<div class="portfolio__el">
 						<div class="portfolio__pic">
-							<%= image_tag(asset_path('toros.webp')) %>
+							<%= image_tag(asset_path('toros.webp'), alt: "Pozycjonowanie strony SEO") %>
 						</div>
 						<div class="portfolio__body">
 							<div class="portfolio__title">
@@ -267,7 +272,7 @@
 					<div class="briefly__label"><h2>KONFIGURACJA REKLAMY KONTEKSTOWEJ</h2></div>
 					<div class="briefly__box ru">
 						<div class="briefly__pic ru">
-							<%= image_tag(asset_path('banner1.webp')) %>
+							<%= image_tag(asset_path('banner1.webp'), alt: "Konfiguracja kampanii reklamowej") %>
 						</div>
 						<div class="briefly__el-box">
 							<div class="briefly__el">

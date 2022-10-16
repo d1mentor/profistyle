@@ -9,7 +9,7 @@
 	<meta property="og:title" content="Website development, seo promotion and contextual advertising" />
     <meta property="og:description" content="Website development on CMS and frameworks. Website optimization for search engines. Contextual advertising.
     Reliable and fast hosting." />
-    <meta property="og:image" content="" />
+    <meta property="og:image" content="<%= image_tag(asset_path('cropped-icon2.png')) %>" />
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "style", "data-turbo-track": "reload" %>
@@ -38,7 +38,7 @@
 						<div class="additional__body">
 							<div class="additional__el add__el-1">
 								<div class="additional__pic">
-									<%= image_tag(asset_path('mn-48.webp')) %>
+									<%= image_tag(asset_path('mn-48.webp'), alt: "SEO analytics") %>
 								</div>
 								<div class="additional__text">
 									<div class="additional__title"><h3>SEO analytics</h3></div>
@@ -48,17 +48,17 @@ optimization.</div>
 							</div>
 							<div class="additional__el add__el-2">
 								<div class="additional__pic">
-									<%= image_tag(asset_path('et-50.webp')) %>
+									<%= image_tag(asset_path('et-50.webp'), alt: "Site on HTML5/CSS") %>
 								</div>
 								<div class="additional__text">
-									<div class="additional__title"><h3>Site on HTML5 / CSS</h3></div>
+									<div class="additional__title"><h3>Site on HTML5/CSS</h3></div>
 									<div class="additional__subtitle">Development of a website on pure HTML/CSS.One of the best solutions for
 website promotion in the top.</div>
 								</div>
 							</div>
 							<div class="additional__el add__el-3">
 								<div class="additional__pic">
-									<%= image_tag(asset_path('html-50.webp')) %>
+									<%= image_tag(asset_path('html-50.webp'), alt: "Optimization site") %>
 								</div>
 								<div class="additional__text">
 									<div class="additional__title"><h3>Optimization site</h3></div>
@@ -68,7 +68,7 @@ errors, speeds, semantics.</div>
 							</div>
 							<div class="additional__el add__el-4">
 								<div class="additional__pic">
-									<%= image_tag(asset_path('st-50.webp')) %>
+									<%= image_tag(asset_path('st-50.webp'), alt: "SEO images") %>
 								</div>
 								<div class="additional__text">
 									<div class="additional__title"><h3>SEO images</h3></div>
@@ -78,7 +78,7 @@ search engines.</div>
 							</div>
 							<div class="additional__el add__el-5">
 								<div class="additional__pic">
-									<%= image_tag(asset_path('lp-50.webp')) %>
+									<%= image_tag(asset_path('lp-50.webp'), alt: "SEO promotion") %>
 								</div>
 								<div class="additional__text">
 									<div class="additional__title"><h3>SEO promotion</h3></div>
@@ -88,7 +88,7 @@ resources.Linkbuilding.</div>
 							</div>
 							<div class="additional__el add__el-6">
 								<div class="additional__pic">
-									<%= image_tag(asset_path('pc-50.webp')) %>
+									<%= image_tag(asset_path('pc-50.webp'), alt: "Detailed reports") %>
 								</div>
 								<div class="additional__text">
 									<div class="additional__title"><h3>Detailed reports</h3></div>

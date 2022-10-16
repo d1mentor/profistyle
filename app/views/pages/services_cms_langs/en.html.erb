@@ -9,7 +9,7 @@
 	<meta property="og:title" content="Sites on CMS Wordpress and Joomla" />
     <meta property="og:description" content="Website development on CMS Wordpress, Joomla and any other. Search engine optimization.
     Plugin settings." />
-    <meta property="og:image" content="" />
+    <meta property="og:image" content="<%= image_tag(asset_path('cropped-icon2.png')) %>" />
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "style", "data-turbo-track": "reload" %>
@@ -71,7 +71,7 @@
 					<div class="ruby__gallery">
 						<div class="ruby__el">
 							<div class="ruby__el-pic">
-							<%= image_tag(asset_path('php.webp')) %>
+							<%= image_tag(asset_path('php.webp'), alt: "App Development") %>
 							</div>
 							<div class="ruby__el-body">
 								<div class="ruby__el-title">App Development</div>
@@ -80,7 +80,7 @@
 						</div>
 						<div class="ruby__el">
 							<div class="ruby__el-pic">
-							<%= image_tag(asset_path('ui.webp')) %>
+							<%= image_tag(asset_path('ui.webp'), alt: "Web Portal") %>
 							</div>
 							<div class="ruby__el-body">
 								<div class="ruby__el-title">Web Portal</div>
@@ -89,7 +89,7 @@
 						</div>
 						<div class="ruby__el">
 							<div class="ruby__el-pic">
-							<%= image_tag(asset_path('mockup.png')) %>
+							<%= image_tag(asset_path('mockup.png'), alt: "Open Source") %>
 							</div>
 							<div class="ruby__el-body">
 								<div class="ruby__el-title">Open Source</div>
@@ -98,7 +98,7 @@
 						</div>
 						<div class="ruby__el">
 							<div class="ruby__el-pic">
-							<%= image_tag(asset_path('responsive.png')) %>
+							<%= image_tag(asset_path('responsive.png'), alt: "CRM") %>
 							</div>
 							<div class="ruby__el-body">
 								<div class="ruby__el-title">CRM</div>
@@ -107,7 +107,7 @@
 						</div>
 						<div class="ruby__el">
 							<div class="ruby__el-pic">
-							<%= image_tag(asset_path('brainstorm.png')) %>
+							<%= image_tag(asset_path('brainstorm.png'), alt: "Enterprise Portal") %>
 							</div>
 							<div class="ruby__el-body">
 								<div class="ruby__el-title">Enterprise Portal</div>
@@ -116,7 +116,7 @@
 						</div>
 						<div class="ruby__el">
 							<div class="ruby__el-pic">
-							<%= image_tag(asset_path('web-design.png')) %>
+							<%= image_tag(asset_path('web-design.png'), alt: "Custom eCommerce") %>
 							</div>
 							<div class="ruby__el-body">
 								<div class="ruby__el-title">Custom eCommerce</div>
@@ -125,7 +125,7 @@
 						</div>
 						<div class="ruby__el">
 							<div class="ruby__el-pic">
-							<%= image_tag(asset_path('website.png')) %>
+							<%= image_tag(asset_path('website.png'), alt: "CMS") %>
 							</div>
 							<div class="ruby__el-body">
 								<div class="ruby__el-title">CMS</div>
@@ -134,7 +134,7 @@
 						</div>
 						<div class="ruby__el">
 							<div class="ruby__el-pic">
-							<%= image_tag(asset_path('wireframe.png')) %>
+							<%= image_tag(asset_path('wireframe.png'), alt: "Website Maintenance") %>
 							</div>
 							<div class="ruby__el-body">
 								<div class="ruby__el-title">Website Maintenance</div>
@@ -143,7 +143,7 @@
 						</div>
 						<div class="ruby__el">
 							<div class="ruby__el-pic">
-							<%= image_tag(asset_path('browser.png')) %>
+							<%= image_tag(asset_path('browser.png'), alt: "Cost Effective") %>
 							</div>
 							<div class="ruby__el-body">
 								<div class="ruby__el-title">Cost Effective</div>

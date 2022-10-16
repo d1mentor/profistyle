@@ -9,7 +9,7 @@
 	<meta property="og:title" content="Разработка веб-сайтов на CMS и RoR" />
     <meta property="og:description" content="Разработка веб-сайтов на CMS Wordpress, Joomla и фреймворке Ruby on Rails. SEO продвижение сайтов. 
 	Настройка контекстной рекламы" />
-    <meta property="og:image" content="" />
+    <meta property="og:image" content="<%= image_tag(asset_path('cropped-icon2.png')) %>" />
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "style", "data-turbo-track": "reload" %>
@@ -27,7 +27,7 @@
 			<div class="slider">
 				<div class="slider__item ops">
 					<span class="slider__item-bg1"></span>
-					<%= image_tag(asset_path('Sl1.jpg'), class: "slider__item-pic" ) %>
+					<%= image_tag(asset_path('Sl1.jpg'), alt: "разработка сайтов", class: "slider__item-pic" ) %>
 						<div class="slider__item-box">
 							<div class="slider__item-label"><h1>РАЗРАБОТКА ВЕБ-САЙТОВ<br> ЛЮБОЙ СЛОЖНОСТИ</h1></div>
 							<div class="slider__item-sublabel">Мы быстро и эффективно реализуем Ваш веб-проект в виде веб-приложения
@@ -38,7 +38,7 @@
 				</div>
 				<div class="slider__item ops">
 					<span class="slider__item-bg2"></span>
-					<%= image_tag(asset_path('Sl2.webp'), class: "slider__item-pic" ) %>
+					<%= image_tag(asset_path('Sl2.webp'), alt: "контекстная реклама", class: "slider__item-pic" ) %>
 						<div class="slider__item-box">
 							<div class="slider__item-label"><h1>НАСТРОЙКА КОНТЕКСТНОЙ РЕКЛАМЫ</h1></div>
 							<div class="slider__item-sublabel">Создадим и настроим рекламную компанию для Вашего бизнеса в контекстной
@@ -48,7 +48,7 @@
 				</div>
 				<div class="slider__item ops">
 					<span class="slider__item-bg3"></span>
-					<%= image_tag(asset_path('Sl3.webp'), class: "slider__item-pic" ) %>
+					<%= image_tag(asset_path('Sl3.webp'), alt: "СЕО продвижение", class: "slider__item-pic" ) %>
 						<div class="slider__item-box">
 							<div class="slider__item-label"><h1>SEO ПРОДВИЖЕНИЕ САЙТОВ<br> В ТОП GOOGLE</h1></div>
 							<div class="slider__item-sublabel">Проведем SEO аналитику конкурентов вашего сайта. Оптимизируем ваш сайт
@@ -92,7 +92,7 @@
 					<div class="choose__col">
 						<div class="choose__label"><h2>Разработка и поддержка сайта</h2></div>
 						<div class="choose__vid">
-							<%= image_tag(asset_path('usl.webp')) %>
+							<%= image_tag(asset_path('usl.webp'), alt: "разработка сайта") %>
 						</div>
 					</div>
 					<div class="choose__col">
@@ -102,7 +102,7 @@
 						<div class="choose__body">
 							<div class="choose__el">
 								<div class="choose__pic">
-									<%= image_tag(asset_path('bu-50.webp')) %>
+									<%= image_tag(asset_path('bu-50.webp'), alt: "разработка") %>
 								</div>
 								<div class="choose__tagline"><h3>Разработка</h3></div>
 								<div class="choose__text">&nbsp;Разработка ведется на нашем хостинге, на техническом домене несколькими
@@ -111,7 +111,7 @@
 							</div>
 							<div class="choose__el">
 								<div class="choose__pic">
-									<%= image_tag(asset_path('bx-50.webp')) %>
+									<%= image_tag(asset_path('bx-50.webp'), alt: "поддержка") %>
 								</div>
 								<div class="choose__tagline"><h3>Поддержка</h3></div>
 								<div class="choose__text">&nbsp;Оказываем услуги по последующей поддержке и сопровождению веб-сайта.
@@ -130,7 +130,7 @@
 					<div class="additional__body">
 						<div class="additional__el add__el-1">
 							<div class="additional__pic">
-								<%= image_tag(asset_path('mn-48.webp')) %>
+								<%= image_tag(asset_path('mn-48.webp'), alt: "сео аналитика") %>
 							</div>
 							<div class="additional__text">
 								<div class="additional__title"><h3>SEO аналитика</h3></div>
@@ -140,7 +140,7 @@
 						</div>
 						<div class="additional__el add__el-2">
 							<div class="additional__pic">
-								<%= image_tag(asset_path('et-50.webp')) %>
+								<%= image_tag(asset_path('et-50.webp'), alt: "сайт на html/css") %>
 							</div>
 							<div class="additional__text">
 								<div class="additional__title"><h3>Сайт на HTML5/CSS</h3></div>
@@ -150,7 +150,7 @@
 						</div>
 						<div class="additional__el add__el-3">
 							<div class="additional__pic">
-								<%= image_tag(asset_path('html-50.webp')) %>
+								<%= image_tag(asset_path('html-50.webp'), alt: "оптимизация сайта") %>
 							</div>
 							<div class="additional__text">
 								<div class="additional__title"><h3>Оптимизация сайта</h3></div>
@@ -160,7 +160,7 @@
 						</div>
 						<div class="additional__el add__el-4">
 							<div class="additional__pic">
-								<%= image_tag(asset_path('st-50.webp')) %>
+								<%= image_tag(asset_path('st-50.webp'), alt: "СЕО изображений") %>
 							</div>
 							<div class="additional__text">
 								<div class="additional__title"><h3>SEO изображений</h3></div>
@@ -170,7 +170,7 @@
 						</div>
 						<div class="additional__el add__el-5">
 							<div class="additional__pic">
-								<%= image_tag(asset_path('lp-50.webp')) %>
+								<%= image_tag(asset_path('lp-50.webp'), alt: "СЕО продвижение") %>
 							</div>
 							<div class="additional__text">
 								<div class="additional__title"><h3>SEO продвижение</h3></div>
@@ -180,7 +180,7 @@
 						</div>
 						<div class="additional__el add__el-6">
 							<div class="additional__pic">
-								<%= image_tag(asset_path('pc-50.webp')) %>
+								<%= image_tag(asset_path('pc-50.webp'), alt: "отчеты") %>
 							</div>
 							<div class="additional__text">
 								<div class="additional__title"><h3>Развернутые отчеты</h3></div>
@@ -199,7 +199,7 @@
 					<div class="portfolio__label"><h2>Портфолио</h2></div>
 					<div class="portfolio__el">
 						<div class="portfolio__pic">
-							<%= image_tag(asset_path('usl.webp')) %>
+							<%= image_tag(asset_path('usl.webp'), alt: "сайт электрика") %>
 						</div>
 						<div class="portfolio__body">
 							<div class="portfolio__title"><h3>Веб-сайт польской электрической фирмы</h3></div>
@@ -210,7 +210,7 @@
 					</div>
 					<div class="portfolio__el">
 						<div class="portfolio__pic">
-							<%= image_tag(asset_path('cmr.png')) %>
+							<%= image_tag(asset_path('cmr.png'), alt: "срм система") %>
 						</div>
 						<div class="portfolio__body">
 							<div class="portfolio__title"><h3>CRM для польской электрической компании</h3></div>
@@ -222,7 +222,7 @@
 					</div>
 					<div class="portfolio__el">
 						<div class="portfolio__pic">
-							<%= image_tag(asset_path('an.webp')) %>
+							<%= image_tag(asset_path('an.webp'), alt: "Веб-сайт питомника животных") %>
 						</div>
 						<div class="portfolio__body">
 							<div class="portfolio__title"><h3>Веб-сайт украинского питомника животных</h3></div>
@@ -232,7 +232,7 @@
 					</div>
 					<div class="portfolio__el">
 						<div class="portfolio__pic">
-							<%= image_tag(asset_path('tea.webp')) %>
+							<%= image_tag(asset_path('tea.webp'), alt: "Веб-сайт чайной лавки") %>
 						</div>
 						<div class="portfolio__body">
 							<div class="portfolio__title"><h3>Веб-сайт английской чайной лавки</h3></div>
@@ -242,7 +242,7 @@
 					</div>
 					<div class="portfolio__el">
 						<div class="portfolio__pic">
-							<%= image_tag(asset_path('agroseller.webp')) %>
+							<%= image_tag(asset_path('agroseller.webp'), alt: "Веб-сайт агрофирмы") %>
 						</div>
 						<div class="portfolio__body">
 							<div class="portfolio__title"><h3>Веб-сайт украинской агрофирмы</h3></div>
@@ -252,7 +252,7 @@
 					</div>
 					<div class="portfolio__el">
 						<div class="portfolio__pic">
-							<%= image_tag(asset_path('toros.webp')) %>
+							<%= image_tag(asset_path('toros.webp'), alt: "сео сайта") %>
 						</div>
 						<div class="portfolio__body">
 							<div class="portfolio__title">
@@ -275,7 +275,7 @@
 					<div class="briefly__label"><h2>НАСТРОЙКА КОНТЕКСТНОЙ РЕКЛАМЫ</h2></div>
 					<div class="briefly__box ru">
 						<div class="briefly__pic ru">
-							<%= image_tag(asset_path('banner1.webp')) %>
+							<%= image_tag(asset_path('banner1.webp'), alt: "контекстная реклама") %>
 						</div>
 						<div class="briefly__el-box">
 							<div class="briefly__el">
