@@ -33,7 +33,7 @@
 							<img src="<%= "#{post.post_intro.url}" %>" alt="">
 						</div>
 						<div class="news__body">
-							<div class="news__title"><a href="<%= "/blog/post/#{post.id}?lang=en" %>"><%= post.name_en %></a></div>
+							<div class="news__title"><a href="<%= "/blog/post/#{post.id}?lang=en" %>"><h2><%= post.name_en %><h2></a></div>
 							<div class="news__subtitle"><a href="<%= "/blog/post/#{post.id}?lang=en" %>"><span class="news__span-pic"></span> admin</a> •<span
 									class="news__span-pic-2"></span><%= post.created_at %></div>
 							<% if post.text_en.index("</h2>") %>

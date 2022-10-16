@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'sitemap/sitemap'
   
   devise_for :users
   
@@ -29,4 +30,6 @@ Rails.application.routes.draw do
   post '/admin_panel/post/:id/update', to: "admin_panel#update_post"
   post '/admin_panel/post/:id/destroy', to: "admin_panel#destroy_post"
   get '/admin_panel/portfolio', to: "admin_panel#portfolio"
+
+  get '/sitemap', to: 'sitemap#sitemap', defaults: { format: 'xml' }
 end

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>https://profistyle.group/</loc>
+<lastmod>2022-10-16T16:20:38+00:00</lastmod>
+<priority>1.00</priority>
+</url>
+<url>
+<loc>https://profistyle.group/?lang=pl</loc>
+<lastmod>2022-10-16T16:20:38+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://profistyle.group/?lang=ru</loc>
+<lastmod>2022-10-16T16:20:38+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://profistyle.group/?lang=en</loc>
+<lastmod>2022-10-16T16:20:38+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://profistyle.group/services_cms?lang=pl</loc>
+<lastmod>2022-10-16T16:20:38+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://profistyle.group/about_us?lang=pl</loc>
+<lastmod>2022-10-16T16:20:38+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://profistyle.group/about_us?lang=ru</loc>
+<lastmod>2022-10-16T16:20:38+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://profistyle.group/about_us?lang=en</loc>
+<lastmod>2022-10-16T16:20:38+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://profistyle.group/services?lang=pl</loc>
+<lastmod>2022-10-16T16:20:38+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://profistyle.group/services?lang=ru</loc>
+<lastmod>2022-10-16T16:20:38+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://profistyle.group/services?lang=en</loc>
+<lastmod>2022-10-16T16:20:38+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://profistyle.group/services_ror?lang=pl</loc>
+<lastmod>2022-10-16T16:20:38+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://profistyle.group/services_ror?lang=ru</loc>
+<lastmod>2022-10-16T16:20:38+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://profistyle.group/services_ror?lang=en</loc>
+<lastmod>2022-10-16T16:20:38+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://profistyle.group/services_cms?lang=ru</loc>
+<lastmod>2022-10-16T16:20:38+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://profistyle.group/services_cms?lang=en</loc>
+<lastmod>2022-10-16T16:20:38+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://profistyle.group/services_seo?lang=pl</loc>
+<lastmod>2022-10-16T16:20:38+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://profistyle.group/services_seo?lang=ru</loc>
+<lastmod>2022-10-16T16:20:38+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://profistyle.group/services_seo?lang=en</loc>
+<lastmod>2022-10-16T16:20:38+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://profistyle.group/blog?lang=pl</loc>
+<lastmod><%= @blog_updated_at.xmlschema %></lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://profistyle.group/blog?lang=ru</loc>
+<lastmod><%= @blog_updated_at.xmlschema %></lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://profistyle.group/blog?lang=en</loc>
+<lastmod><%= @blog_updated_at.xmlschema %></lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://profistyle.group/portfolio?lang=pl</loc>
+<lastmod>2022-10-16T16:20:38+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://profistyle.group/portfolio?lang=ru</loc>
+<lastmod>2022-10-16T16:20:38+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://profistyle.group/portfolio?lang=en</loc>
+<lastmod>2022-10-16T16:20:38+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://profistyle.group/contacts?lang=pl</loc>
+<lastmod>2022-10-16T16:20:38+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://profistyle.group/contacts?lang=ru</loc>
+<lastmod>2022-10-16T16:20:38+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://profistyle.group/contacts?lang=en</loc>
+<lastmod>2022-10-16T16:20:38+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<% @posts.each do |post| %>
+    <% if check_valid_post_for_lang(post.text_en, post.post_intro, post.name_en, post.metatitle_en, post.metadescription_en) %>
+      <url>
+        <loc>https://profistyle.group/blog/post/<%= post.id %>?lang=en</loc>
+        <lastmod><%= post.updated_at.xmlschema %></lastmod>
+        <priority>0.51</priority>
+      </url>  
+    <% end %>
+    <% if check_valid_post_for_lang(post.text_ru, post.post_intro, post.name_ru, post.metatitle_ru, post.metadescription_ru) %>
+      <url>
+        <loc>https://profistyle.group/blog/post/<%= post.id %>?lang=ru</loc>
+        <lastmod><%= post.updated_at.xmlschema %></lastmod>
+        <priority>0.51</priority>
+      </url>  
+    <% end %>
+    <% if check_valid_post_for_lang(post.text_pl, post.post_intro, post.name_pl, post.metatitle_pl, post.metadescription_pl) %>
+      <url>
+        <loc>https://profistyle.group/blog/post/<%= post.id %>?lang=pl</loc>
+        <lastmod><%= post.updated_at.xmlschema %></lastmod>
+        <priority>0.51</priority>
+      </url>  
+    <% end %>
+<% end %>
+</urlset>
