@@ -1,10 +1,28 @@
+<% content_for :head do %>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <title><%= @post.metatitle_ru %></title>
+    <meta name="description" content="<%= @post.metadescription_ru %>">
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "style", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "false", defer: true %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
+    <script src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <%= favicon_link_tag asset_path('cropped-icon2.png') %>
+    <%= tinymce_assets %>
+<% end %>
+
 <div class="wrapper">
 		<main class="main" style="margin-top: 100px;">
 			<div class="blog">
                     <div class="blog__row" style="border: 0;">
 						<div class="blog__label text-center"></div>
 								<div class="blog__el">
-								<a class="blog__el-label"><h2><%= @post.name_ru %></h2></a>
+								<a class="blog__el-label"><h1><%= @post.name_ru %></h1></a>
 									<div class="blog__el-pic">
 										<%	
 										if @post.post_intro.url

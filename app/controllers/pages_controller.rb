@@ -32,25 +32,31 @@ class PagesController < ApplicationController
 
 		case get_lang
 		when "ru"
-			if check_valid_post_for_lang(@post_ver.text_ru, @post_ver.post_intro, @post_ver.name_ru)
+			if check_valid_post_for_lang(@post_ver.text_ru, @post_ver.post_intro, @post_ver.name_ru, @post_ver.metatitle_ru, @post_ver.metadescription_ru)
 			  @post.name_ru = @post_ver.name_ru
 			  @post.text_ru = @post_ver.text_ru
+			  @post.metatitle_ru = @post_ver.metatitle_ru
+			  @post.metadescription_ru = @post_ver.metadescription_ru
 			  render "pages/show_post", post: @post
 			else
 			  redirect_to "/blog?lang=ru"
 			end	
 		when "pl"
-			if check_valid_post_for_lang(@post_ver.text_pl, @post_ver.post_intro, @post_ver.name_pl)
+			if check_valid_post_for_lang(@post_ver.text_pl, @post_ver.post_intro, @post_ver.name_pl, @post_ver.metatitle_pl, @post_ver.metadescription_pl)
 			  @post.name_ru = @post_ver.name_pl
 			  @post.text_ru = @post_ver.text_pl
+			  @post.metatitle_ru = @post_ver.metatitle_pl
+			  @post.metadescription_ru = @post_ver.metadescription_pl
 			  render "pages/show_post", post: @post
 			else
 			  redirect_to "/blog?lang=pl"
 			end	
 		when "en"
-			if check_valid_post_for_lang(@post_ver.text_en, @post_ver.post_intro, @post_ver.name_en)
+			if check_valid_post_for_lang(@post_ver.text_en, @post_ver.post_intro, @post_ver.name_en, @post_ver.metatitle_en, @post_ver.metadescription_en)
 			  @post.name_ru = @post_ver.name_en
 			  @post.text_ru = @post_ver.text_en
+			  @post.metatitle_ru = @post_ver.metatitle_en
+			  @post.metadescription_ru = @post_ver.metadescription_en
 			  render "pages/show_post", post: @post
 			else
 			  redirect_to "/blog?lang=en"
@@ -58,6 +64,8 @@ class PagesController < ApplicationController
 		else
 			@post.name_ru = @post_ver.name_ru
 			@post.text_ru = @post_ver.text_ru
+			@post.metatitle_ru = @post_ver.metatitle_ru
+			@post.metadescription_ru = @post_ver.metadescription_ru
 			render "pages/show_post", post: @post
 		end		
 	  end
@@ -96,8 +104,8 @@ class PagesController < ApplicationController
 
 	private
 
-	def check_valid_post_for_lang(text, post_intro, name)
-        if text == "" || post_intro.url.nil? || name == ""
+	def check_valid_post_for_lang(text, post_intro, name, metatitle, metadescription)
+        if text == "" || post_intro.url.nil? || name == "" || metatitle == "" || metadescription == "" || metatitle == nil || metadescription == nil
             false
         else
             true    

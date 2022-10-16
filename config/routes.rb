@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   get "/services_cmr", to: "pages#services_cmr"
   post "/contacts_form_send", to: "pages#contacts_form_send" 
 
-  get '/admin_panel/home', to: "admin_panel#home"
+  get '/admin_panel/', to: "admin_panel#home"
   get '/admin_panel/posts', to: "admin_panel#posts"
   get '/admin_panel/posts_base', to: "admin_panel#posts_base"
   get '/admin_panel/new_post', to: "admin_panel#new_post"

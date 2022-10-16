@@ -31,14 +31,20 @@
         %> <br>
         <br>
         <h2 class="text-center">РУССКАЯ ВЕРСИЯ</h2>
+        <%= f.label "Meta Title RU", class: "form-label" %>: <%= f.text_field :metatitle_ru, class: "form-control", value: "#{@post.metatitle_ru}" %> <br>
+        <%= f.label "Meta Description RU", class: "form-label" %>: <%= f.text_field :metadescription_ru, class: "form-control", value: "#{@post.metadescription_ru}" %> <br>
         <%= f.label "Имя поста RU", class: "form-label" %>: <%= f.text_field :name_ru, class: "form-control", value: "#{@post.name_ru}" %> <br>
         <div class="field"><%= f.label "Текст RU", class: "form-label" %>: <%= text_area_tag :text_ru, "#{@post.text_ru}", :class => "tinymce" %><%= tinymce %></div>
         <br>
         <h2 class="text-center">ПОЛЬСКАЯ ВЕРСИЯ</h2>
+        <%= f.label "Meta Title PL", class: "form-label" %>: <%= f.text_field :metatitle_pl, class: "form-control", value: "#{@post.metatitle_pl}" %> <br>
+        <%= f.label "Meta Description PL", class: "form-label" %>: <%= f.text_field :metadescription_pl, class: "form-control", value: "#{@post.metadescription_pl}" %> <br>
         <%= f.label "Имя поста PL", class: "form-label" %>: <%= f.text_field :name_pl, class: "form-control", value: "#{@post.name_pl}" %> <br>
         <div class="field"><%= f.label "Текст PL", class: "form-label" %>: <%= text_area_tag :text_pl, "#{@post.text_pl}", :class => "tinymce" %><%= tinymce %></div>
         <br>
         <h2 class="text-center">АНГЛИЙСКАЯ ВЕРСИЯ</h2>
+        <%= f.label "Meta Title EN", class: "form-label" %>: <%= f.text_field :metatitle_en, class: "form-control", value: "#{@post.metatitle_en}" %> <br>
+        <%= f.label "Meta Description EN", class: "form-label" %>: <%= f.text_field :metadescription_en, class: "form-control", value: "#{@post.metadescription_en}" %> <br>
          <%= f.label "Имя поста EN", class: "form-label" %>: <%= f.text_field :name_en, class: "form-control", value: "#{@post.name_en}" %> <br>
         <div class="field"><%= f.label "Текст EN", class: "form-label" %>: <%= text_area_tag :text_en, "#{@post.text_en}", :class => "tinymce" %><%= tinymce %></div>
         <br>

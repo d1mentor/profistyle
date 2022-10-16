@@ -19,8 +19,8 @@ module ApplicationHelper
 		end		
 	end	
 
-	def check_valid_post_for_lang(text, post_intro, name)
-        if text == "" || post_intro.url.nil? || name == ""
+	def check_valid_post_for_lang(text, post_intro, name, metatitle, metadescription)
+        if text == "" || post_intro.url.nil? || name == "" || metatitle == "" || metadescription == "" || metatitle == nil || metadescription == nil
             false
         else
             true    

@@ -25,14 +25,20 @@
         <%= f.file_field('post_intro') %>
         <br>
         <h2 class="text-center">РУССКАЯ ВЕРСИЯ</h2>
+        <%= f.label "Meta Title RU", class: "form-label" %>: <%= f.text_field :metatitle_ru, class: "form-control" %> <br>
+        <%= f.label "Meta Description RU", class: "form-label" %>: <%= f.text_field :metadescription_ru, class: "form-control" %> <br>
         <%= f.label "Имя поста RU", class: "form-label" %>: <%= f.text_field :name_ru, class: "form-control" %> <br>
         <div class="field"><%= f.label "Текст RU", class: "form-label" %>: <%= text_area_tag :text_ru, "Hello, World!", :class => "tinymce" %><%= tinymce %></div>
         <br>
         <h2 class="text-center">ПОЛЬСКАЯ ВЕРСИЯ</h2>
+        <%= f.label "Meta Title PL", class: "form-label" %>: <%= f.text_field :metatitle_pl, class: "form-control" %> <br>
+        <%= f.label "Meta Description PL", class: "form-label" %>: <%= f.text_field :metadescription_pl, class: "form-control" %> <br>
         <%= f.label "Имя поста PL", class: "form-label" %>: <%= f.text_field :name_pl, class: "form-control" %> <br>
         <div class="field"><%= f.label "Текст PL", class: "form-label" %>: <%= text_area_tag :text_pl, "Hello, World!", :class => "tinymce" %><%= tinymce %></div>
         <br>
         <h2 class="text-center">АНГЛИЙСКАЯ ВЕРСИЯ</h2>
+        <%= f.label "Meta Title EN", class: "form-label" %>: <%= f.text_field :metatitle_en, class: "form-control" %> <br>
+        <%= f.label "Meta Description EN", class: "form-label" %>: <%= f.text_field :metadescription_en, class: "form-control" %> <br>
          <%= f.label "Имя поста EN", class: "form-label" %>: <%= f.text_field :name_en, class: "form-control" %> <br>
         <div class="field"><%= f.label "Текст EN", class: "form-label" %>: <%= text_area_tag :text_en, "Hello, World!", :class => "tinymce" %><%= tinymce %></div>
         <br>

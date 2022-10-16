@@ -19,10 +19,11 @@
 	<div class="wrapper">
 		<main class="main" style="margin-top: 100px;">
 			<div class="blog">
+				<div class="blog__el-label"><h1 class="text-center">Наши последние новости</h1></div>
 				<div class="container">
 					<% @posts.each do |post| %>
-					  <% if check_valid_post_for_lang(post.text_ru, post.post_intro, post.name_ru) %>
-					  <div class="news__el" style="padding-top: 1%; padding-bottom: 1%; padding-left: 15%; padding-right: 15%;">
+					  <% if check_valid_post_for_lang(post.text_ru, post.post_intro, post.name_ru, post.metatitle_ru, post.metadescription_ru) %>
+					  <div class="news__el" style="padding-top: 1%; padding-bottom: 1%; padding-left: 17%; padding-right: 15%;">
 						<div class="news__pic">
 							<a href="<%= "/blog/post/#{post.id}?lang=ru" %>" class="news__pic-bg1"></a>
 							<span class="news__pic-bg2"></span>
