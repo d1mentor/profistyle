@@ -15,6 +15,10 @@
     <script src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
     <%= favicon_link_tag asset_path('cropped-icon2.png') %>
     <%= tinymce_assets %>
+	<% puts current_path %>
+	<% if params[:lang] == "en" %>
+		<link rel="canonical" href="<%= root_path %>"/>
+	<% end %>
 <% end %>
 
 <div class="wrapper">

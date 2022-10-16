@@ -39,29 +39,30 @@
 					<div class="menu">
 						<nav class="nav mon">
 							<ul>
-								<li><a href="/?lang=en">Главная</a></li>
-								<li><a href="/about_us?lang=en">О нас</a></li>
-								<li><a href="/services?lang=en">Услуги</a>
+								<li><%= link_to "Главная", "/?lang=#{get_lang}" %></li>
+								<li><%= link_to "О нас", "/about_us?lang=#{get_lang}" %></li>
+								<li><%= link_to "Услуги", "/services?lang=#{get_lang}" %>
 									<button class="collapsible"></button>
 									<div class="collapsible-content">
-										<a href="/services_ror?lang=en">RoR разработка</a>
-										<a href="/services_cms?lang=en">CMS разработка</a>
-										<a href="/services_seo?lang=en">SEO продвижение</a>
+                                        <%= link_to "RoR разработка", "/services_ror?lang=#{get_lang}" %>
+                                        <%= link_to "CMS разработка", "/services_cms?lang=#{get_lang}" %>
+                                        <%= link_to "SEO продвижение", "/services_seo?lang=#{get_lang}" %>
 									</div>
 								</li>
-								<li><a href="/blog?lang=en">Блог</a></li>
-								<li><a href="/portfolio?lang=en">Портфолио</a></li>
-								<li><a href="/contacts?lang=en">Контакты</a></li>
-								<li><%= link_to "#{current_path}?lang=pl", class: "jaw__link" do %>
+								<li><%= link_to "Блог", "/blog?lang=#{get_lang}" %></li>
+								<li><%= link_to "Портфолио", "/portfolio?lang=#{get_lang}" %></li>
+								<li><%= link_to "Контакты", "/contacts?lang=#{get_lang}" %></li>
+								<li>
+                                    <%= link_to "#{current_path}?lang=pl", class: "jaw__link" do %>
                                         <%= image_tag(asset_path('pl-24.webp')) %>
                                     <% end %>
                                 </li>
-								<li>
+                                <li>
                                     <%= link_to "#{current_path}?lang=ru", class: "jaw__link" do %>
                                         <%= image_tag(asset_path('rus-24.png')) %>
                                     <% end %>
                                 </li>
-								<li>
+                                <li>
                                     <%= link_to "#{current_path}?lang=en", class: "jaw__link" do %>
                                         <%= image_tag(asset_path('eng-24.webp')) %>
                                     <% end %>

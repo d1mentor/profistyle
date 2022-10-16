@@ -1,5 +1,14 @@
 <!DOCTYPE html>
-<html>
+<% case get_lang %>
+<% when "ru" %>
+  <html lang="ru-RU">
+<% when "pl" %>
+  <html lang="pl-PL">
+<% when "en" %>
+  <html lang="en-EN">
+<% else %>
+  <html>
+<% end %>
   <head>
     <%= yield :head %>
   </head>

@@ -1,5 +1,14 @@
 class ApplicationController < ActionController::Base
-    def after_sign_in_path_for(resource)
+  before_action :redirect_from_www_to_non_www_host
+
+  def redirect_from_www_to_non_www_host
+    domain_parts = request.host.split('.')
+    if domain_parts.first == 'www'
+      redirect_to(request.original_url.gsub('www.', ''), status: 301) and return  
+    end
+  end  
+  
+  def after_sign_in_path_for(resource)
         stored_location_for(resource) ||
           if resource.is_a?(User)
             "/admin_panel/home"
