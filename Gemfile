@@ -22,6 +22,8 @@ gem 'carrierwave'
 gem 'yui-compressor'
 gem 'uglifier'
 gem 'terser'
+gem 'csso-rails'
+gem 'therubyracer'
 
 #deploy-------------------------------------
 gem 'capistrano', '~> 3.11'

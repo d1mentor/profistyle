@@ -16,6 +16,7 @@ Rails.application.configure do
   config.assets.compress = true
   config.assets.js_compressor = :terser
   config.assets.css_compressor = :yui
+  config.assets.gzip = true
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false

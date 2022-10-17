@@ -10,7 +10,7 @@ Rails.application.configure do
 
   config.assets.compress = true
   config.assets.js_compressor = :terser
-  config.assets.css_compressor = :yui
+  config.assets.css_compressor = :csso
   # Do not eager load code on boot.
   config.eager_load = false
 
