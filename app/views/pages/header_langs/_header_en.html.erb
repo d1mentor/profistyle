@@ -54,17 +54,17 @@
 								<li><%= link_to "Contact us", "/contacts?lang=#{get_lang}" %></li>
 								<li>
                                     <%= link_to "#{current_path}?lang=pl", class: "jaw__link" do %>
-                                        <%= image_tag(asset_path('pl-24.webp'), alt: "pl") %>
+                                        <%= image_tag(asset_path('pl-24.webp'), alt: "pl", style:"height: 20px; width: 22px;") %>
                                     <% end %>
                                 </li>
                                 <li>
                                     <%= link_to "#{current_path}?lang=ru", class: "jaw__link" do %>
-                                        <%= image_tag(asset_path('rus-24.png'), alt: "ru") %>
+                                        <%= image_tag(asset_path('rus-24.png'), alt: "ru", style:"height: 20px; width: 22px;") %>
                                     <% end %>
                                 </li>
                                 <li>
                                     <%= link_to "#{current_path}?lang=en", class: "jaw__link" do %>
-                                        <%= image_tag(asset_path('eng-24.webp'), alt: "en") %>
+                                        <%= image_tag(asset_path('eng-24.webp'), alt: "en",  style:"height: 20px; width: 22px;") %>
                                     <% end %>
                                 </li>
 							</ul>
@@ -133,13 +133,13 @@
                             </div>
                             <div class="jaw__el">
                                 <%= link_to "#{current_path}?lang=pl", class: "jaw__link" do %>
-                                    <%= image_tag(asset_path('pl-24.webp'), alt: "pl") %>
+                                    <%= image_tag(asset_path('pl-24.webp'), alt: "pl",  style:"height: 20px; width: 22px;") %>
                                 <% end %>
                                 <%= link_to "#{current_path}?lang=ru", class: "jaw__link" do %>
-                                    <%= image_tag(asset_path('rus-24.png'), alt: "ru") %>
+                                    <%= image_tag(asset_path('rus-24.png'), alt: "ru",  style:"height: 20px; width: 22px;") %>
                                 <% end %>
                                 <%= link_to "#{current_path}?lang=en", class: "jaw__link" do %>
-                                    <%= image_tag(asset_path('eng-24.webp'), alt: "en") %>
+                                    <%= image_tag(asset_path('eng-24.webp'), alt: "en", style:"height: 20px; width: 22px;") %>
                                 <% end %>
                             </div>
                         </div>
