@@ -32,7 +32,8 @@ class PagesController < ApplicationController
 
 		case get_lang
 		when "ru"
-			if check_valid_post_for_lang(@post_ver.text_ru, @post_ver.post_intro, @post_ver.name_ru, @post_ver.metatitle_ru, @post_ver.metadescription_ru)
+			if check_valid_post_for_lang(@post_ver.text_ru, @post_ver.post_intro, @post_ver.name_ru, @post_ver.metatitle_ru, @post_ver.metadescription_ru, @post_ver.alt_ru)
+			  @post.alt_ru = @post_ver.alt_ru
 			  @post.name_ru = @post_ver.name_ru
 			  @post.text_ru = @post_ver.text_ru
 			  @post.metatitle_ru = @post_ver.metatitle_ru
@@ -42,7 +43,8 @@ class PagesController < ApplicationController
 			  redirect_to "/blog?lang=ru"
 			end	
 		when "pl"
-			if check_valid_post_for_lang(@post_ver.text_pl, @post_ver.post_intro, @post_ver.name_pl, @post_ver.metatitle_pl, @post_ver.metadescription_pl)
+			if check_valid_post_for_lang(@post_ver.text_pl, @post_ver.post_intro, @post_ver.name_pl, @post_ver.metatitle_pl, @post_ver.metadescription_pl, @post_ver.alt_pl)
+			  @post.alt_ru = @post_ver.alt_pl
 			  @post.name_ru = @post_ver.name_pl
 			  @post.text_ru = @post_ver.text_pl
 			  @post.metatitle_ru = @post_ver.metatitle_pl
@@ -52,7 +54,8 @@ class PagesController < ApplicationController
 			  redirect_to "/blog?lang=pl"
 			end	
 		when "en"
-			if check_valid_post_for_lang(@post_ver.text_en, @post_ver.post_intro, @post_ver.name_en, @post_ver.metatitle_en, @post_ver.metadescription_en)
+			if check_valid_post_for_lang(@post_ver.text_en, @post_ver.post_intro, @post_ver.name_en, @post_ver.metatitle_en, @post_ver.metadescription_en, @post_ver.alt_en)
+			  @post.alt_ru = @post_ver.alt_en
 			  @post.name_ru = @post_ver.name_en
 			  @post.text_ru = @post_ver.text_en
 			  @post.metatitle_ru = @post_ver.metatitle_en
@@ -62,6 +65,7 @@ class PagesController < ApplicationController
 			  redirect_to "/blog?lang=en"
 			end	
 		else
+			@post.alt_ru = @post_ver.alt_ru
 			@post.name_ru = @post_ver.name_ru
 			@post.text_ru = @post_ver.text_ru
 			@post.metatitle_ru = @post_ver.metatitle_ru
@@ -104,8 +108,8 @@ class PagesController < ApplicationController
 
 	private
 
-	def check_valid_post_for_lang(text, post_intro, name, metatitle, metadescription)
-        if text == "" || post_intro.url.nil? || name == "" || metatitle == "" || metadescription == "" || metatitle == nil || metadescription == nil
+	def check_valid_post_for_lang(text, post_intro, name, metatitle, metadescription, alt)
+        if text == "" || post_intro.url.nil? || name == "" || metatitle == "" || metadescription == "" || metatitle == nil || metadescription == nil || alt == "" || alt == nil 
             false
         else
             true    

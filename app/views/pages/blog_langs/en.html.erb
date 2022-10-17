@@ -22,24 +22,18 @@
 			<div class="blog__el-label"><h1 class="text-center">Our last news</h1></div>
 				<div class="container">
 					<% @posts.each do |post| %>
-					  <% if check_valid_post_for_lang(post.text_en, post.post_intro, post.name_en, post.metatitle_en, post.metadescription_en) %>
+					  <% if check_valid_post_for_lang(post.text_en, post.post_intro, post.name_en, post.metatitle_en, post.metadescription_en, post.alt_en) %>
 					  <div class="news__el" style="padding-top: 1%; padding-bottom: 1%; padding-left: 17%; padding-right: 15%;">
 						<div class="news__pic">
 							<a href="<%= "/blog/post/#{post.id}?lang=en" %>" class="news__pic-bg1"></a>
 							<span class="news__pic-bg2"></span>
-							<img src="<%= "#{post.post_intro.url}" %>" alt="post img">
+							<img src="<%= "#{post.post_intro.url}" %>" alt="<%= "#{post.alt_en}" %>">
 						</div>
 						<div class="news__body">
 							<div class="news__title"><a href="<%= "/blog/post/#{post.id}?lang=en" %>"><h2><%= post.name_en %><h2></a></div>
 							<div class="news__subtitle"><a href="<%= "/blog/post/#{post.id}?lang=en" %>"><span class="news__span-pic"></span> admin</a> •<span
 									class="news__span-pic-2"></span><%= post.created_at %></div>
-							<% if post.text_en.index("</h2>") %>
-								<div class="news__text"><%= sanitize post.text_en[0..post.text_en.index("</h2>")+1]+"…" %></div>
-							<% elsif post.text_en.index("</h3>") %>
-								<div class="news__text"><%= sanitize post.text_en[0..post.text_en.index("</h3>")+1]+"…" %></div>
-							<% else %>
 								<div class="news__text"><%= sanitize post.text_en[0..post.text_en.index("</p>")+1]+"…" %></div>
-							<% end %>
 					    </div>
 					  </div>
 					  <% end %>

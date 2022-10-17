@@ -23,7 +23,7 @@
 									<div class="blog__el-pic">
 										<%	
 										if @post.post_intro.url
-										  concat image_tag(@post.post_intro.url)
+										  concat image_tag(@post.post_intro.url, alt: "#{@post.alt_ru}")
 										end
 										%>
 									</div>

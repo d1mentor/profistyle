@@ -52,6 +52,6 @@ class AdminPanelController < ApplicationController
   private
 
   def post_params 
-    params.permit(:name_ru, :name_pl, :name_en, :text_ru, :text_pl, :text_en, :metatitle_ru, :metatitle_pl, :metatitle_en, :metadescription_ru, :metadescription_pl, :metadescription_en, :post_intro)
+    params.permit(:name_ru, :name_pl, :name_en, :text_ru, :text_pl, :text_en, :metatitle_ru, :metatitle_pl, :metatitle_en, :metadescription_ru, :metadescription_pl, :metadescription_en, :alt_ru, :alt_pl, :alt_en, :post_intro)
   end  
 end

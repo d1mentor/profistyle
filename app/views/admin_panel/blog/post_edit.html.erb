@@ -22,6 +22,9 @@
     <%= form_with url: "/admin_panel/post/#{@post.id}/update" do |f| %>
         <h2><strong>Интро поста</strong></h2>
         <%= f.file_field('post_intro', multiple: false, value: @post.post_intro.url) %> <br> <br>
+        <%= f.label "Alt RU", class: "form-label" %>: <%= f.text_field :alt_ru, class: "form-control" %> <br>
+        <%= f.label "Alt PL", class: "form-label" %>: <%= f.text_field :alt_pl, class: "form-control" %> <br>
+        <%= f.label "Alt EN", class: "form-label" %>: <%= f.text_field :alt_en, class: "form-control" %> <br>
         <h2><strong>Текущее интро:</strong></h2>
         <%
         if @post.post_intro.url

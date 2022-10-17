@@ -44,7 +44,7 @@
             
             <% else %>
 
-            <% if !check_valid_post_for_lang(post.text_ru, post.post_intro, post.name_ru, post.metatitle_ru, post.metadescription_ru) %>
+            <% if !check_valid_post_for_lang(post.text_ru, post.post_intro, post.name_ru, post.metatitle_ru, post.metadescription_ru, post.alt_ru) %>
                 <div class="alert alert-danger" role="button" data-bs-toggle="collapse" href="#post_ru<%= post.id %>" aria-expanded="false">
                     RU Версия - Не все поля заполнены. Языковая версия не отображается в блоге!
                 </div>
@@ -56,9 +56,10 @@
             <div class="collapse" id="post_ru<%= post.id %>">
                 <br>
                 <div class="card card-body">
-                    <h1><%= post.name_ru %></h1>
+                    <p>Alt:<%= post.alt_ru %></p>
                     <p>Meta Title:<%= post.metatitle_ru %></p>
                     <p>Meta Description:<%= post.metadescription_ru %></p>
+                    <h1><%= post.name_ru %></h1>
                     <div class="blog__body">
                         <div class="blog__el-content">
                             <%= sanitize post.text_ru %>
@@ -67,7 +68,7 @@
                 </div>
                 <br>
             </div>
-            <% if !check_valid_post_for_lang(post.text_pl, post.post_intro, post.name_pl, post.metatitle_pl, post.metadescription_pl) %>
+            <% if !check_valid_post_for_lang(post.text_pl, post.post_intro, post.name_pl, post.metatitle_pl, post.metadescription_pl, post.alt_pl) %>
                 <div class="alert alert-danger" role="button" data-bs-toggle="collapse" href="#post_pl<%= post.id %>" aria-expanded="false">
                     PL Версия - Не все поля заполнены. Языковая версия не отображается в блоге!
                 </div>
@@ -79,9 +80,10 @@
             <div class="collapse" id="post_pl<%= post.id %>">
                 <br>
                 <div class="card card-body">
-                    <h1><%= post.name_pl %></h1>
+                    <p>Alt:<%= post.alt_pl %></p>
                     <p>Meta Title:<%= post.metatitle_pl %></p>
                     <p>Meta Description:<%= post.metadescription_pl %></p>
+                    <h1><%= post.name_pl %></h1>
                     <div class="blog__body">
                         <div class="blog__el-content">
                             <%= sanitize post.text_pl %>
@@ -90,7 +92,7 @@
                 </div>
                 <br>
             </div>
-            <% if !check_valid_post_for_lang(post.text_en, post.post_intro, post.name_en, post.metatitle_en, post.metadescription_en) %>
+            <% if !check_valid_post_for_lang(post.text_en, post.post_intro, post.name_en, post.metatitle_en, post.metadescription_en, post.alt_en) %>
                 <div class="alert alert-danger" role="button" data-bs-toggle="collapse" href="#post_en<%= post.id %>" aria-expanded="false">
                     EN Версия - Не все поля заполнены. Языковая версия не отображается в блоге!
                 </div>
@@ -102,9 +104,10 @@
             <div class="collapse" id="post_en<%= post.id %>">
                 <br>
                 <div class="card card-body">
-                    <h1><%= post.name_en %></h1>
+                    <p>Alt:<%= post.alt_en %></p>
                     <p>Meta Title:<%= post.metatitle_en %></p>
                     <p>Meta Description:<%= post.metadescription_en %></p>
+                    <h1><%= post.name_en %></h1>
                     <div class="blog__body">
                         <div class="blog__el-content">
                             <%= sanitize post.text_en %>
