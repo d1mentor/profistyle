@@ -141,21 +141,21 @@
 <priority>0.64</priority>
 </url>
 <% @posts.each do |post| %>
-    <% if check_valid_post_for_lang(post.text_en, post.post_intro, post.name_en, post.metatitle_en, post.metadescription_en) %>
+    <% if check_valid_post_for_lang(post.text_en, post.post_intro, post.name_en, post.metatitle_en, post.metadescription_en, post.alt_en) %>
       <url>
         <loc>https://profistyle.group/blog/post/<%= post.id %>?lang=en</loc>
         <lastmod><%= post.updated_at.xmlschema %></lastmod>
         <priority>0.51</priority>
       </url>  
     <% end %>
-    <% if check_valid_post_for_lang(post.text_ru, post.post_intro, post.name_ru, post.metatitle_ru, post.metadescription_ru) %>
+    <% if check_valid_post_for_lang(post.text_ru, post.post_intro, post.name_ru, post.metatitle_ru, post.metadescription_ru, post.alt_ru) %>
       <url>
         <loc>https://profistyle.group/blog/post/<%= post.id %>?lang=ru</loc>
         <lastmod><%= post.updated_at.xmlschema %></lastmod>
         <priority>0.51</priority>
       </url>  
     <% end %>
-    <% if check_valid_post_for_lang(post.text_pl, post.post_intro, post.name_pl, post.metatitle_pl, post.metadescription_pl) %>
+    <% if check_valid_post_for_lang(post.text_pl, post.post_intro, post.name_pl, post.metatitle_pl, post.metadescription_pl, post.alt_pl) %>
       <url>
         <loc>https://profistyle.group/blog/post/<%= post.id %>?lang=pl</loc>
         <lastmod><%= post.updated_at.xmlschema %></lastmod>
