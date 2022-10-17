@@ -137,6 +137,8 @@ class PagesController < ApplicationController
 				render "pages/#{dir_name}_langs/pl"
 			when "en" 
 				render "pages/#{dir_name}_langs/en"
+			else
+				render "pages/#{dir_name}_langs/ru"
 		end
 	end
 
@@ -152,6 +154,8 @@ class PagesController < ApplicationController
 				render "pages/blog_langs/pl", posts: posts
 			when "en" 
 				render "pages/blog_langs/en", posts: posts
+			else
+				render "pages/#{dir_name}_langs/ru"
 		end
 	end	
 
