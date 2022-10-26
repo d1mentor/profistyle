@@ -94,7 +94,7 @@ Rails.application.configure do
     address: 'smtp.gmail.com',
     domain: 'profistyle.group',
     user_name: 'gerasimenkot92@gmail.com',
-    password: 'oklfinmpmrjmekxr',
+    password: 'upouuyeipnykuzup',
     authentication: :plain,
     enable_starttls_auto: true,
     openssl_verify_mode: "none"
