@@ -66,10 +66,12 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     port: 587,
     address: 'smtp.gmail.com',
+    domain: 'profistyle.group',
     user_name: 'gerasimenkot92@gmail.com',
-    password: 'dpsdwlvgfdncyaqz',
+    password: 'upouuyeipnykuzup',
     authentication: :plain,
-    enable_starttls_auto: true
+    enable_starttls_auto: false,
+    openssl_verify_mode: 'none'
   }
 
 
