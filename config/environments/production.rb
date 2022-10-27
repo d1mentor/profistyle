@@ -96,8 +96,8 @@ Rails.application.configure do
     user_name: 'gerasimenkot92@gmail.com',
     password: 'upouuyeipnykuzup',
     authentication: :plain,
-    enable_starttls_auto: true,
-    ca_file: "/etc/ssl/certs/ca-certificates.crt"
+    enable_starttls_auto: false
+    openssl_verify_mode: 'none'
   }
 
 
