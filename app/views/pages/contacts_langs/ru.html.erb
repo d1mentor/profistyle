@@ -60,35 +60,86 @@
 			</div>
 			<div class="touch">
 				<div class="container">
-					<%= form_with url: "/contacts_form_send?lang=#{params[:lang]}", class: "touch" do |form| %>
+					<%= form_with url: "/admin_panel/create_message?lang=#{params[:lang]}", class: "touch", :html => { :onsubmit => "submit_form()" }  do |form| %>
 						<div class="touch__title"><h2>Напишите нам</h2></div>
-						<div class="touch__subtitle">Ваше сообщение очень важно для нас. Мы ответим на него как можно скорее.</div>
+						<div class="touch__subtitle" style="margin-bottom: 20px !important;">Ваше сообщение очень важно для нас. Мы ответим на него как можно скорее.</div>
+						<div class="touch__subtitle" id="enter_info"><strong>Пожалуйста, заполните все поля.</strong></div>
 						<div class="touch__body">
 							<div class="touch__rank">
 								<div class="touch__el">
-									<label for="" class="touch__label">Ваше имя *</label>
-									<%= form.text_field :name, class: "touch__input" %>
+									<label for="" class="touch__label">Ваше имя</label>
+									<%= form.text_field :name, class: "touch__input", id: "name" %>
 								</div>
 								<div class="touch__el">
-									<label for="" class="touch__label">Ваш Email*</label>
-									<%= form.text_field :email, class: "touch__input" %>
+									<label for="" class="touch__label">Ваш Email</label>
+									<%= form.text_field :email, class: "touch__input", id: "email", type: "email" %>
 								</div>
 								<div class="touch__el">
 									<label for="" class="touch__label">Тема</label>								
-									<%= form.text_field :subject, class: "touch__input" %>
+									<%= form.text_field :subject, class: "touch__input", id: "subject" %>
 								</div>
 							</div>
 							<div class="touch__el-textarea">
 								<label for="" class="touch__label">Сообщение</label>
-								<%= form.text_area :message, class: "touch__el-textarea", rows: 25 %>
+								<%= form.text_area :message, class: "touch__el-textarea", rows: 25, id: "text" %>
 							</div>
-							<%= form.submit "Отправить", class: "touch__btn" %>
+							<div class="touch__subtitle not-show" id="send_info"><strong>Ваше сообщение отправлено. Мы скоро с вами свяжемся.</strong></div>
+							<%= form.submit "Отправить", class: "touch__btn", id: "send_btn" %>
 						</div>
 					<% end %>
   					</div>
 				</div>
 			</div>
 		</main>
+
+		<style>
+			.not-show{
+				display: none;
+			}
+
+			.success-btn{
+				background-color: #198754;
+			}
+		</style>
+
+		<script>
+			const formInput1 = document.getElementById("name");
+			const formInput2 = document.getElementById("email");
+			const formInput3 = document.getElementById("subject");
+			const formInput4 = document.getElementById("text");
+			const formButton = document.getElementById("send_btn");
+			const sendInfo = document.getElementById("send_info");
+
+			const validateEmail = (email) => {
+  			return email.match(
+   			  /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+ 			);
+			};	
+
+			function submit_form(){
+				formButton.classList.add("not-show");
+				sendInfo.classList.remove("not-show");
+			}
+
+			// the default state is 'disabled'
+			formButton.disabled = true; 
+
+			// alternative is to use "change" - explained below
+			formInput1.addEventListener("keyup", buttonState);
+			formInput2.addEventListener("keyup", buttonState);
+			formInput3.addEventListener("keyup", buttonState);
+			formInput4.addEventListener("keyup", buttonState);
+
+			function buttonState() {
+    			if (document.getElementById("name").value === "" || !validateEmail(document.getElementById("email").value) || document.getElementById("subject").value === "" || document.getElementById("text").value === "") {
+        			formButton.disabled = true; // return disabled as true whenever the input field is empty
+					formButton.classList.remove("success-btn");
+    			} else {
+        			formButton.disabled = false; // enable the button once the input field has content
+					formButton.classList.add("success-btn");
+    			}
+			}
+		</script>
 
 		<script>
 		var strGET = window.location.search.replace( '?', ''); 

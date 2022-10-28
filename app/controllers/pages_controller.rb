@@ -2,6 +2,8 @@ class PagesController < ApplicationController
 	#Методы страничек
 	def home
 		render_page_by_lang("home", params[:lang])
+		#IP ADRESS puts request.env['REMOTE_ADDR'].to_s
+		#DEVISE puts request.env['HTTP_USER_AGENT'].to_s
 	end
 
 	def about

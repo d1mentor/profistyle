@@ -1,0 +1,69 @@
+<% content_for :head do %>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <title>Разработка веб-сайтов на CMS и RoR -</title>
+    <meta name="description" content="Разработка веб-сайтов на CMS Wordpress, Joomla и фреймворке Ruby on Rails. SEO продвижение сайтов. Настройка контекстной рекламы.">
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "style", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "false", defer: true %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
+    <%= favicon_link_tag asset_path('cropped-icon2.png') %>
+<% end %>
+
+<%= render "admin_panel/sidebar" %>
+<div class="col py-3" style="padding: 0 !important;">
+    <div class="bg-dark text-center" style="padding: 1rem;">
+        <h1 class="text-center text-white" style="font-size: 36px;">Сообщения с контактной формы</h1>
+        <ul>
+           <li class="text-center text-white" style="display: inline-block;">
+               <a href="/admin_panel/messages" style="display: block; color: black;"><button class="btn btn-info">Все сообщения</button></a>
+           </li>
+           <li class="text-center text-white" style="display: inline-block;">
+            <a href="/admin_panel/messages?filter=unreaded" style="display: block; color: black;"><button class="btn btn-info">Непрочитанные</button></a>
+            </li> 
+            <li class="text-center text-white" style="display: inline-block;">
+                <a href="/admin_panel/messages?filter=readed" style="display: block; color: black;"><button class="btn btn-info">Прочитанные</button></a>
+            </li> 
+            <li class="text-center text-white" style="display: inline-block;">
+                <a href="/admin_panel/messages?filter=spam" style="display: block; color: black;"><button class="btn btn-info">Спам</button></a>
+            </li>  
+        </ul>
+    </div>
+
+    <table class="table" id="table">
+        <thead>
+          <tr class="table-info">
+            <th scope="col">Email</th>
+            <th scope="col">Имя</th>
+            <th scope="col">Тема</th>
+            <th scope="col">Дата отправки</th>
+          </tr>
+        </thead>
+        <tbody name="original-body">
+          <% @messages.each do |msg| %>
+          <% if msg.checked %>
+          <tr class="table-success" name="row">
+            <td name= "date"><a href="/admin_panel/message/<%= msg.id %>" style="display: block; color: black;"><%= msg.email %></a></td>
+            <td name= "worker"><a href="/admin_panel/message/<%= msg.id %>" style="display: block; color: black;"><%= msg.name %></a></td>
+            <td name= "work"><a href="/admin_panel/message/<%= msg.id %>" style="display: block; color: black;"><%= msg.subject %></a></td>
+            <td name= "work"><a href="/admin_panel/message/<%= msg.id %>" style="display: block; color: black;"><%= msg.created_at %></a></td>    
+          </tr>
+          <% else %>
+          <tr class="table-success" name="row">
+            <td name= "date"><a href="/admin_panel/message/<%= msg.id %>" style="display: block; color: black;"><strong><%= msg.email %></strong></a></td>
+            <td name= "worker"><a href="/admin_panel/message/<%= msg.id %>" style="display: block; color: black;"><strong><%= msg.name %></strong></a></td>
+            <td name= "work"><a href="/admin_panel/message/<%= msg.id %>" style="display: block; color: black;"><strong><%= msg.subject %></strong></a></td>
+            <td name= "work"><a href="/admin_panel/message/<%= msg.id %>" style="display: block; color: black;"><strong><%= msg.created_at %></strong></a></td>    
+          </tr>
+          <% end %>
+          <% end %>
+        </tbody>
+      </table>
+    
+</div>
+</div>
+</div>

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   devise_scope :user do
     get '/admin_panel/login', to: 'devise/sessions#new'
     get '/admin_panel/logout', to: 'devise/sessions#destroy'    
+    post '/admin_panel/create_message', to: "admin_panel#create_message"
   end
 
   root "pages#home"
@@ -30,6 +31,10 @@ Rails.application.routes.draw do
   post '/admin_panel/post/:id/update', to: "admin_panel#update_post"
   post '/admin_panel/post/:id/destroy', to: "admin_panel#destroy_post"
   get '/admin_panel/portfolio', to: "admin_panel#portfolio"
+  get '/admin_panel/messages', to: "admin_panel#messages"
+  get '/admin_panel/message/:id', to: "admin_panel#message"
+  get '/admin_panel/messages/destroy_all_spam', to: "admin_panel#spam_destroy"
+  get '/admin_panel/message/swap_spam_attr/:id', to: "admin_panel#swap_spam_attr"
 
   get '/sitemap', to: 'sitemap#sitemap', defaults: { format: 'xml' }
 end

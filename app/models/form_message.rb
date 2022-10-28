@@ -1,0 +1,2 @@
+class FormMessage < ApplicationRecord
+end

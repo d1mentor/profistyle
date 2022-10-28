@@ -1,0 +1,111 @@
+<% content_for :head do %>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <title>Разработка веб-сайтов на CMS и RoR -</title>
+    <meta name="description" content="Разработка веб-сайтов на CMS Wordpress, Joomla и фреймворке Ruby on Rails. SEO продвижение сайтов. Настройка контекстной рекламы.">
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "style", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "false", defer: true %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
+    <%= favicon_link_tag asset_path('cropped-icon2.png') %>
+<% end %>
+
+<%= render "admin_panel/sidebar" %>
+<div class="col py-3" style="padding: 0 !important;">
+    <div class="bg-dark text-center" style="padding: 1rem;">
+        <h1 class="text-center text-white" style="font-size: 36px;">Сообщения с контактной формы</h1>
+        <ul>
+           <li class="text-center text-white" style="display: inline-block;">
+               <a href="/admin_panel/messages" style="display: block; color: black;"><button class="btn btn-info">Все сообщения</button></a>
+           </li>
+           <li class="text-center text-white" style="display: inline-block;">
+            <a href="/admin_panel/messages?filter=unreaded" style="display: block; color: black;"><button class="btn btn-info">Непрочитанные</button></a>
+            </li> 
+            <li class="text-center text-white" style="display: inline-block;">
+                <a href="/admin_panel/messages?filter=readed" style="display: block; color: black;"><button class="btn btn-info">Прочитанные</button></a>
+            </li> 
+            <li class="text-center text-white" style="display: inline-block;">
+                <a href="/admin_panel/messages?filter=spam" style="display: block; color: black;"><button class="btn btn-info">Спам</button></a>
+            </li>  
+        </ul>
+    </div>
+
+    <h1 class="text-center" style="font-size: 36px; margin-top: 10%;">Сообщение №<%= @message.id %></h1>
+    <div style="margin: 10%; border: 4px solid !important; padding: 5%; margin-top: 10px !important;">
+        <% if @message.spam %>
+            <h2 class="text-center" style="font-size: 24px;">Программа определила это письмо как спам!</h2>
+            <a href="/admin_panel/message/swap_spam_attr/<%= @message.id %>" onclick="return confirm('Точно?');" class="text-center" style="font-size: 20px; display: block; color: green; margin-bottom: 30px;">Убрать из спама</a>
+        <% end %>
+        <ul>
+            <li>
+                <p><strong>Имя отправителя</strong>: <%= @message.name %></p>
+            </li>
+            <li>
+                <p><strong>Почта отправителя</strong>: <%= @message.email %></p>
+            </li>
+            <li>
+                <p><strong>IP адрес отправителя</strong>: <%= @message.sender_ip %></p>
+            </li>
+            <li>
+                <p><strong>Железо и ПО отправителя</strong>: <%= @message.sender_devise %></p>
+            </li>
+            <li>
+                <p><strong>Язык отправителя</strong>: <%= @message.sender_lang %></p>
+            </li>
+            <li>
+                <p><strong>Тема сообщения</strong>: <%= @message.subject %></p>
+            </li>
+            <h2 class="text-center" style="font-size: 24px;"><strong>Текст сообщения</strong></h2>
+            <div>
+                <p class="msg_text"><%= @message.message_text %></p>   
+            </div>
+        </ul>
+    </div>
+    <% if !@message.spam %>
+        <h2 class="text-center" style="font-size: 24px;">Это сообщение похоже на спам? Возможно программа на смогла это определить</h2>
+        <a href="/admin_panel/message/swap_spam_attr/<%= @message.id %>" onclick="return confirm('Точно?');" class="text-center" style="font-size: 20px; display: block; color: red; margin-bottom: 30px;">Перенести в СПАМ</a>
+    <% end %>
+    
+</div>
+</div>
+</div>
+
+<style>
+    .msg_text{
+        font-size: 24px;
+    }
+
+    @media (max-width: 1920px) {
+        .msg_text{
+        font-size: 32px;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .msg_text{
+        font-size: 20px;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .msg_text{
+        font-size: 16px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .msg_text{
+        font-size: 13px;
+        }
+    }
+
+    @media (max-width: 400px) {
+        .msg_text{
+        font-size: 10px;
+    }
+    }
+</style>
