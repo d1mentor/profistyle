@@ -97,6 +97,7 @@ class AdminPanelController < ApplicationController
 
   def message_check_spam(message)
     return true if message.message_text.include?("http")
+    return true if message.message_text.include?(" @")
     return true if message.email.length > 99 || message.subject.length > 99 || message.name.length > 99 
 
     FormMessage.all.each do |msg|
