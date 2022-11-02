@@ -47,7 +47,7 @@ class AdminPanelController < ApplicationController
         @message.save
       end  
     end
-    send_push_notification
+    #send_push_notification
   end
 
   def send_push_notification
