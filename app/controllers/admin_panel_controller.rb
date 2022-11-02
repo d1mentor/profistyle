@@ -51,12 +51,16 @@ class AdminPanelController < ApplicationController
   end
 
   def send_push_notification
-    api_instance = OneSignal::DefaultApi.new
-    notification = OneSignal::Notification.new({app_id: '683d8a22-df80-4896-bdb5-70e83d6a34b8'}) # Notification | 
+    # Create headings for different languages. English is required.
+    headings = OneSignal::Notification::Headings.new(en: 'Message from profistyle.group')
+    # Create contents for different languages. English is required.
+    contents = OneSignal::Notification::Contents.new(en: "Check profistyle admin panel!")
+    # Select the included (and/or excluded) segments to target
+    included_segments = [OneSignal::Segment::ACTIVE_USERS, 'All']
+    # Create the Notification object
+    notification = OneSignal::Notification.new(headings: headings, contents: contents, included_segments: included_segments)
 
-    # Create notification
-    result = api_instance.create_notification(notification)
-    p result
+    response = OneSignal.send_notification(notification)
   end  
 
   def posts

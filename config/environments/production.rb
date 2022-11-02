@@ -17,6 +17,7 @@ Rails.application.configure do
     # Configure Bearer authorization
     config.app_key = 'NGE4NzU4NTctZjE0Yy00MDlkLWI5MWQtMzQ0MzVhNmJmZjVi'
     config.user_key = 'NmJjYjU5ZDYtMGJkMy00NDg5LTgyNjQtODI0NDBmOTFlZDBk'
+    config.active = false
   end
 
   # Compress JavaScript using a preprocessor.
