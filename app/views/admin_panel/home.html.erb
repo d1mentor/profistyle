@@ -14,7 +14,16 @@
     <%= favicon_link_tag asset_path('cropped-icon2.png') %>
 
     <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
-    <script>
+<% end %>
+
+<%= render "admin_panel/sidebar" %>
+<div class="col py-3">
+
+</div>
+</div>
+</div>
+
+<script>
     window.OneSignal = window.OneSignal || [];
     OneSignal.push(function() {
     OneSignal.init({
@@ -26,11 +35,3 @@
     });
   });
 </script>
-<% end %>
-
-<%= render "admin_panel/sidebar" %>
-<div class="col py-3">
-
-</div>
-</div>
-</div>

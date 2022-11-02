@@ -12,6 +12,13 @@ Rails.application.configure do
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
 
+  #web notifications
+  OneSignal.configure do |config|
+    # Configure Bearer authorization
+    config.app_key = 'NGE4NzU4NTctZjE0Yy00MDlkLWI5MWQtMzQ0MzVhNmJmZjVi'
+    config.user_key = 'NmJjYjU5ZDYtMGJkMy00NDg5LTgyNjQtODI0NDBmOTFlZDBk'
+  end
+
   # Compress JavaScript using a preprocessor.
   config.assets.compress = true
   config.assets.js_compressor = :terser
