@@ -57,8 +57,6 @@ class AdminPanelController < ApplicationController
     # Create notification
     result = api_instance.create_notification(notification)
     p result
-    rescue OneSignal::ApiError => e
-    puts "Error when calling DefaultApi->create_notification: #{e}"
   end  
 
   def posts
