@@ -14,6 +14,13 @@ Rails.application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
 
+  #web notifications
+  OneSignal.configure do |config|
+    # Configure Bearer authorization
+    config.app_key = 'NGE4NzU4NTctZjE0Yy00MDlkLWI5MWQtMzQ0MzVhNmJmZjVi'
+    config.user_key = 'NmJjYjU5ZDYtMGJkMy00NDg5LTgyNjQtODI0NDBmOTFlZDBk'
+  end
+
   # Show full error reports.
   config.consider_all_requests_local = true
 

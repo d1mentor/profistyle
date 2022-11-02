@@ -24,6 +24,7 @@ gem 'uglifier'
 gem 'terser'
 gem 'csso-rails'
 gem 'therubyracer'
+gem 'onesignal', '~> 1.0.1' #push notifications
 
 #deploy-------------------------------------
 gem 'capistrano', '~> 3.11'

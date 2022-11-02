@@ -12,6 +12,20 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
     <%= favicon_link_tag asset_path('cropped-icon2.png') %>
+
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <script>
+    window.OneSignal = window.OneSignal || [];
+    OneSignal.push(function() {
+    OneSignal.init({
+      appId: "683d8a22-df80-4896-bdb5-70e83d6a34b8",
+      safari_web_id: "web.onesignal.auto.220aec70-25f6-4973-9e9c-d6d04112ecc1",
+      notifyButton: {
+        enable: true,
+      },
+    });
+  });
+</script>
 <% end %>
 
 <%= render "admin_panel/sidebar" %>

@@ -3,4 +3,5 @@ import "@hotwired/turbo-rails"
 import "./controllers"
 import * as bootstrap from "bootstrap"
 import "./script.js"
+import "./OneSignalSDKWorker.js"
 

@@ -47,7 +47,19 @@ class AdminPanelController < ApplicationController
         @message.save
       end  
     end
+    send_push_notification
   end
+
+  def send_push_notification
+    api_instance = OneSignal::DefaultApi.new
+    notification = OneSignal::Notification.new({app_id: '683d8a22-df80-4896-bdb5-70e83d6a34b8'}) # Notification | 
+
+    # Create notification
+    result = api_instance.create_notification(notification)
+    p result
+    rescue OneSignal::ApiError => e
+    puts "Error when calling DefaultApi->create_notification: #{e}"
+  end  
 
   def posts
     @posts = BlogPost.all.reverse
