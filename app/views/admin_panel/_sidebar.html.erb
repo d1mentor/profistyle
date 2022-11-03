@@ -14,7 +14,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="/admin_panel/messages" class="nav-link align-middle px-0">
-                            <span class="ms-1 d-none d-sm-inline">Сообщения(<%= FormMessage.where(checked: false).count %>)</span>
+                            <span class="ms-1 d-none d-sm-inline">Сообщения(<%= FormMessage.where(checked: false, spam: false).count %>)</span>
                         </a>
                     </li>
                     <li>
