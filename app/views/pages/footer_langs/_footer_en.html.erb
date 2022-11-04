@@ -67,26 +67,15 @@
 							</div>
 						</div>
 						<div class="footer__coll">
-							<div class="footer__title">Useful links</div>
+							<div class="footer__title">Blog</div>
 							<div class="footer__list3">
+								<% BlogPost.all.reverse.slice(0..5).each do |post|  %>
+								<% if post.name_en %>
 								<div class="footer__list3-el">
-									<a href="https://accounts.fozzy.com/aff.php?aff=18138" target="_blank">Domain name</a>
+									<a href="/blog/post/<%= post.id %>?lang=ru" target="_blank"><%= post.name_en %></a>
 								</div>
-								<div class="footer__list3-el">
-									<a href="https://accounts.fozzy.com/aff.php?aff=18138" target="_blank">Hosting</a>
-								</div>
-								<div class="footer__list3-el">
-									<a href="https://accounts.fozzy.com/aff.php?aff=18138" target="_blank">VPS/VDS hosting</a>
-								</div>
-								<div class="footer__list3-el">
-									<a href="https://accounts.fozzy.com/aff.php?aff=18138" target="_blank">Dedicated server</a>
-								</div>
-								<div class="footer__list3-el">
-									<a href="/services_cms?lang=en" target="_blank">Templates Word Press</a>
-								</div>
-								<div class="footer__list3-el">
-									<a href="/services_cms?lang=en" target="_blank">Templates Joomla</a>
-								</div>
+								<% end %>
+								<% end %>
 							</div>
 						</div>
 					</div>

@@ -66,6 +66,18 @@
 								</div>
 							</div>
 						</div>
+						<div class="footer__coll">
+							<div class="footer__title">Блог</div>
+							<div class="footer__list3">
+								<% BlogPost.all.reverse.slice(0..5).each do |post|  %>
+								<% if post.name_ru %>
+								<div class="footer__list3-el">
+									<a href="/blog/post/<%= post.id %>?lang=ru" target="_blank"><%= post.name_ru %></a>
+								</div>
+								<% end %>
+								<% end %>
+							</div>
+						</div>
 					</div>
 					<div class="footer__log">
 						<a href="https://accounts.fozzy.com/aff.php?aff=18138" target="_blank"><%= image_tag(asset_path('fozzy_button.webp'), alt: "хостинг") %></a>
