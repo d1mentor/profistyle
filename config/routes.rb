@@ -42,4 +42,5 @@ Rails.application.routes.draw do
   get '/admin_panel/message/swap_spam_attr/:id', to: "admin_panel#swap_spam_attr"
 
   get '/sitemap', to: 'sitemap#sitemap', defaults: { format: 'xml' }
+  get '/404.html', to: 'errors#not_found_page', defaults: { format: 'html' }
 end

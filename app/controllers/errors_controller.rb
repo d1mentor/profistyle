@@ -1,8 +1,12 @@
 
 class ErrorsController < ApplicationController
   def not_found
-    render status: 404
+    redirect_to "/404"
   end
+
+  def not_found_page
+    render "errors/404"
+  end  
 
   def internal_server_error
     render status: 500
